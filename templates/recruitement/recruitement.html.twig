@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+{% block title %}Candidature{% endblock %}
+{% block body %}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% include 'commons/_headerLittle.html.twig' %}
+     <main class="recruitementPage">
+         <div class="mobilBlock heightDivResponsive"></div>
+         <h1  class="titleResponsiveRecruitement">N'attendez plus, postulez!</h1>
+         <form class="recruitementForm" method="post">
+             {{ form_start(recruitementForm) }}
+             <div class="errorFormMessage">
+                 {{ form_errors(recruitementForm.name) }}
+                 {{ form_errors(recruitementForm.surname) }}
+                 {{ form_errors(recruitementForm.mail) }}
+                 {{ form_errors(recruitementForm.phone) }}
+                 {{ form_errors(recruitementForm.message) }}
+                 {{ form_errors(recruitementForm.document) }}
+             </div>
+             <div class="formContactParent">
+                 <div class="formContactChild1">
+                     <div class="wrap-input2">
+                         {{ form_label(recruitementForm.name) }}
+                         <br>
+                         {{ form_widget(recruitementForm.name, { 'attr': {'class': 'input2'} }) }}
+                         <span class="focus-input2" data-placeholder="NAME"></span>
+                     </div>
+                     <div class="wrap-input2">
+                         {{ form_label(recruitementForm.surname) }}
+                         <br>
+                         {{ form_widget(recruitementForm.surname, { 'attr': {'class': 'input2'} }) }}
+                         <span class="focus-input2" data-placeholder="SURNAME"></span>
+                     </div>
+                     <div class="wrap-input2">
+                         {{ form_label(recruitementForm.mail) }}
+                         <br>
+                         {{ form_widget(recruitementForm.mail, { 'attr': {'class': 'input2'} }) }}
+                         <span class="focus-input2" data-placeholder="EMAIL"></span>
+                     </div>
+                 </div>
+                 <div class="formContactChild2">
+                     <div class="wrap-input2">
+                         {{ form_label(recruitementForm.phone) }}
+                         <br>
+                         {{ form_widget(recruitementForm.phone, { 'attr': {'class': 'input2'} }) }}
+                         <span class="focus-input2" data-placeholder="PHONE"></span>
+                     </div>
+                     <div class="wrap-input2">
+                         {{ form_label(recruitementForm.message) }}
+                         <br>
+                         {{ form_widget(recruitementForm.message, { 'attr': {'class': 'input2'} }) }}
+                         <span class="focus-input2" data-placeholder="MESSAGE"></span>
+                     </div>
+                     <div class="wrap-input2">
+                         {{ form_label(recruitementForm.document) }}
+                         <br>
+                         {{ form_widget(recruitementForm.document, { 'attr': {'class': 'input2'} }) }}
+                         <span class="focus-input2" data-placeholder="DOCUMENT"></span>
+                     </div>
+                     <div>
+                         {{ form_label(recruitementForm.envoyer) }}
+                         {{ form_widget(recruitementForm.envoyer, { 'attr': {'class': 'submitForm'} }) }}
+                     </div>
+                 </div>
+             </div>
+             {{ form_end(recruitementForm) }}
+         </form>
+         <br>
+         <br>
+         <br>
+         {% if is_granted("ROLE_EDITOR") %}
+         <a class="aEffect linkRecruitement" href="{{ path ('recruitement_admin') }}">Les candidatures</a>
+         {% endif %}
+     </main>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

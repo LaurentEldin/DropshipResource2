@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block title %}Zone Admin{% endblock %}
+{% block body %}
+    {% include 'commons/_headerLittle.html.twig' %}
+    <main class="recruitementPageadmin">
+        {% if is_granted("ROLE_EDITOR") %}
+            <div class="recruitementTitle">
+                <h1>Les demandes de candidature</h1>
+                <a class="buttonRecruitementAdmin aEffect" href="{{ path ('home') }}">Accueil</a>
+            </div>
+            <div class="recruitementAdminFor">
+                {% for candidature in recruitement %}
+                    <div class="recruitementOneShow">
+                        <h3 class="">{{ candidature.name }} {{ candidature.surname }}</h3>
+                        <p class="infoRecruitementFor">
+                            Le {{ candidature.date|date('d m Y') }},
+                            eMail:{{ candidature.mail }},
+                            tel:{{ candidature.phone }},
+                            <br>
+                            <a href="{{ asset('asset/../upload_directory/' ~ candidature.document) }}" class="linkCv">Curriculum Vitae (PDF)</a>
+                        </p>
+                        <p>
+                            <strong>message:</strong>
+                            <br>
+                            <br>
+                            {{ candidature.message }}
+                        </p>
+                        <div>
+                            <a class="buttonRecruitementAdmin aEffect" href="{{ path('recruitement_admin_id', {'id' : candidature.id}) }}">supprimer</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </main>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

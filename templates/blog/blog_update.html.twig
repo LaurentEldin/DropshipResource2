@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+{% block title %}Modifier un Blog{% endblock %}
+{% block body %}
+    {% include 'commons/_headerLittle.html.twig' %}
+    <main class="blogPageAdmin">
+        <div class="buttonBlogFromCreateBlog">
+            <a class="aEffect mobilBlock" href="{{ path('blog') }}">Les articles</a>
+        </div>
+        <div>
+            {{ form_start(formView) }}
+            <div class="errorFormMessage">
+                {{ form_errors(formView.title) }}
+                {{ form_errors(formView.article) }}
+                {{ form_errors(formView.picture) }}
+                {{ form_errors(formView.categories) }}
+            </div>
+            <div class="wrap-input2">
+                {{ form_label(formView.categories) }}
+                <br>
+                {{ form_widget(formView.categories, { 'attr': {'class': 'input2'} }) }}
+                <span class="focus-input2" data-placeholder="title"></span>
+            </div>
+            <div class="wrap-input2">
+                {{ form_label(formView.title) }}
+                <br>
+                {{ form_widget(formView.title, { 'attr': {'class': 'input2'} }) }}
+                <span class="focus-input2" data-placeholder="title"></span>
+            </div>
+            <div class="wrap-input2">
+                {{ form_label(formView.chapeau) }}
+                <br>
+                {{ form_widget(formView.chapeau, { 'attr': {'class': 'input2'} }) }}
+                <span class="focus-input2" data-placeholder="article"></span>
+                {{ form_errors(formView.chapeau) }}
+            </div>
+            <div class="wrap-input2">
+                {{ form_label(formView.article) }}
+                <br>
+                {{ form_widget(formView.article) }}
+                <span class="focus-input2" data-placeholder="article"></span>
+            </div>
+            <div class="wrap-input2">
+                {{ form_label(formView.picture) }}
+                <br>
+                {{ form_widget(formView.picture, { 'attr': {'class': 'input2'} }) }}
+                <span class="focus-input2" data-placeholder="illustration"></span>
+            </div>
+            <div>
+                {{ form_label(formView.envoyer) }}
+                {{ form_widget(formView.envoyer, { 'attr': {'class': 'submitForm'} }) }}
+                <a class="aEffect blogAdminUpdateButton displayNone" href="{{ path('blog') }}">Les articles</a>
+            </div>
+            {{ form_end(formView) }}
+        </div>
+    </main>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mise à jour mot de passe{% endblock %}
+
+{% block body %}
+    <main class="fullPage">
+        {% include 'commons/_headerLittle.html.twig' %}
+        <div class="registerpage">
+            {{ form_start(resetForm) }}
+            <h1 class="titleResetPage">Mettre à jour le mot de passe</h1>
+            <div class="errorFormMessage">
+                {{ form_errors(resetForm.plainPassword) }}
+            </div>
+            <div class="formContactParent">
+                <div class="formContactChild1">
+                    <div class="wrap-input2">
+                        {{ form_widget(resetForm.plainPassword, { 'attr': {'class': 'input2'} }) }}
+                        <span class="focus-input2" data-placeholder="NAME"></span>
+                    </div>
+                    {{ form_errors(resetForm.plainPassword) }}
+                </div>
+                    <button type="submit" class="submitHtml">Mettre à jour</button>
+                {{ form_end(resetForm) }}
+            </div>
+        </div>
+    </main>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

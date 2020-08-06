@@ -1,0 +1,16 @@
+
+<h2>Bonjour!</h2>
+
+<p>
+    Pour mettre à jour votre mot de passe, cliquez sur le lien
+    <a href="{{ url('app_reset_password', {token: resetToken.token}) }}">ici</a>
+    ce lien expire dans {{ tokenLifetime|date('g') }} heure(s)..
+</p>
+
+<p>
+    Bien à vous,
+    <br>
+    l'équipe Dropshipresource!
+</p>
+
+<h4><strong>Digital</strong> Agency</h4>

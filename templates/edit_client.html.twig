@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+{% block title %}Modifier vos infos{% endblock %}
+{% block body %}
+    <section class="fullPage">
+        {% include 'commons/_headerLittle.html.twig' %}
+        {% for flashError in app.flashes('verify_email_error') %}
+            <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+        {% endfor %}
+        <div class="modif_client">
+            <div class="registerpage">
+                {{ form_start(userFormView) }}
+                <h1 class="titleHomePage">Modifiez vos informations</h1>
+                <div class="errorFormMessage">
+                    {{ form_errors(userFormView.name) }}
+                    {{ form_errors(userFormView.lastname) }}
+                    {{ form_errors(userFormView.adresse) }}
+                    {{ form_errors(userFormView.phone) }}
+                    {{ form_errors(userFormView.plainPassword) }}
+                    {{ form_errors(userFormView.city) }}
+                    {{ form_errors(userFormView.email) }}
+                    {{ form_errors(userFormView.agreeTerms) }}
+                </div>
+                <div class="formContactParent">
+                    <div class="formContactChild1">
+                        <div class="wrap-input2">
+                            {{ form_label(userFormView.name) }}
+                            <br>
+                            {{ form_widget(userFormView.name, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="NAME"></span>
+                        </div>
+                        <div class="wrap-input2">
+                            {{ form_label(userFormView.adresse) }}
+                            <br>
+                            {{ form_widget(userFormView.adresse, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="ADRESSE"></span>
+                        </div>
+                        <div class="wrap-input2">
+                            {{ form_label(userFormView.phone) }}
+                            <br>
+                            {{ form_widget(userFormView.phone, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="PHONE"></span>
+                        </div>
+                        <div class="wrap-input2">
+                            {{ form_label(userFormView.plainPassword, 'Votre mot de passe') }}
+                            <br>
+                            {{ form_widget(userFormView.plainPassword, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="PASSWORD"></span>
+                        </div>
+                    </div>
+                    <div class="formContactChild2">
+                        <div class="wrap-input2">
+                            {{ form_label(userFormView.lastname) }}
+                            <br>
+                            {{ form_widget(userFormView.lastname, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="LASTNAME"></span>
+                        </div>
+                        <div class="wrap-input2">
+                            {{ form_label(userFormView.city, 'ville') }}
+                            <br>
+                            {{ form_widget(userFormView.city, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="CITY"></span>
+                            {{ form_errors(userFormView.city) }}
+                        </div>
+                        <div class="wrap-input2">
+                            {{ form_label(userFormView.email) }}
+                            <br>
+                            {{ form_widget(userFormView.email, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="EMAIL"></span>
+                        </div>
+                        <br>
+                        <div class="checkbox">
+                            {{ form_widget(userFormView.agreeTerms) }}
+                            {{ form_label(userFormView.agreeTerms, 'Confirmer les modifications ?') }}
+                            <small class="mobileSmall">Cliquer sur le texte pour confirmer</small>
+                        </div>
+                        <br>
+                        <br>
+                        <button type="submit" class="submitHtml">Envoyer</button>
+                    </div>
+                </div>
+                {{ form_end(userFormView) }}
+            </div>
+        </div>
+    </section>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

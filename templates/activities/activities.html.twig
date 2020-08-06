@@ -1,0 +1,309 @@
+{% extends 'base.html.twig' %}
+{% block title %}Activities{% endblock %}
+{% block body %}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% include 'commons/_headerLittle.html.twig' %}
+        <main class="activitiesPage displayNone">
+            <section class="activitiesContainerCreateWeb">
+                <div class="activitiesBloc">
+                    <h1 class="titleActivitiesPage">Création de sites web</h1>
+                    <p class="pActivitiesPage">
+                        Nous avons une longue expérience des plateformes PrestaShop, Wordpress, Shopify, et du 100% codage. Notre équipe assure la création d’un site internet qui remplit des objectifs chiffrés avec un design parfaitement adapté à vos visiteurs.
+                        <br>
+                        Notre équipe de développeurs, épaulées par nos spécialistes marketing et design, conçoivent avec vous votre site internet.
+                        <br>
+                        Site Vitrine, Site e-commerce, Site web classique, nous vous conseillons pour répondre au mieux à vos besoins.
+                    </p>
+                </div>
+                <div class="activitiesBloc">
+                    <img class="cardImgActivities" src="{{ asset('asset/img/web.jpg') }}" alt="image_activité_web" title="image_activité_web">
+                </div>
+            </section>
+            <section class="activitiesContainerProspect">
+                <h1 class="titleActivitiesPage">Génération de prospects qualifiés</h1>
+                <div class="activitiesBlocProspectContainer">
+                    <div class="activitiesBlocProspect">
+                        <img class="imgActivitiesProspect" src="{{ asset('asset/img/ElipseA.svg') }}" alt="ellipse dropship resource color" title="ellipse dropship resource color">
+                        <p class="pActivitiesProspect">
+                            Des prospects ciblés et affiné pour obtenir les prospects les plus hautement qualifiés.
+                        </p>
+                    </div>
+                    <div class="activitiesBlocProspect">
+                        <img class="imgActivitiesProspect" src="{{ asset('asset/img/ElipseB.svg') }}" alt="ellipse dropship resource color" title="ellipse dropship resource color">
+                        <p class="pActivitiesProspect">
+                            Facilitez le travail de vos commerciaux. Nous vous trouvons des prospects qualifiés dans votre secteur d'activité.
+                        </p>
+                    </div>
+                    <div class="activitiesBlocProspect">
+                        <img class="imgActivitiesProspect" src="{{ asset('asset/img/ElipseC.svg') }}" alt="ellipse dropship resource color" title="ellipse dropship resource color">
+                        <p class="pActivitiesProspect">
+                            Chaque prospect n'est affecté qu'à un seul de nos clients. Vous n'êtes pas en compétition.
+                        </p>
+                    </div>
+                    <div class="activitiesBlocProspect">
+                        <img class="imgActivitiesProspect" src="{{ asset('asset/img/ElipseD.svg') }}" alt="ellipse dropship resource color" title="ellipse dropship resource color">
+                        <p class="pActivitiesProspect">
+                            Nos outils sont adaptés aux secteurs d'activité afin de fournir des informations pertinentes.
+                        </p>
+                    </div>
+                </div>
+                <div class="activitiesProspectExemple">
+                    <p class="pProspectExemple">salle de sport</p>
+                    <p class="pProspectExemple">Agence Immobilière</p>
+                    <p class="pProspectExemple">Habitat</p>
+                    <p class="pProspectExemple">Gestion de patrimoine </p>
+                    <p class="pProspectExemple">BTP</p>
+                    <p class="pProspectExemple">Industrie</p>
+                    <p class="pProspectExemple">Coach</p>
+                    <p class="pProspectExemple">Auto-école</p>
+                    <p class="pProspectExemple">Tourisme</p>
+                    <p class="pProspectExemple">Centre de formation</p>
+                </div>
+            </section>
+            <section class="activitiesContainerCreateWeb">
+                <div class="activitiesBloc">
+                    <img class="cardImgActivities" src="{{ asset('asset/img/Groupe902.jpg') }}" alt="image_activité_web" title="image_activité_web">
+                </div>
+                <div class="activitiesBloc">
+                    <h1 class="titleActivitiesPage">Community management</h1>
+                    <p class="pActivitiesPage">
+                        Notre équipe élabore, anime et modère pour vous les réseaux sociaux de votre marque.
+                        Pour accroître votre visibilité et votre notoriété. Choisissez l’offre qui vous convient le mieux et contactez un membre de notre équipe pour démarrer simplement et rapidement. Un community manager prendra alors contact avec vous pour identifier vos besoins, fixer vos objectifs et établir la ligne éditoriale de votre stratégie social media.
+                    </p>
+                    <div>
+                        <img class="logoSocielProspect" src="{{ asset('asset/img/fbcarre.svg') }}" alt="logo reseau social " title="logo reseau social">
+                        <img class="logoSocielProspect" src="{{ asset('asset/img/instagram.svg') }}" alt="logo reseau social " title="logo reseau social">
+                        <img class="logoSocielProspect" src="{{ asset('asset/img/youtube2.svg') }}" alt="logo reseau social " title="logo reseau social">
+                        <img class="logoSocielProspect" src="{{ asset('asset/img/twitter.svg') }}" alt="logo reseau social " title="logo reseau social">
+                        <img class="logoSocielProspect" src="{{ asset('asset/img/snapchat.svg') }}" alt="logo reseau social " title="logo reseau social">
+                        <img class="logoSocielProspect" src="{{ asset('asset/img/linkedin.svg') }}" alt="logo reseau social " title="logo reseau social">
+                        <img class="logoSocielProspect" src="{{ asset('asset/img/chatbot.svg') }}" alt="logo reseau social " title="logo reseau social">
+                        <img class="logoSocielProspect" src="{{ asset('asset/img/pinterest.svg') }}" alt="logo reseau social " title="logo reseau social">
+                        <img class="logoSocielProspect" src="{{ asset('asset/img/tiktok.svg') }}" alt="logo reseau social " title="logo reseau social">
+                    </div>
+                </div>
+            </section>
+            <section class="activitiesContainerPub">
+                <h1 class="titleActivitiesPage">Création de campagnes publicitaires sur Facebook et google ads </h1>
+                <div class="organisationActivitiesPub">
+                    <div class="activitiesPub">
+                        <img class="imgActivitiesPub" src="{{ asset('asset/img/facebook.svg') }}" alt="logo  google dropship resource" title="logo google dropship resource">
+                    </div>
+                    <div class="activitiesPub">
+                        <img class="imgActivitiesPub" src="{{ asset('asset/img/googleads.svg') }}" alt="logo  googleads" title="logo googleads">
+                    </div>
+                </div>
+                <div class="organisationActivitiesPub">
+                    <div class="activitiesPub">
+                        <p>
+                            La publicité sur Facebook vous permet d’atteindre différents objectifs : générer du trafic sur votre site, augmenter vos ventes, recruter plus de fans sur votre page Facebook, sponsoriser vos publications pour toucher une audience plus large, promouvoir une application mobile… Quelque soit votre besoin, Dropship Resource vous accompagne pour tirer le meilleur parti de vos campagnes de publicité Facebook.
+                        </p>
+                    </div>
+                    <div class="activitiesPub">
+                        <p>
+                            Google facilite le lancement de votre campagne sur son réseau publicitaire, mais l’analyse et l’optimisation nécessitent de l’expérience pour apprécier un retour sur votre investissement.
+                        </p>
+                        <p>
+                            Vous obtiendrez une visibilité instantanée, quelle que soit la notoriété de votre site,
+                            Vous disposerez d’un résultat prévisible pour une campagne efficace,
+                            Modulable, elle peut être agencée, suspendue ou arrêtée à tout moment en fonction des résultats constatés.
+                            Si vous souhaitez travailler votre référencement naturel (SEO), la campagne adWords vous donnera un coup de pouce en attendant d'obtenir un bon positionnement naturel.
+                            SEO
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="activitiesContainerCreateAppli">
+                <div class="activitiesBloc">
+                    <h1 class="titleActivitiesPage">Création et développement d'applications mobiles</h1>
+                    <p class="pActivitiesPage">
+                        Nous développons pour vous, les dernières tendances technologiques en matière d'applications mobiles. De la simple application Marketplace aux applications de réseaux sociaux, en passant par le e-commerce et/ou le marketing.
+                    </p>
+                </div>
+                <div class="activitiesBloc">
+                    <img class="cardImgActivities" src="{{ asset('asset/img/appli.jpg') }}" alt="image_activité_web" title="image_activité_web">
+                </div>
+            </section>
+            <section class="activitiesContainerCreateAppli">
+                <div class="activitiesBloc">
+                    <img class="cardImgActivities" src="{{ asset('asset/img/coaching.jpg') }}" alt="image_activité_web" title="image_activité_web">
+                </div>
+                <div class="activitiesBloc">
+                    <h1 class="titleActivitiesPage">Coaching / Conseils:</h1>
+                    <p class="pActivitiesPage">
+                        Nos experts partagent leurs connaissances et leurs compétences pour vous accompagner et devenir autonome tout au long de votre transformation digitale.
+                    </p>
+                </div>
+            </section>
+            <section class="activitiesContainerCreateAppli">
+                <div class="activitiesBloc">
+                    <h1 class="titleActivitiesPage">Graphisme / Webdesign</h1>
+                    <p class="pActivitiesPage">
+                        Nous connaissons l'importance de l'image, c'est pour cela que nous nous efforçons tous les jours de réaliser les meilleurs designs. Nous vous aidons à trouver l'image dont vous avez toujours rêvé.
+                        <br>
+                        - Charte graphique
+                        <br>
+                        - Design des cartes de visite
+                        <br>
+                        - Conception / modification de votre logo
+                        <br>
+                        - Print (dépliants, brochures, papeterie, bannières...)
+                        <br>
+                        - Annonces imprimées / magazine
+                    </p>
+                </div>
+                <div class="activitiesBloc">
+                    <img class="cardImgActivities" src="{{ asset('asset/img/graphisme.jpg') }}" alt="image_activité_web" title="image_activité_web">
+                </div>
+            </section>
+        </main>
+    <main class="activitiesPage mobilBlock">
+        <section class="mobileActivitiesCreateWeb">
+            <div class="activitiesBloc">
+                <h1 class="titleActivitiesPage">Création de sites web</h1>
+                <p class="pActivitiesPage">
+                    Nous avons une longue expérience des plateformes PrestaShop, Wordpress, Shopify, et du 100% codage. Notre équipe assure la création d’un site internet qui remplit des objectifs chiffrés avec un design parfaitement adapté à vos visiteurs.
+                    <br>
+                    Notre équipe de développeurs, épaulées par nos spécialistes marketing et design, conçoivent avec vous votre site internet.
+                    <br>
+                    Site Vitrine, Site e-commerce, Site web classique, nous vous conseillons pour répondre au mieux à vos besoins.
+                </p>
+            </div>
+            <div class="activitiesBloc">
+                <img class="cardImgActivities" src="{{ asset('asset/img/web.jpg') }}" alt="image_activité_web" title="image_activité_web">
+            </div>
+        </section>
+        <section class="activitiesContainerProspect">
+            <h1 class="titleActivitiesPage">Génération de prospects qualifiés</h1>
+                <div class="activitiesBlocProspect">
+                    <img class="imgActivitiesProspect" src="{{ asset('asset/img/ElipseA.svg') }}" alt="ellipse dropship resource color" title="ellipse dropship resource color">
+                    <p class="pActivitiesProspect">
+                        Des prospects ciblés et affiné pour obtenir les prospects les plus hautement qualifiés.
+                    </p>
+                </div>
+                <div class="activitiesBlocProspect">
+                    <img class="imgActivitiesProspect" src="{{ asset('asset/img/ElipseB.svg') }}" alt="ellipse dropship resource color" title="ellipse dropship resource color">
+                    <p class="pActivitiesProspect">
+                        Facilitez le travail de vos commerciaux. Nous vous trouvons des prospects qualifiés dans votre secteur d'activité.
+                    </p>
+                </div>
+                <div class="activitiesBlocProspect">
+                    <img class="imgActivitiesProspect" src="{{ asset('asset/img/ElipseC.svg') }}" alt="ellipse dropship resource color" title="ellipse dropship resource color">
+                    <p class="pActivitiesProspect">
+                        Chaque prospect n'est affecté qu'à un seul de nos clients. Vous n'êtes pas en compétition.
+                    </p>
+                </div>
+                <div class="activitiesBlocProspect">
+                    <img class="imgActivitiesProspect" src="{{ asset('asset/img/ElipseD.svg') }}" alt="ellipse dropship resource color" title="ellipse dropship resource color">
+                    <p class="pActivitiesProspect">
+                        Nos outils sont adaptés aux secteurs d'activité afin de fournir des informations pertinentes.
+                    </p>
+                </div>
+            <div class="activitiesProspectExemple">
+                <p class="pProspectExemple">salle de sport</p>
+                <p class="pProspectExemple">Agence Immobilière</p>
+                <p class="pProspectExemple">Habitat</p>
+                <p class="pProspectExemple">Gestion de patrimoine </p>
+                <p class="pProspectExemple">BTP</p>
+                <p class="pProspectExemple">Industrie</p>
+                <p class="pProspectExemple">Coach</p>
+                <p class="pProspectExemple">Auto-école</p>
+                <p class="pProspectExemple">Tourisme</p>
+                <p class="pProspectExemple">Centre de formation</p>
+            </div>
+        </section>
+        <section class="marginBottomResponsiveActivities">
+            <div class="activitiesBloc">
+                <h1 class="titleActivitiesPage">Community management</h1>
+                <img class="cardImgActivities" src="{{ asset('asset/img/Groupe902.jpg') }}" alt="image_activité_web" title="image_activité_web">
+            </div>
+            <div class="activitiesBloc">
+                <p class="pActivitiesPage">
+                    Notre équipe élabore, anime et modère pour vous les réseaux sociaux de votre marque.
+                    Pour accroître votre visibilité et votre notoriété. Choisissez l’offre qui vous convient le mieux et contactez un membre de notre équipe pour démarrer simplement et rapidement. Un community manager prendra alors contact avec vous pour identifier vos besoins, fixer vos objectifs et établir la ligne éditoriale de votre stratégie social media.
+                </p>
+                <div class="responsiveMannagementLogo">
+                    <img class="logoSocielProspect" src="{{ asset('asset/img/fbcarre.svg') }}" alt="logo reseau social " title="logo reseau social">
+                    <img class="logoSocielProspect" src="{{ asset('asset/img/instagram.svg') }}" alt="logo reseau social " title="logo reseau social">
+                    <img class="logoSocielProspect" src="{{ asset('asset/img/youtube2.svg') }}" alt="logo reseau social " title="logo reseau social">
+                    <img class="logoSocielProspect" src="{{ asset('asset/img/twitter.svg') }}" alt="logo reseau social " title="logo reseau social">
+                    <img class="logoSocielProspect" src="{{ asset('asset/img/snapchat.svg') }}" alt="logo reseau social " title="logo reseau social">
+                    <img class="logoSocielProspect" src="{{ asset('asset/img/linkedin.svg') }}" alt="logo reseau social " title="logo reseau social">
+                    <img class="logoSocielProspect" src="{{ asset('asset/img/chatbot.svg') }}" alt="logo reseau social " title="logo reseau social">
+                    <img class="logoSocielProspect" src="{{ asset('asset/img/pinterest.svg') }}" alt="logo reseau social " title="logo reseau social">
+                    <img class="logoSocielProspect" src="{{ asset('asset/img/tiktok.svg') }}" alt="logo reseau social " title="logo reseau social">
+                </div>
+            </div>
+        </section>
+        <section class="activitiesContainerPub">
+            <h1 class="titleActivitiesPage">Création de campagnes publicitaires sur Facebook et google ads </h1>
+            <div  class="responsiveActivitiesPubCentrage">
+                <img class="imgActivitiesPub" src="{{ asset('asset/img/facebook.svg') }}" alt="logo  google dropship resource" title="logo google dropship resource">
+                <p class="pResponsivePubActivities">
+                    La publicité sur Facebook vous permet d’atteindre différents objectifs : générer du trafic sur votre site, augmenter vos ventes, recruter plus de fans sur votre page Facebook, sponsoriser vos publications pour toucher une audience plus large, promouvoir une application mobile… Quelque soit votre besoin, Dropship Resource vous accompagne pour tirer le meilleur parti de vos campagnes de publicité Facebook.
+                </p>
+            </div>
+            <div  class="responsiveActivitiesPubCentrage">
+                <img class="imgActivitiesPub" src="{{ asset('asset/img/googleads.svg') }}" alt="logo  googleads" title="logo googleads">
+                <p class="pResponsivePubActivities">
+                    Google facilite le lancement de votre campagne sur son réseau publicitaire, mais l’analyse et l’optimisation nécessitent de l’expérience pour apprécier un retour sur votre investissement.
+                </p>
+                <p class="pResponsivePubActivities">
+                    Vous obtiendrez une visibilité instantanée, quelle que soit la notoriété de votre site,
+                    Vous disposerez d’un résultat prévisible pour une campagne efficace,
+                    Modulable, elle peut être agencée, suspendue ou arrêtée à tout moment en fonction des résultats constatés.
+                    Si vous souhaitez travailler votre référencement naturel (SEO), la campagne adWords vous donnera un coup de pouce en attendant d'obtenir un bon positionnement naturel.
+                    SEO
+                </p>
+            </div>
+        </section>
+        <section class="marginBottomResponsiveActivities">
+            <div class="activitiesBloc">
+                <h1 class="titleActivitiesPage">Création et développement d'applications mobiles</h1>
+                <p class="pActivitiesPage">
+                    Nous développons pour vous, les dernières tendances technologiques en matière d'applications mobiles. De la simple application Marketplace aux applications de réseaux sociaux, en passant par le e-commerce et/ou le marketing.
+                </p>
+            </div>
+            <div class="activitiesBloc">
+                <img class="cardImgActivities" src="{{ asset('asset/img/appli.jpg') }}" alt="image_activité_web" title="image_activité_web">
+            </div>
+        </section>
+        <section class="marginBottomResponsiveActivities">
+            <div class="activitiesBloc">
+                <h1 class="titleActivitiesPage">Coaching / Conseils:</h1>
+                <p class="pActivitiesPage">
+                    Nos experts partagent leurs connaissances et leurs compétences pour vous accompagner et devenir autonome tout au long de votre transformation digitale.
+                </p>
+            </div>
+            <div class="activitiesBloc">
+                <img class="cardImgActivities" src="{{ asset('asset/img/coaching.jpg') }}" alt="image_activité_web" title="image_activité_web">
+            </div>
+        </section>
+        <section class="marginBottomResponsiveActivities">
+            <div class="activitiesBloc">
+                <h1 class="titleActivitiesPage">Graphisme / Webdesign</h1>
+                <p class="pActivitiesPage">
+                    Nous connaissons l'importance de l'image, c'est pour cela que nous nous efforçons tous les jours de réaliser les meilleurs designs. Nous vous aidons à trouver l'image dont vous avez toujours rêvé.
+                    <br>
+                    - Charte graphique
+                    <br>
+                    - Design des cartes de visite
+                    <br>
+                    - Conception / modification de votre logo
+                    <br>
+                    - Print (dépliants, brochures, papeterie, bannières...)
+                    <br>
+                    - Annonces imprimées / magazine
+                </p>
+            </div>
+            <div class="activitiesBloc">
+                <img class="cardImgActivities" src="{{ asset('asset/img/graphisme.jpg') }}" alt="image_activité_web" title="image_activité_web">
+            </div>
+        </section>
+    </main>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

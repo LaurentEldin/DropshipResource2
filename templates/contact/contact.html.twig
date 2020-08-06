@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block title %}Zone Admin{% endblock %}
+{% block body %}
+    {{ if is_granted("ROLE_ADMIN") }}
+    <main class="contact">
+        <div>
+        <h1>On nous contact</h1>
+        <a class="aEffect" href="{{ path ('home') }}">Accueil</a>
+        </div>
+        <div class="adminFront">
+            {% for message in contact %}
+            <div class="formlogin paddingLogin">
+                <h3>{{ message.name }}</h3>
+                <ul>
+                    <li>date d'envois : {{ message.date|date('d m Y') }}</li>
+                    <li>eMail : {{ message.mail }}</li>
+                    <li>tel : {{ message.phone }}</li>
+                    <li>sujet:
+                        <br>
+                        {{ message.subject }}
+                    </li>
+                    <li>
+                        message:
+                        <br>
+                        {{ message.message }}
+                    </li>
+                </ul>
+                <div>
+                    <a class="aEffect" href="{{ path('contact_delete_id', {'id' : message.id}) }}">supprimer</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </main>
+
+{% endblock %}

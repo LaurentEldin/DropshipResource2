@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des utilisateurs{% endblock %}
+
+{% block body %}
+    {% include 'commons/_headerLittle.html.twig' %}
+    <main class="adminPage">
+
+        <h1 class="titleHomePageClient">Liste des utilisateurs !</h1>
+        <div class="searchAdmin">
+            <form action="{{ path('recherche_utilisateurs') }}" class="formSearchAdmin">
+                <label for="name">Nom</label>
+                <input type="text"  placeholder="Nom" name="name">
+                <label for="lastname">Prénom</label>
+                <input type="text" placeholder="Prénom" name="lastname">
+                <label for="adresse">Adresse</label>
+                <input type="text" placeholder="Adresse" name="adresse">
+                <label for="city">Ville</label>
+                <input type="text" placeholder="Ville" name="city">
+                <input type="submit" value="rechercher">
+            </form>
+        </div>
+        <div class="tabloL">
+            <table>
+                <tr class="tr1">
+                    <th class="th1">Nom</th>
+                    <th class="th2">Prénom</th>
+                    <th class="th3">Adresse</th>
+                    <th class="th4">Ville</th>
+                    <th class="th5">Téléphone</th>
+                    <th class="th6">Mail</th>
+                    <th class="th7">Rôle</th>
+                    <th class="th8">Modifier</th>
+                    <th class="th9">Supprimer</th>
+                </tr>
+                {% for client in user %}
+                <tr class="tr2">
+                    <td class="td1">{{ client.name }}</td>
+                    <td class="td2">{{ client.lastname }}</td>
+                    <td class="td3">{{ client.adresse }}</td>
+                    <td class="td4">{{ client.city }}</td>
+                    <td class="td5">{{ client.phone }}</td>
+                    <td class="td6">{{ client.email }}</td>
+                    <td class="td7">
+                        {% for role in client.roles %}
+                            {% if role == "ROLE_USER" %}
+                                Utilisateur
+                            {% elseif role == "ROLE_EDITOR" %}
+                                Editeur
+                            {% elseif role == "ROLE_ADMIN" %}
+                                Administrateur
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td class="td8">
+                        <a class="" href="{{ path('modifier_utilisateur', {'id': client.id}) }}">Modifier</a>
+                    </td>
+                    <td class="td9">
+                        <a class="" href="{{ path('delete_utilisateur', {'id': client.id}) }}">Supprimer</a>
+                    </td>
+                </tr>
+                {% else %}
+                    <p>Aucun utilisateur inscrit</p>
+                {% endfor %}
+            </table>
+        </div>
+    </main>
+    {% include 'commons/_footer.html.twig' %}
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+{% block title %}Espace client{% endblock %}
+{% block body %}
+    <section class="fullPage">
+        <div class="boucheTrouL"></div>
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+        {% include 'commons/_headerLittle.html.twig' %}
+        <h1 class="titleHomePageClient">Hello {{ app.user.name }}!</h1>
+        <div class="espaceClient">
+            <div class="formContactParent">
+                <div class="formContactChild1EspaceClient">
+                    {% for user in users %}
+                    <div class="input2">
+                        NOM:
+                        <br>
+                        <em>{{ user.name }}</em>
+                    </div>
+                    <br>
+                    <div class="input2">
+                        PRÉNOM:
+                        <br>
+                        <em>{{ user.lastname }}</em>
+                    </div>
+                    <br>
+                    <div class="input2">
+                        ADRESSE:
+                        <br>
+                        <em>{{ user.adresse }}</em>
+                    </div>
+                    <br>
+                    <div class="input2">
+                        VILLE:
+                        <br>
+                        <em>{{ user.city }}</em>
+                    </div>
+                    <br>
+                    <div class="input2">
+                        TÉLÉPHONE:
+                        <br>
+                        <em>{{ user.phone}}</em>
+                    </div>
+                    <br>
+                    <div class="input2">
+                        EMAIL:
+                        <br>
+                        <em>{{ user.email }}</em>
+                    </div>
+                </div>
+                <div class="formContactChild2EspaceClient">
+                    <div>
+                        <a class="submitHtml" href="{{ path ('edit_client', {'id':app.user.id}) }}">Modifier vos informations</a>
+                    </div>
+                    <div>
+                        <a class="submitHtml" href="{{ path ('app_forgot_password_request', {'id':app.user.id}) }}">Modifier votre mot de passe</a>
+                    </div>
+                    <div>
+                        <a class="submitHtml" href="{{ path ('delete_client', {'id':app.user.id}) }}">Supprimer votre compte</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

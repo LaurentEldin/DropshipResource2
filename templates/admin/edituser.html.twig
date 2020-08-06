@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un utilisateur{% endblock %}
+
+{% block body %}
+    {% include 'commons/_headerLittle.html.twig' %}
+    <main class="adminPage">
+        <h1 class="titleHomePageClient">Modifier un utilisateur !</h1>
+        <div class="tabloOneUserL">
+            {#{{ form_start(userForm) }}
+            <table class="tabloUserL">
+                <tr class="tr1">
+                    <th class="th1">Nom</th>
+                    <th class="th2">Prénom</th>
+                    <th class="th3">Adresse</th>
+                    <th class="th4">Ville</th>
+                    <th class="th5">Téléphone</th>
+                    <th class="th6">Mail</th>
+                    <th class="th7">Rôle</th>
+                    <th class="th8">Valider</th>
+                </tr>
+                <tr class="tr2">
+                    <td class="td1">{{ form_widget(userForm.name) }}</td>
+                    <td class="td2">{{ form_widget(userForm.lastname) }}</td>
+                    <td class="td3">{{ form_widget(userForm.adresse) }}</td>
+                    <td class="td4">{{ form_widget(userForm.city) }}</td>
+                    <td class="td5">{{ form_widget(userForm.phone) }}</td>
+                    <td class="td6">{{ form_widget(userForm.email) }}</td>
+                    <td class="td7">
+                        {% for child in userForm.roles %}
+                            <li>{{ form_label(child) }}{{ form_widget(child) }}</li>
+                        {% endfor %}
+                    </td>
+                    <td class="td8">{{ form_row(userForm.valider) }}</td>
+                </tr>
+            </table>
+            {{ form_end(userForm) }}#}
+            {{ form_start(userForm) }}
+            <table class="tabloMobileL">
+                <tr>
+                    <th>Nom</th>
+                    <td>{{ form_row(userForm.name) }}</td>
+                </tr>
+                <tr>
+                    <th>Prénom</th>
+                    <td>{{ form_row(userForm.lastname) }}</td>
+                </tr>
+                <tr>
+                    <th>Adresse</th>
+                    <td>{{ form_row(userForm.adresse) }}</td>
+                </tr>
+                <tr>
+                    <th>Ville</th>
+                    <td>{{ form_row(userForm.city) }}</td>
+                </tr>
+                <tr>
+                    <th>Téléphone</th>
+                    <td>{{ form_row(userForm.phone) }}</td>
+                </tr>
+                <tr>
+                    <th>Mail</th>
+                    <td>{{ form_row(userForm.email) }}</td>
+                </tr>
+                <tr>
+                    <th>Rôle</th>
+                    <td>
+                        {% for child in userForm.roles %}
+                            <li>{{ form_label(child) }}{{ form_widget(child) }}</li>
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Valider</th>
+                    <td>{{ form_row(userForm.valider) }}</td>
+                </tr>
+            </table>
+        </div>
+        {{ form_end(userForm) }}
+        <br>
+        <br>
+        <br>
+        <a class="submitHtml" href="{{ path ('utilisateurs') }}">Retour Liste</a>
+    </main>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

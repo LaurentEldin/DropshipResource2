@@ -1,0 +1,108 @@
+<footer class="displayNone">
+    <div>
+        <div>
+            <a class="logoFooter" href="{{ path ('home') }}">
+                <img class="logoFooterMarginBottom" src="{{ asset('asset/img/logo_dr_sans.svg') }}" alt="logo_dropshipresource" title="logo_dropshipresource">
+            </a>
+        </div>
+        <div><a href="{{ asset('asset/documents_officiels/Mentions légales site web - Dropship Resource.pdf') }}">Mentions légales</a></div>
+        <div class="aFooter"><a href="{{ asset('asset/documents_officiels/CGU site web.pdf') }}">CGU</a></div>
+        <div class="aFooter"><a href="">RGPD</a></div>
+    </div>
+    <div class="footerAlign">
+        <h5 class="footerTitle">Suivez nous</h5>
+        <div class="socialFooterParent">
+            <div class="socialFooterFb">
+                <a href="https://www.facebook.com/dropshipresource/" target="_blank"></a>
+            </div>
+            <div class="socialFooterInsta">
+                <a href="https://www.instagram.com/dropship_resource/" target="_blank">
+                <p class="langueLogoInstaFooter">Fr</p>
+                </a>
+            </div>
+            <div class="socialFooterLinkedin">
+                <a href="https://www.linkedin.com/company/dropship-resource/" target="_blank"></a>
+            </div>
+            {#
+            <div class="socialFooterYoutube">
+                <a href="https://www.youtube.com/channel/UCFI3IYsyxIwLsVRWJzqUmTw" target="_blank"></a>
+            </div>
+            #}
+        </div>
+        {#<div class="socialFooterParent">
+            <div class="socialFooterInstaMultiLangue">
+                <a href="https://www.instagram.com/dropship_resource_en/?igshid=yjtmoe400ke2" target="_blank">
+                    <p class="langueLogoInstaFooter">En</p>
+                </a>
+            </div>
+            <div class="socialFooterInstaMultiLangue">
+                <a href="https://www.instagram.com/dropship_resource_es/?igshid=x7on698l9lrq" target="_blank">
+                    <p class="langueLogoInstaFooter">Es</p>
+                </a>
+            </div>
+        </div>#}
+    </div>
+    <div>
+        {% include 'form.html.twig' %}
+        {% if is_granted("ROLE_ADMIN") %}
+            <div>
+                <a class="newsletterButton aEffect" href="{{ path('newsletterAdmin') }}" >Admin contact</a>
+            </div>
+        {% endif %}
+    </div>
+</footer>
+<footer class="mobilBlock">
+    <div class="orgaTopFooter">
+        <div>
+            <a href="{{ path ('home') }}">
+                <img class="logoSizeFooterResponsive" src="{{ asset('asset/img/logo_dr_sans.svg') }}" alt="logo_dropshipresource" title="logo_dropshipresource">
+            </a>
+        </div>
+        <div>
+            <div><a class="textFooterSizeResponsive" href="{{ asset('asset/img/MentionsLegales.pdf') }}">Mentions légales</a></div>
+            <div><a class="textFooterSizeResponsive" href="">CGU</a></div>
+            <div><a class="textFooterSizeResponsive" href="">RGPD</a></div>
+        </div>
+    </div>
+    <div id="newsletter">
+        {% include 'form.html.twig' %}
+        {% if is_granted("ROLE_ADMIN") %}
+            <div>
+                <a class="newsletterButton aEffect" href="{{ path('newsletterAdmin') }}" >Admin contact</a>
+            </div>
+        {% endif %}
+    </div>
+    <div class="footerAlign">
+        <h5 class="footerTitle">Suivez nous</h5>
+        <div class="socialFooterParent">
+            <div class="socialFooterFb">
+                <a href="https://www.facebook.com/dropshipresource/" target="_blank"></a>
+            </div>
+            <div class="socialFooterInsta">
+                <a href="https://www.instagram.com/dropship_resource/" target="_blank">
+                    <p class="langueLogoInstaFooter">Fr</p>
+                </a>
+            </div>
+            <div class="socialFooterLinkedin">
+                <a href="https://www.linkedin.com/company/dropship-resource/" target="_blank"></a>
+            </div>
+            {#
+            <div class="socialFooterYoutube">
+                <a href="https://www.youtube.com/channel/UCFI3IYsyxIwLsVRWJzqUmTw" target="_blank"></a>
+            </div>
+            #}
+        </div>
+        {#<div class="socialFooterParent">
+            <div class="socialFooterInstaMultiLangue">
+                <a href="https://www.instagram.com/dropship_resource_en/?igshid=yjtmoe400ke2" target="_blank">
+                    <p class="langueLogoInstaFooter">En</p>
+                </a>
+            </div>
+            <div class="socialFooterInstaMultiLangue">
+                <a href="https://www.instagram.com/dropship_resource_es/?igshid=x7on698l9lrq" target="_blank">
+                <p class="langueLogoInstaFooter">Es</p>
+                </a>
+        </div>#}
+         </div>
+    </div>
+</footer>

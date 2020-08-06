@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mise à jour mot de passe{% endblock %}
+
+{% block body %}
+
+        {% for flashError in app.flashes('reset_password_error') %}
+            <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+        {% endfor %}
+        <main class="fullPage">
+            {% include 'commons/_headerLittle.html.twig' %}
+            <div class="modif_client">
+                <div class="registerpage">
+                    {{ form_start(requestForm) }}
+                    <h1 class="titleResetPage">Mettre à jour le mot de passe</h1>
+                    <div class="errorFormMessage">
+                        {{ form_errors(requestForm.email) }}
+                    </div>
+                    <div class="formContactParent">
+                        <div class="formContactChild1">
+                            <div class="wrap-input2">
+                                {{ form_label(requestForm.email, 'votre email') }}
+                                <br>
+                                {{ form_widget(requestForm.email, { 'attr': {'class': 'input2'} }) }}
+                                <span class="focus-input2" data-placeholder="NAME"></span>
+                            </div>
+                            {{ form_errors(requestForm.email) }}
+                            <small>
+                                Vous allez recevoir un lien pour mettre à jour votre mot de passe.
+                            </small>
+                        </div>
+                        <button type="submit" class="submitHtml">Mettre à jour</button>
+                        {{ form_end(requestForm) }}
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% include 'commons/_footer.html.twig' %}
+
+{% endblock %}

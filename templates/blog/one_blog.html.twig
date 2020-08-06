@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails Article{% endblock %}
+{% block body %}
+
+{% include 'commons/_headerLittle.html.twig' %}
+    <main class="showOneBlog">
+        <h1 class="blogTitleShowId">{{ blog.title }}</h1>
+        <div class="blogShowIdChapeau">
+            <p>{{ blog.chapeau }}</p>
+        </div>
+        <div class="blogForTitleShowId">
+            <img class="blogPicture" alt="article illustration" src="{{ asset('upload_directory/' ~ blog.picture) }}">
+        </div>
+        <div class="BlogShowIdOrganisationArticle">
+            <div class="blogForArticle">
+                <span>{{ blog.article|raw }}</span>
+            </div>
+            <div class="blogForArticle2">
+                <h2 class="titleAgenceStoryDr">À lire aussi</h2>
+                <div class="forOtherBlog">
+                {% for article in blogB | slice(1,2)%}
+                    <h3>{{ article.title }}</h3>
+                    <p>{{ article.article|u.truncate(155,'...')|raw }}</p>
+                    <a class="linkBlogIdTxtShoxId" data-aos-delay="1250" data-aos="zoom-out" href="{{ path('details_article',{'id':article.id}) }}">VOIR PLUS</a>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="linkBlogId displayNone">
+            <a class="linkBlogIdTxt" data-aos-delay="100" data-aos="zoom-out" href="{{ path('blog') }}">Retour</a>
+            <img class="linkBlogIdColorOne" data-aos="fade-up" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element15.svg') }}">
+            <img class="linkBlogIdColorTwoBis" data-aos="fade-down" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element5.svg') }}">
+        </div>
+        <div class="linkBlogId mobilBlock" data-aos="fade-up" data-aos-duration="1450">
+            <a class="linkBlogIdTxtResponsive" data-aos-delay="100" data-aos="zoom-out" href="{{ path('blog') }}">Retour</a>
+        </div>
+    </main>
+{% include 'commons/_footer.html.twig' %}
+
+{% endblock %}

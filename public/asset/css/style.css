@@ -1,0 +1,2022 @@
+@font-face{
+    font-family: "mapolice";
+    src: url("../font/Montserrat/Montserrat-Medium.ttf");
+}
+@font-face{
+    font-family: "mapolice2";
+    src: url("../font/Montserrat/Montserrat-Black.ttf");
+}
+*{
+    scroll-behavior: smooth;
+}
+.firstLetter::first-letter{
+    color: #2046f5;
+    font-size: 130%;
+}
+body{
+    font-family: "mapolice", sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: rgb(30,30,30);
+}
+li{
+    list-style-type: none;
+}
+.fullPage{
+    height: 100vh;
+}
+.errorFormMessage{
+    color: red;
+    font-size: 10px;
+    position: absolute;
+}
+.validFormMessage{
+    color: green;
+    font-size: 10px;
+    position: absolute;
+}
+.center{
+    text-align: center;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS element for responsive----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.mobilBlock{
+    display: none;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS hover img stylisé----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.nd-wrap {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+.nd-title {
+    position: relative;
+    top: -150px;
+    opacity: 0;
+    margin: 0 0 30px;
+    font-weight: 400;
+    -webkit-transition: all 1s ease 0.01s;
+    -o-transition: all 1s ease 0.01s;
+    transition: all 1s ease 0.01s;
+}
+.nd-title span {
+    color: #fff;
+    padding: 0 20px 15px;
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+}
+.nd-icon {
+    color: #000;
+    display: inline-block;
+    font-size: 25px;
+    margin: 0 5px;
+    opacity: 0;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition-duration: 0.6s;
+    -o-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -webkit-transition-timing-function: cubic-bezier(1.000, -0.530, 0.405, 1.425);
+    -o-transition-timing-function: cubic-bezier(1.000, -0.530, 0.405, 1.425);
+    transition-timing-function: cubic-bezier(1.000, -0.530, 0.405, 1.425);
+}
+.nd-icon span {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+    padding: 10px 15px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.nd-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.nd-content_inner {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.nd-content_inner1 {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.nd-wrap:hover .nd-icon,
+.nd-wrap:hover .nd-content,
+.nd-wrap:hover .nd-title{
+    opacity: 1;
+    top: 0;
+}
+
+.nd-wrap:hover .nd-title {
+    -webkit-transition: all 0.5s cubic-bezier(1.000, -0.530, 0.405, 1.425) 0.01s;
+    -o-transition: all 0.5s cubic-bezier(1.000, -0.530, 0.405, 1.425) 0.01s;
+    transition: all 0.5s cubic-bezier(1.000, -0.530, 0.405, 1.425) 0.01s;
+}
+.nd-wrap:hover .nd-content {
+    background: rgba(0, 0, 255, 0.2);
+}
+.nd-style-1 .nd-icon {
+    top: 150px;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS button stylisé----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.aEffect {
+    margin: 20px 15px;
+    position: relative;
+    padding: 10px 30px;
+    color: #2046f5;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.aEffect:nth-child(3) {
+    -webkit-filter: hue-rotate(270deg);
+    filter: hue-rotate(270deg);
+}
+
+.aEffect:hover {
+    background: #2046f5;
+    color: rgb(250,250,250);
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.aEffect:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #2046f5;
+    border-left: 2px solid #2046f5;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.aEffect:hover:before {
+    width: 98%;
+    height: 96%;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.aEffect:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #2046f5;
+    border-right: 2px solid #2046f5;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.aEffect:hover:after {
+    width: 98%;
+    height: 96%;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------design back-----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+
+/*-------Activities---------*/
+.geoAnime{
+    position: absolute;
+}
+.colorAnimeOne{
+    top: 25%;
+    left: 70%;
+    width: 100px;
+    -webkit-transform: translateZ(-1px) scale(2.1);
+    transform: translateZ(-1px) scale(2.1);
+}
+.colorAnimeTwo{
+    top: 18%;
+    left: 63%;
+    width: 130px;
+}
+.colorAnimeThree{
+    top: 35%;
+    left: 58%;
+    width: 150px;
+}
+.linkAnime{
+    top: 26%;
+    left: 64%;
+    width: 150px;
+    font-size: 29px;
+    color: white;
+    text-align: left;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+/*agence*/
+.colorAnimeFour{
+    width: 130px;
+    -webkit-transform: translate(-50,-50);
+    -ms-transform: translate(-50,-50);
+    transform: translate(-50,-50);
+    top: 35%;
+    left: 20%;
+    z-index: 5;
+}
+.colorAnimeFive{
+    width: 115px;
+    -webkit-transform: translate(-50,-50);
+    -ms-transform: translate(-50,-50);
+    transform: translate(-50,-50);
+    top: 25%;
+    left: 25%;
+    z-index: 7;
+}
+.colorAnimeSix{
+    width: 80px;
+    -webkit-transform: translate(-50,-50);
+    -ms-transform: translate(-50,-50);
+    transform: translate(-50,-50);
+    top: 50%;
+    left: 17%;
+    z-index: 1;
+}
+.linkAnimeTwo{
+    top: 40%;
+    left: 22%;
+    width: 150px;
+    font-size: 29px;
+    color: white;
+    text-align: left;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    z-index: 10;
+}
+/*blog*/
+.colorAnimeSeven{
+    width: 38px;
+    -webkit-transform: translate(-50,-50);
+    -ms-transform: translate(-50,-50);
+    transform: translate(-50,-50);
+    top: 92%;
+    left: 57%;
+    z-index: 6;
+}
+.colorAnimeSevenBis{
+    width: 40px;
+    -webkit-transform: translate(-50,-50);
+    -ms-transform: translate(-50,-50);
+    transform: translate(-50,-50);
+    top: 92%;
+    left: 54%;
+    z-index: 6;
+}
+.colorAnimeHeight{
+    width: 90px;
+    -webkit-transform: translate(-50,-50);
+    -ms-transform: translate(-50,-50);
+    transform: translate(-50,-50);
+    top: 106%;
+    left: 43%;
+    z-index: 2;
+    image-orientation: 45deg;
+}
+.colorAnimeNine{
+    width: 140px;
+    -webkit-transform: translate(-50,0);
+    -ms-transform: translate(-50,0);
+    transform: translate(-50,0);
+    top: 90%;
+    left: 46%;
+    z-index: 3;
+}
+.linkAnimeThree{
+    top: 100%;
+    left: 48%;
+    width: 150px;
+    font-size: 29px;
+    color: white;
+    text-align: left;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    z-index: 5;
+}
+/*blog*/
+.colorBlockService{
+    background-image: url("../img/element3.svg");
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background-attachment: fixed;
+    left: 60%;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS Header-----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/logo-anim.gif");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.mp4Header{
+    width: 100%;
+    height: 100%;
+}
+.headerLittle{
+    width: 100%;
+    background-color: #F6F6F6;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+.nav{
+    z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(246, 246, 246,0.9);
+    font-size: 1vw;
+    height: 12vh;
+}
+.menu{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.logoNavebar{
+    height: 60%;
+    padding: 10% 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.buttonNavbar{
+    height: 100%;
+    padding: 0 20px;
+    vertical-align: middle;
+}
+.alignTitle{
+    padding: 20px 0;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.alignTitle:hover{
+    background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.logoConnect{
+    height: 60%;
+    padding: 10% 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.loginHeaderPicture{
+    float: right;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS footer-----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/
+footer{
+    background-color: rgb(180,180,180);
+    padding: 5% 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.logoFooterMarginB{
+    margin-bottom: 30px;
+}
+.aFooter{
+    padding-top: 30px;
+}
+.aFooter:hover{
+    background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+}
+.footerTitle{
+    font-size: 30px;
+}
+.footerAlign{
+    text-align: center;
+}
+.logoSocial{
+    margin: 0 5px;
+}
+.socialFooterLinkedin{
+    background-image: url("../img/linkedinfooter.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    margin: 0 20px;
+}
+.socialFooterLinkedin:hover{
+    background-image: url("../img/linkedin_hover.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    margin: 0 20px;
+}
+.logoFooterMarginBottom{
+    margin-bottom: 30px;
+}
+.socialFooterFb{
+    background-image: url("../img/fb.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    margin: 0 20px;
+}
+.socialFooterFb:hover{
+    background-image: url("../img/fb_hover.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    margin: 0 20px;
+}
+.socialFooterInsta{
+    position: relative;
+    background-image: url("../img/insta.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    margin: 0 20px;
+}
+.socialFooterInsta:hover{
+    position: relative;
+    background-image: url("../img/insta_hover.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    margin: 0 20px;
+}
+.socialFooterYoutube{
+    background-image: url("../img/youtube.svg");
+    background-size: contain;
+    width: 70px;
+    height: 50px;
+    margin: 0 5px;
+    background-repeat: no-repeat;
+}
+.socialFooterYoutube:hover{
+    background-image: url("../img/youtube_hover.svg");
+    background-size: contain;
+    width: 70px;
+    height: 50px;
+    margin: 0 5px;
+    background-repeat: no-repeat;
+}
+.socialFooterParent{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.formFooterParent{
+    width: 100%;
+}
+.formFooter{
+    background-color: transparent;
+    width: 100%;
+    font-size: 16px;
+}
+.submitFormFooter{
+    width: 45%;
+    border-radius: 50px;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgb(30,30,30);
+    color: rgb(255,255,255);
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    border: none;
+}
+.socialFooterInstaMultiLangue{
+    position: relative;
+    background-image: url("../img/insta.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    margin: 20px 20px;
+}
+.socialFooterInstaMultiLangue:hover{
+    position: relative;
+    background-image: url("../img/insta_hover.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    margin: 5px 20px;
+}
+.langueLogoInstaFooter{
+    position: absolute;
+    top: -27px;
+    font-size: 12px;
+}
+.textFooterSizeResponsive{
+    font-size: 3.5vw;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS Activities-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+#Activities{
+    padding: 0 8% 10% 8%;
+    position: relative;
+}
+.titleHomePage{
+    font-size: 6vw;
+    margin: 5% 0;
+    background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+}
+.titleResetPage{
+    font-size: 4.8vw;
+    margin: 10% auto;
+    padding-top: 50px;
+    background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: max-content;
+}
+.pActivities{
+    position: relative;
+    text-align: justify-all;
+    width: 40%;
+    font-size: 1.6vw;
+}
+.activitiesButton{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    z-index: 8;
+}
+.createActivities .formContactParent{
+    margin-left: 180px;
+}
+.createActivities h1{
+    padding-left: 180px;
+    padding-top: 140px;
+}
+
+/* MADE BY LAURENT */                                                        /* MADE BY LAURENT */
+/* MADE BY LAURENT */                                                        /* MADE BY LAURENT */
+/* MADE BY LAURENT */                                                        /* MADE BY LAURENT */
+/* MADE BY LAURENT */                                                        /* MADE BY LAURENT */
+/* MADE BY LAURENT */                    /* CSS SERVICES*/                   /* MADE BY LAURENT */
+/* MADE BY LAURENT */                                                        /* MADE BY LAURENT */
+/* MADE BY LAURENT */                                                        /* MADE BY LAURENT */
+/* MADE BY LAURENT */                                                        /* MADE BY LAURENT */
+/* MADE BY LAURENT */                                                        /* MADE BY LAURENT */
+/* MADE BY LAURENT */                                                        /* MADE BY LAURENT */
+/* MADE BY LAURENT */                                                        /* MADE BY LAURENT */
+
+
+.activitiesPage{
+    padding: 100px 10%;
+}
+.activitiesPage h2{
+    padding-left: 10px;
+    padding-bottom: 100px;
+}
+.activitiesContainer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.activitiesCard{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 100px;
+}
+.cardTitleText h3{
+    margin-top: 0;
+}
+.cardTitleText{
+    width: 48%;
+    padding-top: 20px;
+}
+.cardImg{
+    width: 48%;
+}
+
+.buttonActivities{
+    padding: 30px;
+}
+.activitiesParallax1{
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    z-index: -100;
+}
+.activitiesParallax2{
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    top: 300%;
+    right: 10%;
+    z-index: -100;
+}
+.activitiesParallax3{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 8%;
+    bottom: -115%;
+    z-index: -100;
+}
+.activitiesParallax4{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 9%;
+    bottom: -315%;
+    z-index: -100;
+}
+.activitiesParallax5{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 70%;
+    bottom: -20%;
+    z-index: -100;
+}
+.activitiesParallax6{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 27%;
+    bottom: -66%;
+    z-index: -100;
+}
+.activitiesParallax7 {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 9%;
+    bottom: -172%;
+    z-index: -100;
+}
+.displayActivitiesProspect{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.imgActivitiesSocialLogoDisplay{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.imgActivitiesSocialLogo{
+    width: 10%;
+    margin: 9px 30px;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS Agence-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+#Agence{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+}
+.agence{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/team.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.agenceButton{
+    -webkit-transform: translate(-50,-50);
+    -ms-transform: translate(-50,-50);
+    transform: translate(-50,-50);
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+.titleActivitiesPage {
+    font-size: 2vw;
+    background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+}
+.activitiesContainerCreateWeb{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+.activitiesBloc{
+    width: 48%;
+}
+.cardImgActivities{
+    width: 100%;
+}
+.pActivitiesPage{
+    font-size: 1.4vw;
+    text-align: left;
+}
+.activitiesContainerProspect{
+    margin-bottom: 150px;
+}
+.activitiesBlocProspectContainer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+.imgActivitiesProspect{
+    width: 55%;
+    margin: 0 auto;
+}
+.activitiesBlocProspect{
+    width: 25%;
+    margin: 50px 13px 0;
+}
+.pActivitiesProspect{
+    font-size: 1vw;
+    text-align: left;
+}
+.activitiesProspectExemple{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.pProspectExemple{
+    margin: 12px 5%;
+    font-size: 0.7vw;
+}
+.logoSocielProspect{
+    width: 10%;
+    margin-top: 12px;
+}
+.activitiesContainerPub .titleActivitiesPage{
+    width: 50%;
+}
+.organisationActivitiesPub{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.activitiesPub{
+    width: 48%;
+    text-align: center;
+}
+.imgActivitiesPub{
+    width: 40%;
+    margin: 50px 0;
+}
+.activitiesContainerPub{
+    margin-bottom: 150px;
+}
+.activitiesContainerCreateAppli{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+.activitiesContainerCreateAppli
+.activitiesBloc
+.titleActivitiesPage{
+    width: 100%;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS Blog-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/
+#Blog{
+    position: relative;
+    padding: 0 5% 5% 5%;
+}
+.titleHomePageBlog{
+    font-size: 75px;
+    margin: 5% 0;
+}
+.pBlog{
+    width: 60%;
+    margin: 60px 0;
+}
+.aButton{
+    margin: 10px 0;
+}
+.blogPictureHome{
+    width: 100%;
+}
+.blogHomeFor{
+    z-index: 50;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+
+.linkForBlock{
+    width: 45%;
+}
+.blogCarte{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.blogcontainer {
+    position: relative;
+}
+.blogimgCarte{
+    display: block;
+    width: 100%;
+}
+.blogoverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    background-color: rgba(30, 19, 232, 0.8);
+}
+.blogcontainer:hover .blogoverlay {
+    opacity: 1;
+}
+.blogtext {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: small;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.blanche{
+    width: 30%;
+    height: 1px;
+    background-color: whitesmoke;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+/* CSS POUR LES IMAGES DE LA HOMEPAGE BLOG */
+.blogPage{
+    margin: 20vh 180px 0 210px;
+    position: relative;
+}
+.blogPageAdmin{
+    margin: 20vh 180px 20vh 180px;
+    position: relative;
+}
+.blogAdminButton{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+}
+.blogFor{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin-bottom: 120px;
+}
+.blogForTitle{
+    width: 48%;
+}
+.blogForArticleFor {
+    width: 48%;
+    font-size: 1.3vw;
+    text-align: left;
+}
+.blogForArticle {
+    width: 58%;
+    font-size: 1.3vw;
+    text-align: left;
+    margin-top: 20px;
+}
+.blogForArticle2{
+    width: 38%;
+    text-align: left;
+    margin-top: 20px;
+    border-left: solid;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    border-width: 3px;
+    padding-left: 9px;
+    -o-border-image:
+            -o-linear-gradient(
+                    top,
+                    #00E0FF,
+                    #FF00FF
+            ) 1 100%;
+    border-image:
+            -webkit-gradient(
+                    linear,
+                    left top, left bottom,
+                    from(#00E0FF),
+                    to(#FF00FF)
+            ) 1 100%;
+    border-image:
+            linear-gradient(
+                    to bottom,
+                    #00E0FF,
+                    #FF00FF
+            ) 1 100%;}
+.linkBlogIdTxtShoxId{
+    font-size: 9px;
+    color: black;
+    background-color: #FF00FF;
+    padding: 5px;
+}
+.blogForArticle2
+.titleAgenceStoryDr{
+    font-size: 3vw;
+}
+.BlogShowIdOrganisationArticle{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+.articleBlog{
+    text-align: justify;
+}
+.blogTitle{
+    font-size: 40px;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+}
+.blogTitleShowId{
+    font-size: 5vw;
+    text-align: left;
+    width: 80%;
+    margin: 0 0 50px;
+}
+.blogShowIdChapeau{
+    text-align: left;
+    font-size: 1.5vw;
+}
+.blogForTitleShowId{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1vw;
+}
+.blogPicture{
+    width: 100%;
+}
+.blogUpdate{
+    margin-top: 15vh;
+}
+.blogAdminUpdateButton{
+    position: absolute;
+    left: 60%;
+}
+.adminButtonBlog{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.buttonBlog{
+    text-align: center;
+    margin-top: 70px;
+}
+.showOneBlog{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 60px 7%;
+}
+.articleHomePage{
+    color: whitesmoke;
+    font-size: 15px;
+}
+.blockLinkId{
+    text-align: center;
+}
+.articleBlog{
+    padding: 30px 0;
+}
+.linkBlogId{
+    position: relative;
+    height: 60px;
+}
+.linkBlogIdColorOne{
+    position: absolute;
+    width: 140px;
+    top: 51px;
+    left: 35%;
+    z-index: 4;
+}
+.forOtherBlog
+h3{
+    font-size: 1.4vw;
+}
+.forOtherBlog
+p{
+    font-size: 0.9vw;
+}
+.linkBlogIdColorTwo{
+    position: absolute;
+    width: 80px;
+    top: 40px;
+    left: 30%;
+    z-index: 2;
+}
+.linkBlogIdColorTwoBis{
+    position: absolute;
+    width: 80px;
+    top: 40px;
+    left: 38%;
+    z-index: 2;
+}
+.linkBlogIdTxt{
+    position: absolute;
+    left: 40%;
+    top: 60px;
+    z-index: 6;
+    color: whitesmoke;
+}
+.formBlogCategorie{
+    margin: 30px 0;
+}
+.inputBlog{
+    background-color: rgb(40,40,40);
+    padding: 10px 20px;
+    color: whitesmoke;
+    border: none;
+    border-radius: 50px;
+}
+.choiceTypeBlog{
+    border: none;
+    margin-right: 30px;
+}
+.sizeMessageBlogUpload{
+    color: red;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS contact-----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/
+#Contact{
+    position: relative;
+    padding: 8% 8% 8% 8%;
+}
+.contactButton{
+    position: absolute;
+    right: 15%;
+    bottom: 4%;
+}
+.formContactParent{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.formContactChild1{
+    width: 48%;
+}
+.formContactChild2{
+    width: 48%;
+}
+.input2{
+    border: transparent;
+    width: 100%;
+}
+.input2:focus{
+    outline: none;
+}
+.wrap-input2 {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 37px;
+}
+.focus-input2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+
+    background: rgba(0, 224, 255,1);
+    background: -o-linear-gradient(45deg, #00E0FF, #FF00FF);
+    background: linear-gradient(45deg, #00E0FF, #FF00FF);
+}
+.input2:focus + .focus-input2::before {
+    width: 100%;
+}
+.submitForm{
+    border-radius: 50px;
+    margin: 20px;
+    padding: 10px;
+    width: 20%;
+    background-color: rgb(30,30,30);
+    color: rgb(255,255,255);
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    border: none;
+}
+.submitHtml{
+    border-radius: 50px;
+    width: 20%;
+    background-color: rgb(30,30,30);
+    color: rgb(255,255,255);
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    border: none;
+    margin: 20px;
+    padding: 10px;
+}
+.submitHtml:hover{
+    background-color: rgb(55,55,55);
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+}
+.submitForm:hover{
+    background-color: rgb(55,55,55);
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS Login Page-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.login{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/log2.gif");
+    background-size: cover;
+    background-position: center;
+}
+
+.loginform{
+    width: 50%;
+}
+.marginLeft{
+    margin-left: 140px;
+}
+.loginform .input2{
+    background-color: transparent;
+    border: transparent;
+    width: 100%;
+}
+.loginform .submitHtml{
+    border-radius: 50px;
+    background-color: rgb(30,30,30);
+    color: rgb(255,255,255);
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    border: none;
+    padding: 10px;
+    width: 20%;
+}
+.loginform .formContactChild1 {
+    width: 80%;
+}
+.divbutton{
+    text-align: center;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 45%;
+    margin: auto;
+}
+
+.headerlogin{
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(30,30,30);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.logged{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.logout{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: whitesmoke;
+    background-color: rgb(30,30,30);
+    height: 30px;
+    width: 80px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.formlogin{
+    color: whitesmoke;
+    padding: 50px 0;
+    width: 30%;
+    background-color: rgb(52, 61, 104);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);;
+}
+.logologin{
+    padding-bottom: 50px;
+}
+.loginform .divbutton .submitHtml{
+    width: 80%;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS Register Page-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.registerpage .titleHomePage{
+    padding-left: 180px;
+    padding-top: 140px;
+}
+.registerpage .formContactParent{
+    padding:  0 160px;
+}
+.registerpage .formContactChild1{
+    width: 45%;
+}
+.registerpage .formContactChild2{
+    width: 45%;
+}
+.registerpage .submitHtml{
+    border-radius: 50px;
+    width: 20%;
+    background-color: rgb(30,30,30);
+    color: rgb(255,255,255);
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    border: none;
+    margin-top: 20px;
+    padding: 10px;
+}
+.mobileSmall{
+    display: none;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS ResetPassword Page-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/ /*   J'ai réutiliser le CSS de Login Page   */
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS Admin contact-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/
+.adminFront{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.paddingLogin{
+    margin: 30px 15px;
+    text-align: center;
+}
+.contact{
+    text-align: center;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS Recruitement-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/
+.recruitementPage{
+    text-align: center;
+    padding: 90px 180px 20px;
+}
+.recruitementForm .formContactChild1{
+    width: 48%;
+    margin-top: 70px;
+}
+.recruitementForm .formContactChild2{
+    width: 48%;
+    margin-top: 70px;
+}
+.recruitementPageadmin{
+    text-align: center;
+    padding: 80px 180px 20px;
+}
+.linkCv{
+    color: rgb(0,0,255);
+}
+.recruitementAdminFor{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.recruitementOneShow{
+    width: 90%;
+    margin: 30px 0;
+    background-color: rgba(0, 224, 255,0.3);
+    padding: 8px 8px 35px;
+}
+.recruitementOneShow:nth-child(2n){
+    background-color: rgba(255, 0, 255, 0.3);
+}
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS ESPACE CLIENT-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/
+.titleHomePageClient{
+    padding-left: 180px;
+    padding-top: 140px;
+    font-size: 75px;
+    margin-bottom: 5%;
+}
+.formContactChild1EspaceClient{
+    width: 30%;
+    padding-left: 160px;
+}
+.formContactChild2EspaceClient{
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS PAGE ERROR 404-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/
+
+.pageError{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/404.gif");
+    background-size: cover;
+    background-position: center;
+}
+.pageError .headerLittle{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pageError .titreError{
+    position: absolute;
+    right: 180px;
+    bottom: 240px;
+}
+
+/* ALERTE MESSAGE */
+
+.alert-success{
+    background-color: rgba(132,209,43,0.7);
+    position: absolute;
+    top: 10vh;
+    padding-left: 100px;
+    z-index: 1000;
+    padding-right: 100px;
+}
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------Newsletter-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.newsletter{
+    margin: 15vh 180px 7vh 180px;
+}
+.newsletterForContainer{
+    padding-top: 5px;
+    background-color: rgba(0, 224, 255,0.3);
+}
+.newsletterFor{
+    position: relative;
+    text-align: center;
+    margin: 2px ;
+    width: 100%;
+    padding: 4px 0;
+}
+.newsletterForContainer:nth-child(2n){
+    background-color: rgba(255, 0, 255, 0.3);
+}
+.suppButtonNewsletter{
+    position: absolute;
+    right: 60px;
+}
+.sendNewsletterButton{
+    margin-bottom: 50px;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS AGENCE PAGE-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.agencePage{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 140px 5% ;
+    text-align: center;
+}
+.agencePage h1{
+    padding-bottom: 20px;
+    font-size: 3vw;
+}
+.storyDR{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.storyDR1{
+    width: 40%;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+.titleAgenceStoryDr{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 6vw;
+    background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.storyDR1
+.titleAgenceStoryDr{
+    width: 100%;
+}
+.teamDR
+.titleAgenceStoryDr{
+    margin: 0 auto;
+}
+.storyDR2{
+    width: 40%;
+    padding-left: 30px;
+}
+.storyDR2img{
+    width: 100%;
+}
+.teamDR{
+    padding: 100px 0 0;
+    text-align: center;
+}
+.pValeursAgence{
+    width: 80%;
+    margin: 0 auto;
+}
+.teamLead{
+    padding-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.teamDir{
+    padding-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+}
+.teamStaff{
+    padding: 100px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.teamStaff2{
+    padding: 100px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.teamCarte{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 22%;
+    padding-left: 30px;
+    margin: 0 auto;
+}
+.teamCarte2{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 22%;
+    padding-left: 30px;
+}
+.imgCarte{
+    width: 100%;
+    display: block;
+}
+.marge {
+    margin-left: 5em;
+}
+.nomprenomgrade{
+    padding-top: 30px;
+}
+
+/* CSS POUR LES PHOTOS *//* CSS POUR LES PHOTOS *//* CSS POUR LES PHOTOS */
+/* CSS POUR LES PHOTOS *//* CSS POUR LES PHOTOS *//* CSS POUR LES PHOTOS */
+/* CSS POUR LES PHOTOS *//* CSS POUR LES PHOTOS *//* CSS POUR LES PHOTOS */
+/* CSS POUR LES PHOTOS *//* CSS POUR LES PHOTOS *//* CSS POUR LES PHOTOS */
+/* CSS POUR LES PHOTOS *//* CSS POUR LES PHOTOS *//* CSS POUR LES PHOTOS */
+
+
+.container {
+    position: relative;
+    width: 100%;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    background-color: rgba(30, 19, 232, 0.8);
+}
+.container:hover .overlay {
+    opacity: 1;
+}
+.text {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: small;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.element1{
+    background-color: rgb(0, 224, 255);
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    z-index: -1;
+}
+.element2{
+    background-color: rgb(0, 102, 232);
+    height: 60px;
+    width: 20px;
+    position: absolute;
+    bottom: 90%;
+    right: 85%;
+}
+.element3{
+    background-color: rgb(0, 0, 255);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 85%;
+    left: 85%;
+    z-index: -100;
+}
+.element4{
+    background-color: rgb(150, 0, 255);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 90%;
+    right: 70%;
+}
+.element5{
+    background-color: rgb(255, 0, 255);
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    bottom: 40%;
+    right: 90%;
+    z-index: -100;
+}
+.element6{
+    background-color: rgb(112, 12, 232);
+    height: 70px;
+    width: 30px;
+    position: absolute;
+    bottom: 40%;
+    left: 95%;
+}
+
+.sectionValeursAgence .titleAgenceStoryDr{
+    margin: 60px auto;
+    text-align: center;
+}
+.valeursAgenceOrganisation{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.valeursAgenceOrganisationChild{
+    width: 30%;
+}
+.logoValeursAgence{
+    width: 30%;
+    height: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+.sectionValeursAgence{
+    text-align: center;
+}
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS PAGE ADMIN-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+
+.adminPage{
+    margin: 99px;
+}
+table
+{
+    border-collapse: collapse;
+}
+td, th /* Mettre une bordure sur les td ET les th */
+{
+    border: 1px solid black;
+}
+.searchAdmin{
+    margin: 100px;
+}
+.espaceButtonAdmin{
+    margin-top: 50px;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS PAGE Meta-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.metaPage{
+    padding: 80px 5% 100px;
+}
+.keywordShowFor{
+    margin: 6px 9px;
+    padding: 6px 9px;
+    border-radius: 50px;
+    background-color: rgba(0, 224, 255,0.3);
+    text-align: center;
+}
+.keywordShowFor:nth-child(2n){
+    background-color: rgba(255, 0, 255, 0.3);
+}
+.metaKeywordFor{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.buttonMetaBack{
+    margin: 70px 0 40px;
+    font-size: 0.7vw;
+}
+.forMeta{
+    margin: 65px 0;
+}
+.positionButtonMetaDescriptionUpdate{
+    margin: 0 auto;
+}
+.buttonMetaOption{
+    font-size: 5vw;
+}
+.buttonMetaBack .submitHtml{
+    padding: 12px 70px;
+}
+.ButtonXKeyword{
+    background-color: rgb(30,30,30);
+    border-radius: 50px;
+    color: whitesmoke;
+    padding: 6px 12px;
+}
+.formKeywords{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.formKeywordsChild2{
+    width: 100%;
+}
+.formKeywordsChild1{
+    width: 50%;
+}
+

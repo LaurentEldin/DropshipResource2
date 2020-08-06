@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+{% block title %}Zone Admin{% endblock %}
+{% block body %}
+    {% include 'commons/_headerLittle.html.twig' %}
+
+    <main class="blogPageAdmin">
+        <div class="buttonBlogFromCreateBlog">
+            <p class="sizeMessageBlogUpload">Les images doivent impérativement être uploadé au format 762px/400px</p>
+            <a class="aEffect mobilBlock" href="{{ path('blog') }}">Les articles</a>
+        </div>
+        <div class="sizeResponsiveForemCreateBlog">
+            <div class="formContactChild1">
+                {{ form_start(blogForm) }}
+                <div class="errorFormMessage">
+                    {{ form_errors(blogForm.title) }}
+                    {{ form_errors(blogForm.chapeau) }}
+                    {{ form_errors(blogForm.article) }}
+                    {{ form_errors(blogForm.picture) }}
+                    {{ form_errors(blogForm.categories) }}
+                </div>
+                <div class="wrap-input2">
+                    {{ form_label(blogForm.categories) }}
+                    <br>
+                    {{ form_widget(blogForm.categories, { 'attr': {'class': 'input2'} }) }}
+                    <span class="focus-input2" data-placeholder="title"></span>
+                    {{ form_errors(blogForm.categories) }}
+                </div>
+                <div class="wrap-input2">
+                    {{ form_label(blogForm.title) }}
+                    <br>
+                    {{ form_widget(blogForm.title, { 'attr': {'class': 'input2'} }) }}
+                    <span class="focus-input2" data-placeholder="title"></span>
+                    {{ form_errors(blogForm.title) }}
+                </div>
+                <div class="wrap-input2">
+                    {{ form_label(blogForm.chapeau) }}
+                    <br>
+                    {{ form_widget(blogForm.chapeau, { 'attr': {'class': 'input2'} }) }}
+                    <span class="focus-input2" data-placeholder="article"></span>
+                    {{ form_errors(blogForm.chapeau) }}
+                </div>
+                <div class="wrap-input2">
+                    {{ form_label(blogForm.article) }}
+                    <br>
+                    {{ form_widget(blogForm.article) }}
+                    <span class="focus-input2" data-placeholder="article"></span>
+                    {{ form_errors(blogForm.article) }}
+                </div>
+                <div class="wrap-input2">
+                    {{ form_label(blogForm.picture) }}
+                    <br>
+                    {{ form_widget(blogForm.picture, { 'attr': {'class': 'input2'} }) }}
+                    <span class="focus-input2" data-placeholder="illustration"></span>
+                    {{ form_errors(blogForm.picture) }}
+                </div>
+                <div>
+                    {{ form_label(blogForm.envoyer) }}
+                    {{ form_widget(blogForm.envoyer, { 'attr': {'class': 'submitForm'} }) }}
+                </div>
+                {{ form_end(blogForm) }}
+            </div>
+        </div>
+        <a class="aEffect blogAdminButton displayNone" href="{{ path('blog') }}">Les articles</a>
+    </main>
+
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

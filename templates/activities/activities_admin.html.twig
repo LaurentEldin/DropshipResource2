@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% block title %}Création Activities{% endblock %}
+{% block body %}
+    {% include 'commons/_headerLittle.html.twig' %}
+
+    <main class="createActivities">
+        <h1>Créer un article</h1>
+        {{ form_start(activitiesForm) }}
+        <div class="formContactParent">
+            <div class="formContactChild1">
+                <div class="errorFormMessage">
+                    {{ form_errors(activitiesForm.title) }}
+                    {{ form_errors(activitiesForm.article) }}
+                </div>
+                <div class="wrap-input2">
+                    {{ form_label(activitiesForm.title) }}
+                    <br>
+                    {{ form_widget(activitiesForm.title, { 'attr': {'class': 'input2'} }) }}
+                    <span class="focus-input2" data-placeholder="TITRE"></span>
+                </div>
+                <div class="wrap-input2">
+                    {{ form_label(activitiesForm.article) }}
+                    <br>
+                    {{ form_widget(activitiesForm.article) }}
+                    <span class="focus-input2" data-placeholder="ARTICLE"></span>
+                </div>
+                <div class="wrap-input2">
+                    {{ form_label(activitiesForm.picture) }}
+                    <br>
+                    {{ form_widget(activitiesForm.picture) }}
+                    <span class="focus-input2" data-placeholder="ARTICLE"></span>
+                </div>
+                <div>
+                    {{ form_label(activitiesForm.envoyer) }}
+                    {{ form_widget(activitiesForm.envoyer, { 'attr': {'class': 'submitForm'} }) }}
+                </div>
+            </div>
+        </div>
+        {{ form_end(activitiesForm) }}
+    </main>
+    {% include 'commons/_footer.html.twig' %}
+    {% block javascripts %}
+        <script src="{{ asset('asset/ckeditor/adapters/jquery.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('asset/ckeditor/ckeditor.js') }}" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('textarea.ckeditor').ckeditor();
+            });
+        </script>
+    {% endblock %}
+{% endblock %}

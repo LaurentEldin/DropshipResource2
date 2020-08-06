@@ -1,0 +1,769 @@
+
+@media screen and (min-width:1px) and (max-width:900px) {
+    /*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS general----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+    .displayNone {
+        display: none;
+    }
+    .mobilBlock {
+        display: block;
+    }
+    .aEffect{
+        font-size: 2vw;
+    }
+    /*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS Header-----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/
+    .headerLittle{
+        margin-bottom: 0;
+    }
+    /*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS footer-----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+    footer{
+        background-color: rgb(180,180,180);
+        padding: 60px 4%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .logoFooter{
+        padding-top: 20px;
+    }
+    .orgaTopFooter{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    #newsletter{
+        padding-top: 55px;
+        text-align: center;
+    }
+    .footerTitle{
+        font-size: 5vw;
+    }
+    .newsletterButton{
+        margin: 0 20%;
+    }
+    .submitFormFooter{
+        width: 20%;
+        font-size: 1.5vw;
+        margin: 0;
+    }
+    .logoSizeFooterResponsive{
+        width: 100%;
+    }
+    .wrap-input2{
+        margin-bottom: 6px;
+    }
+
+    /*
+    ----------------------------------------------------------------------------------------------------------------------
+    -------------------------------------------CSS menu burger------------------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------
+     */
+    @-webkit-keyframes checked-anim {
+        50% {
+            width: 100%;
+            height: 100%;
+        }
+        100% {
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+        }
+    }
+    @keyframes checked-anim {
+        50% {
+            width: 100%;
+            height: 100%;
+        }
+        100% {
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+        }
+    }
+    @-webkit-keyframes not-checked-anim {
+        0% {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @keyframes not-checked-anim {
+        0% {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    #menu{
+        width: 100vh;
+        height: auto;
+    }
+    .menuBurgerParent{
+        width: 100vh;
+        height: auto;
+    }
+    li, a {
+        margin: 0 0 20px 0;
+        color: rgb(40,40,40);
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: none;
+        list-style: none;
+        outline: 0;
+        display: none;
+    }
+
+    li {
+        width: 300px;
+        font-size: 4vw;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        margin-left: 50%;
+    }
+    a:focus {
+        display: block;
+        color: #333;
+        background-color: #eee;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+    }
+    #trigger, #burger, #burger:before, #burger:after {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        background: #2046f5;
+        width: 30px;
+        height: 5px;
+        -webkit-transition: .2s ease;
+        -o-transition: .2s ease;
+        transition: .2s ease;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    #trigger {
+        height: 25px;
+        background: none;
+        z-index: 9999;
+    }
+    #burger:before {
+        content: " ";
+        top: 10px;
+        left: 0;
+        z-index: 9999;
+    }
+    #burger:after {
+        content: " ";
+        top: 20px;
+        left: 0;
+        z-index: 9999;
+    }
+    #menu-toggle:checked + #trigger + #burger {
+        top: 35px;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+        -webkit-transition: -webkit-transform .2s ease;
+        transition: -webkit-transform .2s ease;
+        -o-transition: transform .2s ease;
+        transition: transform .2s ease;
+        transition: transform .2s ease, -webkit-transform .2s ease;
+        z-index: 9999;
+    }
+    #menu-toggle:checked + #trigger + #burger:before {
+        width: 20px;
+        top: -2px;
+        left: 18px;
+        -webkit-transform: rotate(45deg) translateX(-5px);
+        -ms-transform: rotate(45deg) translateX(-5px);
+        transform: rotate(45deg) translateX(-5px);
+        -webkit-transition: -webkit-transform .2s ease;
+        transition: -webkit-transform .2s ease;
+        -o-transition: transform .2s ease;
+        transition: transform .2s ease;
+        transition: transform .2s ease, -webkit-transform .2s ease;
+        z-index: 9999;
+    }
+    #menu-toggle:checked + #trigger + #burger:after {
+        width: 20px;
+        top: 2px;
+        left: 18px;
+        -webkit-transform: rotate(-45deg) translateX(-5px);
+        -ms-transform: rotate(-45deg) translateX(-5px);
+        transform: rotate(-45deg) translateX(-5px);
+        -webkit-transition: -webkit-transform .2s ease;
+        transition: -webkit-transform .2s ease;
+        -o-transition: transform .2s ease;
+        transition: transform .2s ease;
+        transition: transform .2s ease, -webkit-transform .2s ease;
+        z-index: 9999;
+    }
+    #menu {
+        position: absolute;
+        margin: 0;
+        padding: 70px 0 0;
+        width: 110px;
+        background-color: rgb(246, 246, 246);
+        border-bottom-right-radius: 100%;
+        -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+        -webkit-animation: not-checked-anim .2s both;
+        animation: not-checked-anim .2s both;
+        -webkit-transition: .2s;
+        -o-transition: .2s;
+        transition: .2s;
+        z-index: 8888;
+    }
+    #menu-toggle:checked + #trigger + #burger + #menu {
+        -webkit-animation: checked-anim 1s ease both;
+        animation: checked-anim 1s ease both;
+    }
+    #menu-toggle:checked + #trigger ~ #menu > li, a {
+        display: block;
+    }
+    [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        display: none;
+    }
+    .logoHeaderResponsive{
+        width: 12%;
+    }
+
+    /*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS home page service-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+
+    .pActivities{
+        width: 100%;
+        text-align: left;
+        font-size: 2.5vw;
+    }
+    .titleHomePage{
+        font-size: 7vw;
+        margin: 5% 0 40%;
+    }
+    /*-------Button animation---------*/
+    .geoAnime{
+        position: absolute;
+    }
+    .colorAnimeOne{
+        top: 55px;
+        left: 56%;
+        width: 5%;
+        -webkit-transform: translateZ(-1px) scale(2.1);
+        transform: translateZ(-1px) scale(2.1);
+        z-index: 9;
+    }
+    .colorAnimeTwo{
+        top: 70px;
+        left: 40%;
+        width: 22%;
+        z-index: 6;
+    }
+    .colorAnimeThree{
+        top: 85px;
+        left: 33%;
+        width: 18%;
+        z-index: 2;
+    }
+    .linkAnime{
+        top: 78px;
+        left: 42%;
+        width: 15%;
+        font-size: 4vw;
+        color: whitesmoke;
+        text-align: left;
+        z-index: 10;
+    }
+
+
+    /*
+    ----------------------------------------------------------------------------------------------------------------------
+    -------------------------------------------CSS home page agence-------------------------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------
+     */
+
+    .agence{
+        background-position: right;
+    }
+    .agencePage{
+        padding: 0;
+    }
+    .colorAnimeFour{
+        top: 120px;
+        left: 33%;
+        width: 20%;
+        z-index: 4;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+    .colorAnimeFive{
+        top: 80px;
+        left: 56%;
+        width: 16%;
+        z-index: 8;
+    }
+    .colorAnimeSix{
+        top: 100px;
+        left: 40%;
+        width: 25%;
+        z-index: 6;
+    }
+    .linkAnimeTwo{
+        top: 130px;
+        left: 43%;
+        width: 15%;
+        font-size: 5vw;
+        color: whitesmoke;
+        text-align: left;
+        z-index: 10;
+    }
+
+    /*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS home page blog-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+    #Blog{
+        position: relative;
+        padding: 0 8% 10% 8%;
+    }
+    .titleHomePageBlog{
+        font-size: 7vw;
+        margin: 0 0 55%;
+    }
+    .blogimgCarteA{
+        display: block;
+        width: 100%;
+    }
+    .texteBlogHomePageMobile{
+        text-align: left;
+        font-size: 3vw;
+    }
+    .blogArticleTitleHomePageResponsive{
+        font-size: 4vw;
+    }
+    /*----button----*/
+    .colorAnimeSeven{
+        top: 80px;
+        left: 55%;
+        width: 7%;
+        z-index: 8;
+    }
+    .colorAnimeSevenBis{
+        top: 80px;
+        left: 62%;
+        width: 7%;
+        z-index: 8;
+    }
+    .colorAnimeHeight{
+        top: 95px;
+        left: 35%;
+        width: 18%;
+        z-index: 6;
+        image-orientation: 45deg;
+    }
+    .colorAnimeNine{
+        top: 75px;
+        left: 40%;
+        width: 25%;
+        z-index: 6;
+    }
+    .linkAnimeThree{
+        top: 111px;
+        left: 46%;
+        width: 15%;
+        font-size: 5vw;
+        color: whitesmoke;
+        text-align: left;
+        z-index: 10;
+    }
+    .blogHomePageH2{
+        padding: 45px 0 0;
+    }
+    /*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS home page contact-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+    .titleHomePageContactResponsive{
+        font-size: 7vw;
+        margin: 10% 0 ;
+    }
+    .formContactParent{
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .formContactChild1, .formContactChild2{
+        width: 100%;
+    }
+    .positionSubmitFormContactResponsive{
+        text-align: right;
+    }
+    .contactButton{
+        position: absolute;
+        left: 15%;
+        bottom: 4%;
+        width: 27%;
+    }
+    .submitForm{
+        font-size: 1.5vw;
+    }
+    /*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS page blog-----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+    .blogPage{
+        margin: 0;
+        padding: 125px 5% 0;
+    }
+    .buttonCreateBlogResponsive{
+        text-align: center;
+        margin-left: 25%;
+    }
+    .formBlogCategorie{
+        margin: 0 0 30px;
+    }
+    .adminButtonBlog{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .blogTitle{
+        font-size: 6vw;
+        text-align: left;
+    }
+    .blogForTitle{
+        text-align: center;
+        width: 100%;
+        margin: 20px auto;
+    }
+    .linkBlogIdColorOne{
+        width: 180px;
+        top: 51px;
+        left: 31%;
+    }
+    .linkBlogIdColorTwoBis{
+        width: 80px;
+        top: 30px;
+        left: 50%;
+    }
+    .linkBlogIdTxt{
+        left: 37%;
+        top: 63px;
+        font-size: 3.5vw;
+    }
+    .adminButtonBlog{
+        margin-top: 50px;
+    }
+    .textBlogResponsive{
+        font-size: 2.8vw;
+    }
+    .blogPageAdmin{
+        margin: 0;
+        padding: 150px 5% 0;
+    }
+    .wrap-input2{
+        margin: 20px 0;
+    }
+    .sizeResponsiveForemCreateBlog{
+        font-size: 2.5vw;
+    }
+    .buttonBlogFromCreateBlog{
+        text-align: center;
+        width: 40%;
+        margin: 0 auto;
+    }
+    .blogPageAdmin{
+        font-size: 2.5vw;
+    }
+    .formContactParent{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .titleResponsiveRecruitement{
+        font-size: 6vw;
+    }
+
+    /*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS page recruitement -----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/
+    .recruitementPage{
+        margin: 0;
+        padding: 0 5%;
+    }
+    .heightDivResponsive{
+        height: 140px;
+    }
+    .recruitementForm .formContactChild1{
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 4.3vw;
+    }
+    .recruitementForm .formContactChild2{
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 4.3vw;
+    }
+    .recruitementPageadmin{
+        margin: 0;
+        padding: 100px 0 0;
+    }
+    .recruitementOneShow{
+        font-size: 3.5vw;
+    }
+    .infoRecruitementFor>a{
+        margin: 0;
+        padding: 0;
+    }
+    .buttonRecruitementAdmin{
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    /*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS page service-----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/
+    .activitiesPage {
+
+    }
+    .mobileActivitiesCreateWeb{
+        width: 100%;
+        padding-bottom: 60px;
+    }
+    .activitiesBloc{
+        width: 100%;
+    }
+    .titleActivitiesPage{
+        font-size: 3.7vw;
+        width: 100%;
+    }
+    .pActivitiesPage{
+        font-size: 2.3vw;
+    }
+    .imgActivitiesProspect{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .pActivitiesProspect{
+        font-size: 2.3vw;
+        width: 100%;
+        text-align: center;
+    }
+    .activitiesBlocProspectContainer{
+        width: 100%;
+    }
+    .activitiesBlocProspect{
+        width: 45%;
+        margin: 25px auto 0;
+    }
+    .pProspectExemple{
+        font-size: 2vw;
+    }
+    .activitiesContainerProspect{
+        padding-bottom: 60px;
+        margin-bottom: 0;
+    }
+    .pActivitiesPage{
+        font-size: 2.3vw;
+        text-align: center;
+    }
+    .logoSocielProspect{
+        width: 7%;
+    }
+    .responsiveMannagementLogo{
+        display: flex;
+        justify-content: space-around;
+    }
+    .marginBottomResponsiveActivities{
+        margin-bottom: 60px;
+    }
+    .activitiesContainerPub
+    .titleActivitiesPage{
+        width: 100%;
+    }
+    .imgActivitiesPub{
+        width: 25%;
+        margin: 30px auto 15px;
+        text-align: center;
+    }
+    .pResponsivePubActivities{
+        font-size: 2.5vw;
+        text-align: center;
+    }
+    .responsiveActivitiesPubCentrage{
+        text-align: center;
+    }
+    .activitiesContainerPub{
+        margin-bottom: 0;
+        padding-bottom: 60px;
+    }
+    /*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS page newsletteradmin-----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+*/
+    .newsletter{
+        margin: 0;
+        padding-top: 70px;
+        text-align: center;
+    }
+    .newsletterFor{
+        position: relative;
+        text-align: center;
+        margin: 2px ;
+        width: 100%;
+        padding: 4px 0 40px 0;
+        font-size: 3.5vw;
+    }
+    .suppButtonNewsletter{
+        position: absolute;
+        bottom: 0;
+    }
+    .newsletterFor>a{
+        margin: 0;
+        padding: 0;
+    }
+
+    /*
+    ----------------------------------------------------------------------------------------------------------------------
+    -----                                     MEDIA QUERIES PARTIE LAURENT                                           -----
+    -----                                                                                                            -----
+    -----                                                                                                            -----
+    -----                                                                                                            -----
+    -----                                                                                                            -----
+    -----                                               PAGE ONE_BLOG                                                -----
+    ----------------------------------------------------------------------------------------------------------------------
+    */
+    /* CONTAINER FULL PAGE ONE_BLOG */
+
+    .showOneBlog{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .blogTitleShowId{
+        padding-top:30px;
+        text-align: center;
+        margin: 0;
+    }
+    .blogShowIdChapeau{
+        text-align: center;
+        font-size: 2vw;
+    }
+    /* PARTIE IMAGE DE LA SECTION */
+    .blogForTitle{
+        width: 80%;
+    }
+    .blogPicture{}
+    /* PARTIE TEXT DE LA SECTION */
+    .blogForArticle{
+        width: 80%;
+        font-size: 2vw;
+    }
+    .forOtherBlog
+    h3{
+        font-size: 1.8vw;
+    }
+    .forOtherBlog
+    p{
+        font-size: 1.5vw;
+    }
+    .linkBlogId{
+        background-color: #2046f5;
+        padding: 0 24px;
+        margin-top: 26px;
+    }
+    .linkBlogIdTxtResponsive{
+        font-size: 2vw;
+        color: whitesmoke;
+        padding-top: 60%;
+    }
+    .linkBlogIdTxtShoxId{
+        font-size: 0.9vw;
+        width: max-content;
+    }
+    /* PARTIE BOUTON RETOUR ACCUEIL */
+    .linkBlogId{}
+    .showOneBlog .linkBlogIdTxt{
+        top: -10px;
+    }
+    .linkBlogIdColorOne{}
+    .linkBlogIdColorTwoBis{}
+}
+
+
+
+
+@media screen and (min-width:1px) and (max-width:280px) {
+    .titleHomePageBlog{
+        font-size: 7vw;
+        margin: 0 0 70%;
+    }
+    .linkAnimeThree{
+        top: 35px;
+    }
+    .titleHomePageContactResponsive{
+        font-size: 7vw;
+        margin: 20% 0 ;
+    }
+}
+@media screen and (min-width:1px) and (max-width:362px) {
+    .socialFooterFb,
+    .socialFooterInstaMultiLangue,
+    .socialFooterInsta,
+    .socialFooterLinkedin,
+    .socialFooterInsta:hover,
+    .socialFooterFb:hover,
+    .socialFooterInstaMultiLangue:hover,
+    .socialFooterLinkedin:hover {
+        width: 34px;
+        height: 34px;
+    }
+    .linkBlogIdTxt{
+        font-size: 5vw;
+    }
+}

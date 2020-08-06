@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    <section class="fullPage">
+    {% include 'commons/_headerLittle.html.twig' %}
+        <section class="login">
+            <div class="loginform">
+                <form method="post" class="formContactParent marginLeft">
+                    <div class="formContactChild1">
+                        <div class="wrap-input2">
+                            <label for="inputEmail">Votre Email</label>
+                            <br>
+                            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="input2" required autofocus>
+                            <span class="focus-input2" data-placeholder="EMAIL"></span>
+                        </div>
+                        <br>
+                        <div class="wrap-input2">
+                            <label for="inputPassword">Votre mot de passe</label>
+                            <br>
+                            <input type="password" name="password" id="inputPassword" class="input2" required>
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                            <span class="focus-input2" data-placeholder="PHONE"></span>
+                        </div>
+                        <div class="centerButtonLoginResponsive">
+                             <button class="submitHtml" type="submit">Connexion</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="centerButtonLoginResponsive">
+                    <div class="divbutton">
+                        <a class="submitHtml" href="{{ path ('app_register') }}">S'enregistrer</a>
+                    </div>
+                    <div class="divbutton">
+                        <a class="submitHtml" href="{{ path ('app_forgot_password_request') }}">Mot de passe oublié</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}
+
+
+
+{#      REMEMBER ME BUTTON
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}

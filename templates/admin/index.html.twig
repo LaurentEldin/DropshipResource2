@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin Index{% endblock %}
+
+{% block body %}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success alerte-absolute">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% include 'commons/_headerLittle.html.twig' %}
+    <main class="fullPage">
+        <div class="adminIndex">
+            <h1 class="titleHomePageClient">Hello {{ controller_name }} !</h1>
+            <div class="formContactChild1EspaceClient espaceButtonAdmin">
+                <a class="submitHtml" href="{{ path ('utilisateurs') }}">Liste des utilisateurs</a>
+            </div>
+            <div class="formContactChild1EspaceClient espaceButtonAdmin">
+                <a class="submitHtml" href="{{ path ('metaAdmin') }}">Accès meta référencement</a>
+            </div>
+        </div>
+    </main>
+
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

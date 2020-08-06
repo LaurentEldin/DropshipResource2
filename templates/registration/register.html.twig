@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S'enregistrer{% endblock %}
+
+{% block body %}
+    <main class="fullPage">
+        {% include 'commons/_headerLittle.html.twig' %}
+            {% for flashError in app.flashes('verify_email_error') %}
+                <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+            {% endfor %}
+        <div class="registerpage">
+            {{ form_start(registrationForm) }}
+            <h1 class="titleHomePage">Enregistrez vous</h1>
+            <div class="errorFormMessage">
+                {{ form_errors(registrationForm.name) }}
+                {{ form_errors(registrationForm.lastname) }}
+                {{ form_errors(registrationForm.adresse) }}
+                {{ form_errors(registrationForm.city) }}
+                {{ form_errors(registrationForm.phone) }}
+                {{ form_errors(registrationForm.email) }}
+                {{ form_errors(registrationForm.plainPassword) }}
+                {{ form_errors(registrationForm.agreeTerms) }}
+            </div>
+            <div class="formContactParent">
+                <div class="formContactChild1">
+                    <div class="wrap-input2">
+                        {{ form_label(registrationForm.name) }}
+                        <br>
+                        {{ form_widget(registrationForm.name, { 'attr': {'class': 'input2'} }) }}
+                        <span class="focus-input2" data-placeholder="NAME"></span>
+                    </div>
+                    <div class="wrap-input2">
+                        {{ form_label(registrationForm.adresse) }}
+                        <br>
+                        {{ form_widget(registrationForm.adresse, { 'attr': {'class': 'input2'} }) }}
+                        <span class="focus-input2" data-placeholder="ADRESSE"></span>
+                    </div>
+                    <div class="wrap-input2">
+                        {{ form_label(registrationForm.phone) }}
+                        <br>
+                        {{ form_widget(registrationForm.phone, { 'attr': {'class': 'input2'} }) }}
+                        <span class="focus-input2" data-placeholder="PHONE"></span>
+                    </div>
+                    <div class="wrap-input2">
+                        {{ form_label(registrationForm.plainPassword, 'Votre mot de passe') }}
+                        <br>
+                        {{ form_widget(registrationForm.plainPassword, { 'attr': {'class': 'input2'} }) }}
+                        <span class="focus-input2" data-placeholder="NAME"></span>
+                    </div>
+                </div>
+                <div class="formContactChild2">
+                    <div class="wrap-input2">
+                        {{ form_label(registrationForm.lastname) }}
+                        <br>
+                        {{ form_widget(registrationForm.lastname, { 'attr': {'class': 'input2'} }) }}
+                        <span class="focus-input2" data-placeholder="LASTNAME"></span>
+                    </div>
+                    <div class="wrap-input2">
+                        {{ form_label(registrationForm.city, 'ville') }}
+                        <br>
+                        {{ form_widget(registrationForm.city, { 'attr': {'class': 'input2'} }) }}
+                        <span class="focus-input2" data-placeholder="CITY"></span>
+                    </div>
+                    <div class="wrap-input2">
+                        {{ form_label(registrationForm.email) }}
+                        <br>
+                        {{ form_widget(registrationForm.email, { 'attr': {'class': 'input2'} }) }}
+                        <span class="focus-input2" data-placeholder="EMAIL"></span>
+                    </div>
+                    <br>
+                    <div>
+                        {{ form_widget(registrationForm.agreeTerms) }}
+                        {{ form_label(registrationForm.agreeTerms, 'Accepter et continuer') }}
+                        <small class="mobileSmall">Cliquer sur le texte pour confirmer</small>
+                    </div>
+                    <br>
+                    <br>
+                    <button type="submit" class="submitHtml">Envoyer</button>
+                </div>
+            </div>
+            {{ form_end(registrationForm) }}
+        </div>
+    </main>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modif Infos{% endblock %}
+
+{% block body %}
+    <div class="formlogin">
+        <h1>Modifier vos informations</h1>
+
+        {{ form_start(form) }}
+
+            {{ form_label(form.email,'Votre Email') }}
+            <br>
+            {{ form_widget(form.email) }}
+            <br>
+            <br>
+            {{ form_label(form.name,"Votre nom / nom de l'entreprise") }}
+            <br>
+            {{ form_widget(form.name) }}
+            <br>
+            <br>
+            {{ form_label(form.lastname,'Votre prénom') }}
+            <br>
+            {{ form_widget(form.lastname) }}
+            <br>
+            <br>
+            {{ form_label(form.adresse,'Votre adresse') }}
+            <br>
+            {{ form_widget(form.adresse) }}
+            <br>
+            <br>
+            {{ form_label(form.city,'Votre ville') }}
+            <br>
+            {{ form_widget(form.city) }}
+            <br>
+            <br>
+            {{ form_label(form.phone,'Votre numéro de téléphone') }}
+            <br>
+            {{ form_widget(form.phone) }}
+            <br>
+            <br>
+            {{ form_label(form.plainPassword,'Votre mot de passe') }}
+            <br>
+            {{ form_widget(form.plainPassword) }}
+            <br>
+            <br>
+            <div>
+                {{ form_widget(form.agreeTerms) }}
+                {{ form_label(form.agreeTerms, 'Accepter et continuer') }}
+            </div>
+            <button type="submit" class="btn">Envoyer</button>
+
+        {{ form_end(form) }}
+
+        <img class="logo" src="{{ asset('asset/img/logo.png') }}">
+
+    </div>
+
+{% endblock %}

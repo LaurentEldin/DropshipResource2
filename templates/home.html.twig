@@ -1,0 +1,150 @@
+{% extends 'base.html.twig' %}
+{% block title %}Dropship Resource{% endblock %}
+{% block body %}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success alerte-absolute">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% include 'commons/_header.html.twig' %}
+    <main>
+        <section id="Activities">
+            <img class="geoAnime colorAnimeOne mobilBlock" data-aos="fade-left" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element6.svg') }}" title="image_button">
+            <img class="geoAnime colorAnimeTwo mobilBlock" data-aos="fade-up" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element5.svg') }}" title="image_button">
+            <img class="geoAnime colorAnimeThree mobilBlock" data-aos="fade-right" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element1.svg') }}" title="image_button">
+            <a class="geoAnime linkAnime mobilBlock" data-aos-delay="850" data-aos="zoom-out" href="{{ path('activities') }}">Nos Services</a>
+            <h1 class="titleHomePage ">Services</h1>
+            <div>
+                <p class="pActivities">
+                    L'agence de marketing et de communication digitale Dropship Resource compte 7 services. Découvrez tout le potentiel de nos stratégies et donnez à votre équipe commerciale tous les outils pour suivre les ventes et conclure vos opportunités.             </p>
+                <p class="pActivities">
+                    Vous souhaitez un accompagnement dans la transformation digitale ? Lancez la machine et découvrez nos services !
+                </p>
+            </div>
+            <img class="displayNone geoAnime colorAnimeOne" data-aos="fade-left" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element6.svg') }}" title="image_button">
+            <img class="displayNone geoAnime colorAnimeTwo" data-aos="fade-up" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element5.svg') }}" title="image_button">
+            <img class="displayNone geoAnime colorAnimeThree" data-aos="fade-right" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element1.svg') }}" title="image_button">
+            <a class="displayNone geoAnime linkAnime" data-aos-delay="850" data-aos="zoom-out" href="{{ path('activities') }}">Nos Services</a>
+        </section>
+        <section id="Agence">
+            <div class="agence">
+                <img class="geoAnime colorAnimeFour" data-aos="flip-up" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element3.svg') }}" title="image_button">
+                <img class="geoAnime colorAnimeFive" data-aos="fade-left" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element9.svg') }}" title="image_button">
+                <img class="geoAnime colorAnimeSix" data-aos="fade-right" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element4.svg') }}" title="image_button">
+                <a class="geoAnime linkAnimeTwo" data-aos-delay="850" data-aos="zoom-out" href="{{ path('agence') }}">Agence</a>
+            </div>
+        </section>
+        <section id="Blog">
+            <h1 class="titleHomePage">Blog</h1>
+            <h2 class="blogHomePageH2">À la une</h2>
+            <div class="blogHomeFor displayNone">
+                {% for article in blog | slice(0,2)%}
+                <a href="{{ path('details_article',{'id':article.id}) }}" class="linkForBlock">
+                    <div class="blogCarte">
+                        <div class="blogcontainer">
+                            <img src="{{ asset('upload_directory/' ~ article.picture) }}" class="blogimgCarte" alt="picture_blog" title="picture_blog ">
+                            <div class="blogoverlay">
+                                <div class="blogtext">
+                                    {{ article.title }}
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="blanche"></div>
+                                    <br>
+                                    {{ article.article|u.truncate(155,'...')|raw }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            <div class="mobilBlock">
+                {% for article in blog | slice(0,1)%}
+                    <a href="{{ path('details_article',{'id':article.id}) }}" class="linkForBlockA">
+                        <div class="">
+                            <div class="blogcontainer">
+                                <div><h3 class="blogArticleTitleHomePageResponsive">{{ article.title }}</h3></div>
+                                <img src="{{ asset('upload_directory/' ~ article.picture) }}" class="blogimgCarteA" alt="picture_blog" title="picture_blog">
+                                <div class="texteBlogHomePageMobile">
+                                    {{ article.article|u.truncate(90,'...')|raw }}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+            <img class="geoAnime colorAnimeSeven" data-aos="flip-up" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element6.svg') }}" title="image_button">
+            <img class="geoAnime colorAnimeSevenBis" data-aos="flip-up" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element6.svg') }}" title="image_button">
+            <img class="geoAnime colorAnimeHeight" data-aos="fade-left" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element9.svg') }}" title="image_button">
+            <img class="geoAnime colorAnimeNine" data-aos="fade-right" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element4.svg') }}" title="image_button">
+            <a class="geoAnime linkAnimeThree" data-aos-delay="850" data-aos="zoom-out" href="{{ path('blog') }}">Blog</a>
+        </section>
+        <section id="Contact">
+            <h1 class="displayNone titleHomePage">Contact</h1>
+            <h1 class="mobilBlock titleHomePageContactResponsive">Contact</h1>
+            <div>
+                {{ form_start(contactForm) }}
+                <div class="errorFormMessage">
+                    {{ form_errors(contactForm.name) }}
+                    {{ form_errors(contactForm.phone) }}
+                    {{ form_errors(contactForm.mail) }}
+                    {{ form_errors(contactForm.subject) }}
+                    {{ form_errors(contactForm.message) }}
+                </div>
+                <div class="formContactParent">
+                    <div class="formContactChild1">
+                        <div class="wrap-input2">
+                            {{ form_label(contactForm.name) }}
+                            <br>
+                             {{ form_widget(contactForm.name, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="NAME"></span>
+                        </div>
+                        <div class="wrap-input2">
+                            {{ form_label(contactForm.phone) }}
+                            <br>
+                            {{ form_widget(contactForm.phone, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="PHONE"></span>
+                        </div>
+                        <div class="wrap-input2">
+                            {{ form_label(contactForm.mail) }}
+                            <br>
+                            {{ form_widget(contactForm.mail, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="EMAIL"></span>
+                        </div>
+                    </div>
+                    <div class="formContactChild2">
+                        <div class="wrap-input2">
+                            {{ form_label(contactForm.subject) }}
+                            <br>
+                            {{ form_widget(contactForm.subject, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="SUBJECT"></span>
+                        </div>
+                        <div class="wrap-input2">
+                            {{ form_label(contactForm.message) }}
+                            <br>
+                            {{ form_widget(contactForm.message, { 'attr': {'class': 'input2'} }) }}
+                            <span class="focus-input2" data-placeholder="MESSAGE"></span>
+                        </div>
+                        <div class="positionSubmitFormContactResponsive">
+                            {{ form_label(contactForm.envoyer) }}
+                            {{ form_widget(contactForm.envoyer, { 'attr': {'class': 'submitForm'} }) }}
+                        </div>
+                    </div>
+                </div>
+                {{ form_end(contactForm) }}
+            </div>
+            {% if is_granted("ROLE_ADMIN") %}
+            <div>
+                <a class="contactButton aEffect" href="{{ path('contact') }}" >Admin contact</a>
+            </div>
+            {% endif %}
+            {% for message in app.flashes('success') %}
+                <div class="">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

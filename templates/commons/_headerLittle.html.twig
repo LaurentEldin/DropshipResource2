@@ -1,0 +1,68 @@
+<header class="headerLittle">
+    <nav class="displayNone nav">
+        <div class="menu">
+            <a class="buttonNavbar" href="{{ path ('home') }}">
+                <img class="logoNavebar" src="{{ asset('asset/img/logo_dr_sans.svg') }}" alt="logo_dropshipresource" title="logo_dropshipresource">
+            </a>
+        </div>
+        <div class="menu">
+            <a class="buttonNavbar" href="{{ path('activities') }}"><h1 class="alignTitle">Services</h1></a>
+            <a class="buttonNavbar" href="{{ path ('agence') }}"><h1 class="alignTitle">Agence</h1></a>
+            <a class="buttonNavbar" href="{{ path ('blog') }}"><h1 class="alignTitle">Blog</h1></a>
+            {% if is_granted("ROLE_ADMIN") %}
+                <a class="buttonNavbar" href="{{ path ('admin',{'id':app.user.id}) }}"><h1 class="alignTitle">Admin</h1></a>
+            {% elseif is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <a class="buttonNavbar" href="{{ path ('espace_client',{'id':app.user.id}) }}"><h1 class="alignTitle">Espace client</h1></a>
+            {% else %}
+                <a class="buttonNavbar" href="{{ path ('app_login') }}"><h1 class="alignTitle">Espace client</h1></a>
+            {% endif %}
+            <a class="buttonNavbar" href="{{ path ('recruitement') }}"><h1 class="alignTitle">Candidature</h1></a>
+            {#<a class="buttonNavbar" href="{{ relative_path('http://localhost/DRClientV2/DRClientV2/DRClientV2/public/#Contact') }}"><h1 class="alignTitle">Contact</h1></a>#}
+        </div>
+        <div>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <a class="buttonNavbar" href="{{ path ('app_logout') }}">
+                    <img class="logoConnect" src="{{ asset('asset/img/connect.svg') }}" alt="logo_dropshipresource_logout" title="logo_dropshipresource_logout">
+                </a>
+            {% else %}
+                <a class="buttonNavbar" href="{{ path ('app_login') }}">
+                    <img class="logoConnect" src="{{ asset('asset/img/noConnect.svg') }}" alt="logo_dropshipresource_login" title="logo_dropshipresource_login">
+                </a>
+            {% endif %}
+        </div>
+    </nav>
+    <nav class="menuBurgerParent mobilBlock">
+        <input type="checkbox" id="menu-toggle"/>
+        <label id="trigger" for="menu-toggle"></label>
+        <label id="burger" for="menu-toggle"></label>
+        <ul id="menu">
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li>
+                    <a href="{{ path ('app_logout') }}">
+                        <img class="logoHeaderResponsive" src="{{ asset('asset/img/connect.svg') }}" alt="logo_dropshipresource_logout" title="logo_dropshipresource_logout">
+                    </a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="{{ path ('app_login') }}">
+                        <img class="logoHeaderResponsive" src="{{ asset('asset/img/noConnect.svg') }}" alt="logo_dropshipresource_login" title="logo_dropshipresource_login">
+                    </a>
+                </li>
+            {% endif %}
+            <li><a href="{{ path('home') }}"><h1>Accueil</h1></a></li>
+            <li><a href="{{ path('activities') }}"><h1>Services</h1></a></li>
+            <li><a href="{{ path ('agence') }}"><h1>Agence</h1></a></li>
+            <li><a href="{{ path ('blog') }}"><h1>Blog</h1></a></li>
+            {% if is_granted("ROLE_ADMIN") %}
+                <li><a href="{{ path ('admin',{'id':app.user.id}) }}"><h1>Espace admin</h1></a></li>
+                {% elseif is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li><a href="{{ path ('espace_client',{'id':app.user.id}) }}"><h1>Espace client</h1></a></li>
+                {% else %}
+                <li><a href="{{ path ('app_login') }}"><h1>Espace client</h1></a></li>
+            {% endif %}
+            <li><a href="{{ path ('recruitement') }}"><h1>Candidature</h1></a></li>
+            <li><a href="#Contact"><h1 class="burgerTitle">Contact</h1></a></li>
+        </ul>
+    </nav>
+</header>
+

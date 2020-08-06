@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block title %}Meta{% endblock %}
+{% block body %}
+    {% include 'commons/_headerLittle.html.twig' %}
+        <main class="metaPage">
+            <h1>Référencement naturel</h1>
+            <section class="forMeta">
+                <h2>Web description</h2>
+                <div class="">
+                    {% for desc in metadescription %}
+                        <div class="keywordShowFor">
+                            <p>{{ desc.description }}</p>
+                            <a class="submitHtml" href="{{ path('descriptionUpdateId', {'id' : desc.id}) }}">modifier</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+            <section class="forMeta">
+                <h2>Liste des keyword</h2>
+                <div class="metaKeywordFor">
+                    {% for key in metaf %}
+                        <div class="keywordShowFor">
+                            <p> {{ key.keywords }}</p>
+                            <a class="ButtonXKeyword" href="{{ path('metaDeleteId', {'id' : key.id}) }}">x</a>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="">
+                    {{ form_start(form) }}
+                    {{ form_errors(form.keywords, { 'attr': {'class': 'errorFormMessage'} }) }}
+                    <div class="wrap-input2 formKeywordsChild1">
+                        {{ form_label(form.keywords) }}
+                        <br>
+                        {{ form_widget(form.keywords, { 'attr': {'class': 'input2'} }) }}
+                        <span class="focus-input2" data-placeholder="description"></span>
+                    </div>
+                    <div class="formKeywordsChild2">
+                        {{ form_label(form.envoyer) }}
+                        {{ form_widget(form.envoyer, { 'attr': {'class': 'submitForm'} }) }}
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </section>
+            <div class="formContactChild1EspaceClient buttonMetaBack">
+                <a class="submitHtml" href="{{ path ('admin',{'id':app.user.id}) }}">Back</a>
+            </div>
+        </main>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

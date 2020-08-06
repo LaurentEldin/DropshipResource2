@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block title %}Meta Description Update{% endblock %}
+{% block body %}
+    {% include 'commons/_headerLittle.html.twig' %}
+    <main class="metaPage">
+        <h1>Modifier la meta référencement</h1>
+        <section class="">
+            {{ form_start(formView) }}
+            <div class="errorFormMessage">
+                {{ form_errors(formView.description) }}
+            </div>
+            <div class="wrap-input2">
+                {{ form_label(formView.description) }}
+                <br>
+                {{ form_widget(formView.description, { 'attr': {'class': 'input2'} }) }}
+                <span class="focus-input2" data-placeholder="description"></span>
+            </div>
+            <div>
+                {{ form_label(formView.envoyer) }}
+                {{ form_widget(formView.envoyer, { 'attr': {'class': 'submitForm'} }) }}
+            </div>
+            {{ form_end(formView) }}
+        </section>
+        <div class="buttonMetaBack">
+            <a class="submitForm " href="{{ path ('admin',{'id':app.user.id}) }}">Retour espace admin</a>
+        </div>
+    </main>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}

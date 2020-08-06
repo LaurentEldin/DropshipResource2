@@ -1,0 +1,612 @@
+
+@media screen and (min-width:1px) and (max-width:1140px) {
+    /*
+    ----------------------------------------------------------------------------------------------------------------------
+    -----                                     MEDIA QUERIES PARTIE LAURENT                                           -----
+    -----                                                                                                            -----
+    -----                                                                                                            -----
+    -----                                                                                                            -----
+    -----                                                                                                            -----
+    -----                                               PAGE AGENCE                                                  -----
+    ----------------------------------------------------------------------------------------------------------------------
+    */
+    /* CONTAINER FULL PAGE AGENCE */
+
+
+    .agencePage{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 135px;
+        /* padding: 0 10px; */
+    }
+    .agencePage h1 {
+        font-size: 5.6vw;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    .teamDR{
+        margin-top: 70px;
+    }
+
+    .container{
+        width: 50%;
+    }
+
+    /* PARTIE HISTOIRE */
+
+
+    .storyDR{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0 30px;
+    }
+    .storyDR1{
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .storyDR2{
+        width: 40%;
+        padding-left: 0;
+        margin: 0 auto;
+    }
+    .storyDR2img{
+        width: 100%;
+    }
+    .valeursAgenceOrganisationChild{
+        width: 100%;
+    }
+    .pAgenceResponsive{
+        font-size: 2.7vw;
+    }
+    .titleAgenceStoryDr{
+        font-size: 3.7vw;
+    }
+    .logoValeursAgence{
+        width: 20%;
+        margin: 20px 0 10px;
+    }
+    .valeursAgenceOrganisationChild
+    h2{
+        font-size: 3.5vw;
+    }
+    .pValeursAgence{
+        font-size: 2.7vw;
+    }
+    .paragrapheL{
+        font-size: 3vw;
+    }
+    .text{
+        font-size: 2.3vw;
+    }
+
+
+
+    /* PARTIE TEAM */
+
+
+    .teamDR{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+    .paragrapheL{
+        padding: 30px;
+    }
+    .paragrapheL br{
+        display: none;
+    }
+    .teamLead{
+        padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .teamDir{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .teamStaff{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .teamStaff2{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+
+
+    /* PARTIE CARTE */
+
+
+    .teamCarte{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 80%;
+        padding-bottom: 30px;
+        padding-left: 0;
+    }
+    .container{}
+    .imgCarte{}
+    .overlay{}
+    .text{}
+    .element1{}
+    .element2{}
+    .element3{}
+    .element4{}
+    .element5{}
+    .element6{}
+    .nomprenomgrade{}
+
+
+    /*
+    ----------------------------------------------------------------------------------------------------------------------
+    -----                                     MEDIA QUERIES PARTIE LAURENT                                           -----
+    -----                                                                                                            -----
+    -----                                                                                                            -----
+    -----                                                                                                            -----
+    -----                                                                                                            -----
+    -----                                               PAGE ESPACE_CLIENT                                           -----
+    ----------------------------------------------------------------------------------------------------------------------
+    */
+    .fullPage{
+        height: auto;
+    }
+    .boucheTrouL{
+        height: 1px;
+    }
+    .titleHomePageClient{
+        padding: 150px 30px 0 30px;
+        font-size: 40px;
+    }
+    .espaceClient{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .espaceClient .formContactParent{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .formContactChild1EspaceClient{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 30px;
+    }
+    .formContactChild2EspaceClient{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 30px;
+    }
+    .formContactChild2EspaceClient .submitHtml{
+        width: 100%;
+        text-align: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        font-size: 10px;
+        font-weight: lighter;
+    }
+
+    /*---------------------------------------- MODIF INFO CLIENT -------------------------------------------------*/
+    /*---------------------------------------- MODIF INFO CLIENT -------------------------------------------------*/
+    /*---------------------------------------- MODIF INFO CLIENT -------------------------------------------------*/
+    /*---------------------------------------- MODIF INFO CLIENT -------------------------------------------------*/
+    /*---------------------------------------- MODIF INFO CLIENT -------------------------------------------------*/
+
+    .modif_client{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .modif_client .registerpage{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 30px;
+    }
+    .modif_client .titleHomePage{
+        padding: 150px 30px 0 30px;
+        text-align: center;
+    }
+    .modif_client .formContactParent{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .modif_client .formContactChild1{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+    .modif_client .formContactChild2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+    .modif_client [type="checkbox"]:checked{
+        display: block;
+    }
+    .mobileSmall{
+        display: block;
+    }
+    .checkbox{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .modif_client .submitHtml{
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        width: 30%;
+    }
+
+    /*---------------------------------------- PAGE LOGIN FORM -------------------------------------------------*/
+    /*---------------------------------------- PAGE LOGIN FORM -------------------------------------------------*/
+    /*---------------------------------------- PAGE LOGIN FORM -------------------------------------------------*/
+    /*---------------------------------------- PAGE LOGIN FORM -------------------------------------------------*/
+    /*---------------------------------------- PAGE LOGIN FORM -------------------------------------------------*/
+
+    .login{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0 30px;
+        background-color: #FFFFFF;
+        background-image: none;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .loginform{
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .loginform .formContactParent{
+        padding: 0;
+        margin: 0;
+
+    }
+    .loginform .formContactChild1{
+        padding: 0;
+        margin: 0 auto;
+    }
+    .loginform .formContactChild1 .submitHtml{
+        width: 50%;
+    }
+    .loginform .divbutton{
+        margin: 0;
+    }
+    .loginform .divbutton .submitHtml{
+        width: 80%;
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: lighter;
+    }
+    .centerButtonLoginResponsive{
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    .divbutton{
+        margin: 0 auto;
+    }
+
+    /*---------------------------------------- PAGE UPDATE PASSWORD -------------------------------------------------*/
+    /*---------------------------------------- PAGE UPDATE PASSWORD -------------------------------------------------*/
+    /*---------------------------------------- PAGE UPDATE PASSWORD -------------------------------------------------*/
+    /*---------------------------------------- PAGE UPDATE PASSWORD -------------------------------------------------*/
+    /*---------------------------------------- PAGE UPDATE PASSWORD -------------------------------------------------*/
+
+
+
+    /*---------------------------------------- PAGE INSCRIPTION -------------------------------------------------*/
+    /*---------------------------------------- PAGE INSCRIPTION -------------------------------------------------*/
+    /*---------------------------------------- PAGE INSCRIPTION -------------------------------------------------*/
+    /*---------------------------------------- PAGE INSCRIPTION -------------------------------------------------*/
+
+    .registerpage{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 80%;
+        text-align: center;
+        padding: 0 10%;
+    }
+    .registerpage .titleHomePage{
+        padding: 100px 0 0 0;
+        text-align: center;
+        margin: 0 0 40px;
+    }
+    .registerpage .formContactParent{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .registerpage .formContactChild1{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+    .registerpage .formContactChild2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+    .registerpage [type="checkbox"]:checked{
+        display: block;
+    }
+    .mobileSmall{
+        display: block;
+    }
+    .checkbox{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .modif_client .submitHtml{
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        width: 30%;
+    }
+
+    /*---------------------------------------- PAGE ADMIN INDEX + USER -------------------------------------------------*/
+    /*---------------------------------------- PAGE ADMIN INDEX + USER -------------------------------------------------*/
+    /*---------------------------------------- PAGE ADMIN INDEX + USER -------------------------------------------------*/
+    /*---------------------------------------- PAGE ADMIN INDEX + USER -------------------------------------------------*/
+    /*---------------------------------------- PAGE ADMIN INDEX + USER -------------------------------------------------*/
+
+    .adminIndex{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .adminIndex .titleHomePageClient{
+        text-align: center;
+        padding-top: 100px;
+        font-size: 40px;
+    }
+    .adminIndex .formContactChild1EspaceClient{}
+    .adminIndex .submitHtml{
+        width: 100%;
+        text-align: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+
+    .adminPage{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+    .adminPage .titleHomePageClient{
+        text-align: center;
+        padding-top: 100px;
+        font-size: 40px;
+    }
+    .adminPage .tabloL a{
+        margin: 0;
+    }
+    .tabloL{
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        padding-bottom: 50px;
+    }
+    .tabloL .tr1, .tr2, .th1, .th2, .td1, .td2,
+    .td8, .td9, .th8, .th9{
+        padding: 10px;
+    }
+    .adminPage .searchAdmin{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 0;
+        padding-bottom: 50px;
+    }
+    .formSearchAdmin{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .tabloL .th2, .th3, .th4, .th5, .th6, .th7{
+        display: none;
+    }
+    .tabloL .td2, .td3, .td4, .td5, .td6, .td7{
+        display: none;
+    }
+    .tabloUserL{
+        display: none;
+    }
+    .tabloOneUserL{
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        padding-bottom: 50px;
+    }
+    .adminPage .submitHtml{
+        width: 50%;
+        text-align: center;
+    }
+    /*---------------------------------------- PAGE ERROR 404  -------------------------------------------------*/
+    /*---------------------------------------- PAGE ERROR 404  -------------------------------------------------*/
+    /*---------------------------------------- PAGE ERROR 404  -------------------------------------------------*/
+    /*---------------------------------------- PAGE ERROR 404  -------------------------------------------------*/
+    /*---------------------------------------- PAGE ERROR 404  -------------------------------------------------*/
+    /*---------------------------------------- PAGE ERROR 404  -------------------------------------------------*/
+
+    .pageError{
+        width: 100%;
+        height: 100vh;
+        background-image: url("../img/404.gif");
+        background-position-x: 12%;
+    }
+    .pageError .titreError {
+        position: absolute;
+        right: 0;
+        bottom: 10%;
+        padding: 30px;
+    }
+}
