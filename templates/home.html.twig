@@ -134,11 +134,7 @@
                 </div>
                 {{ form_end(contactForm) }}
             </div>
-            {% if is_granted("ROLE_ADMIN") %}
-            <div>
-                <a class="contactButton aEffect" href="{{ path('contact') }}" >Admin contact</a>
-            </div>
-            {% endif %}
+
             {% for message in app.flashes('success') %}
                 <div class="">
                     {{ message }}
