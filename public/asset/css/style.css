@@ -1529,6 +1529,7 @@ p{
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .paddingLogin{
     margin: 30px 15px;
@@ -1536,6 +1537,15 @@ p{
 }
 .contact{
     text-align: center;
+}
+.adminContactFor{
+    background-color: #FF00FF;
+    padding: 25px;
+    border-radius: 50px;
+    font-size: 16px;
+}
+.adminContactFor:nth-child(2n){
+    background-color: #00E0FF;
 }
 /*
 ----------------------------------------------------------------------------------------------------------------------
