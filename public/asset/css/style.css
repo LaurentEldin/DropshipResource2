@@ -453,6 +453,7 @@ li{
     float: right;
 }
 .contactHeader{
+    color: black;
     font-size: 19px;
     position: absolute;
     background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
@@ -466,6 +467,10 @@ li{
     transform: translate(100% 0);
     right: 0;
 }
+.contactHeader:hover{
+    color: white;
+}
+
 /*
 ----------------------------------------------------------------------------------------------------------------------
 -------------------------------------------CSS footer-----------------------------------------------------------------
