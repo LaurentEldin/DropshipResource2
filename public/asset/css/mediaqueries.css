@@ -22,6 +22,20 @@
     .headerLittle{
         margin-bottom: 0;
     }
+    .contactHeader{
+        font-size: 16px;
+        position: absolute;
+        background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+        background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+        background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+        width: max-content;
+        float: right;
+        top: 77vh;
+        border-radius: 50px 0 0 50px ;
+        padding: 0 20px 0 10px;
+        transform: translate(100% 0);
+        right: 0;
+    }
     /*
 ----------------------------------------------------------------------------------------------------------------------
 -------------------------------------------CSS footer-----------------------------------------------------------------
@@ -737,6 +751,8 @@
     }
     .linkBlogIdColorOne{}
     .linkBlogIdColorTwoBis{}
+
+
 }
 
 

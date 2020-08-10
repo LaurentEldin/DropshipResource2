@@ -95,4 +95,44 @@ class homeController extends AbstractController
 
         return $this->redirectToRoute('contact');
     }
+
+    /**
+     * @Route("/contactform", name="contactForm")
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @param Swift_Mailer $mailer
+     * @param UserRepository $userRepository
+     * @return Response
+     * @throws \Exception
+     */
+    public function contactform(Request $request, EntityManagerInterface $entityManager, Swift_Mailer $mailer, UserRepository $userRepository, BlogRepository $blogRepository)
+    {
+        $contact = new Contact();
+        $contact->setDate(new \DateTime('now'));
+        $users = $userRepository->findAll();
+
+        $form = $this->createForm(ContactType::class, $contact);
+
+        if ($request->isMethod('Post')) {
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted() && $form->isValid()) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($contact);
+                $entityManager->flush();
+                $message = (new \Swift_Message('Demande de contact'))
+                    ->setFrom('atif.developpeur@gmail.com')
+                    ->setTo('atif.developpeur@gmail.com')
+                    ->setBody('Nom: ' . $contact->getName() . '<br>' . 'Tel: ' . $contact->getPhone() . '<br>' . 'Email: ' . $contact->getMail() . '<br>' . 'Sujet: ' . $contact->getMessage(), 'text/html');
+                $mailer->send($message);
+
+                $this->addFlash('success', 'Votre message a bien été envoyé.');
+                return $this->redirectToRoute('home');
+            }
+        }
+        return $this->render('contact/contactForm.html.twig', [
+            'contactForm' => $form->createView(),
+            'users' => $users,
+        ]);
+    }
 }

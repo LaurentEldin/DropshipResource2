@@ -22,7 +22,7 @@ class ContactType extends AbstractType
                 'label'=>'Nom'
             ])
             ->add('mail', EmailType::class, [
-                'label'=>'eMail'
+                'label'=>'Mail'
             ])
             ->add('phone', TextType::class, [
                 'label'=>'Téléphone'
@@ -31,7 +31,7 @@ class ContactType extends AbstractType
                 'label'=>'Sujet'
             ])
             ->add('message', TextareaType::class, [
-                'label'=>'Message'
+                'label'=>'Précisez votre demande'
             ])
             ->add('envoyer', SubmitType::class, [
                 'label'=>'Envoyer'

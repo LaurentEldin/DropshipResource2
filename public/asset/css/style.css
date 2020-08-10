@@ -1,6 +1,6 @@
 @font-face{
     font-family: "mapolice";
-    src: url("../font/Montserrat/Montserrat-Medium.ttf");
+    src: url("../font/DIN/D-DIN.ttf");
 }
 @font-face{
     font-family: "mapolice2";
@@ -452,7 +452,20 @@ li{
 .loginHeaderPicture{
     float: right;
 }
-
+.contactHeader{
+    font-size: 19px;
+    position: absolute;
+    background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    width: max-content;
+    float: right;
+    top: 70vh;
+    border-radius: 50px 0 0 50px ;
+    padding: 0 100px 0 20px;
+    transform: translate(100% 0);
+    right: 0;
+}
 /*
 ----------------------------------------------------------------------------------------------------------------------
 -------------------------------------------CSS footer-----------------------------------------------------------------
@@ -2040,3 +2053,28 @@ td, th /* Mettre une bordure sur les td ET les th */
     width: 50%;
 }
 
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS PAGE contact-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.contactPage{
+    padding: 60px 5% 90px;
+}
+.titleContactH1{
+    font-size: 4vw;
+    margin: 5% 0;
+    background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+}
+.titleContactH2{
+    font-size: 2vw;
+    margin: 5% 0;
+
+}
