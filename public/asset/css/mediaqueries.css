@@ -576,6 +576,10 @@
     .titleActivitiesPage{
         font-size: 3.7vw;
         width: 100%;
+        margin-bottom: 15px;
+    }
+    .cardImgActivities{
+        margin-top: 20px;
     }
     .pActivitiesPage{
         font-size: 2.3vw;
@@ -692,7 +696,7 @@
     }
     .blogShowIdChapeau{
         text-align: center;
-        font-size: 2vw;
+        font-size: 3vw;
     }
     /* PARTIE IMAGE DE LA SECTION */
     .blogForTitle{
@@ -702,15 +706,15 @@
     /* PARTIE TEXT DE LA SECTION */
     .blogForArticle{
         width: 80%;
-        font-size: 2vw;
+        font-size: 3vw;
     }
     .forOtherBlog
     h3{
-        font-size: 1.8vw;
+        font-size: 2.5vw;
     }
     .forOtherBlog
     p{
-        font-size: 1.5vw;
+        font-size: 2.5vw;
     }
     .linkBlogId{
         background-color: #2046f5;
@@ -723,7 +727,7 @@
         padding-top: 60%;
     }
     .linkBlogIdTxtShoxId{
-        font-size: 0.9vw;
+        font-size: 2.5vw;
         width: max-content;
     }
     /* PARTIE BOUTON RETOUR ACCUEIL */
