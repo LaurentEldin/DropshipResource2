@@ -22,7 +22,8 @@
                 {% for article in blogB | slice(1,2)%}
                     <h3>{{ article.title }}</h3>
                     <p>{{ article.article|u.truncate(155,'...')|raw }}</p>
-                    <a class="linkBlogIdTxtShoxId" data-aos-delay="1250" data-aos="zoom-out" href="{{ path('details_article',{'id':article.id}) }}">VOIR PLUS</a>
+                    <a class="linkBlogIdTxtShoxId displayNone" data-aos-delay="1250" data-aos="zoom-out" href="{{ path('details_article',{'id':article.id}) }}">VOIR PLUS</a>
+                    <a class="linkBlogIdTxtShoxId mobilBlock" href="{{ path('details_article',{'id':article.id}) }}">VOIR PLUS</a>
                 {% endfor %}
                 </div>
             </div>
@@ -32,8 +33,8 @@
             <img class="linkBlogIdColorOne" data-aos="fade-up" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element15.svg') }}">
             <img class="linkBlogIdColorTwoBis" data-aos="fade-down" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element5.svg') }}">
         </div>
-        <div class="linkBlogId mobilBlock" data-aos="fade-up" data-aos-duration="1450">
-            <a class="linkBlogIdTxtResponsive" data-aos-delay="100" data-aos="zoom-out" href="{{ path('blog') }}">Retour</a>
+        <div class="linkBlogId mobilBlock">
+            <a class="linkBlogIdTxtResponsive" href="{{ path('blog') }}">Retour</a>
         </div>
     </main>
 {% include 'commons/_footer.html.twig' %}

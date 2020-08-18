@@ -904,7 +904,7 @@ footer{
     margin: 50px 13px 0;
 }
 .pActivitiesProspect{
-    font-size: 1vw;
+    font-size: 1.4vw;
     text-align: left;
 }
 .activitiesProspectExemple{
@@ -939,6 +939,7 @@ footer{
 .activitiesPub{
     width: 48%;
     text-align: center;
+    font-size: 1.4vw;
 }
 .imgActivitiesPub{
     width: 40%;
@@ -1728,6 +1729,7 @@ p{
     flex-direction: column;
     padding: 140px 5% ;
     text-align: center;
+    font-size: 1.4vw;
 }
 .agencePage h1{
     padding-bottom: 20px;

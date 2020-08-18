@@ -49,17 +49,19 @@
         {% endif %}
     </div>
 </footer>
+
+
+
+{# FOOTER MOBILE#}
+
+
+
 <footer class="mobilBlock">
     <div class="orgaTopFooter">
         <div>
             <a href="{{ path ('home') }}">
                 <img class="logoSizeFooterResponsive" src="{{ asset('asset/img/logo_dr_sans.svg') }}" alt="logo_dropshipresource" title="logo_dropshipresource">
             </a>
-        </div>
-        <div>
-            <div><a class="textFooterSizeResponsive" href="{{ asset('asset/img/MentionsLegales.pdf') }}">Mentions légales</a></div>
-            <div><a class="textFooterSizeResponsive" href="">CGU</a></div>
-            <div><a class="textFooterSizeResponsive" href="">RGPD</a></div>
         </div>
     </div>
     <div id="newsletter">
@@ -70,7 +72,7 @@
             </div>
         {% endif %}
     </div>
-    <div class="footerAlign">
+    {#<div class="footerAlign displayNone">
         <h5 class="footerTitle">Suivez nous</h5>
         <div class="socialFooterParent">
             <div class="socialFooterFb">
@@ -84,12 +86,32 @@
             <div class="socialFooterLinkedin">
                 <a href="https://www.linkedin.com/company/dropship-resource/" target="_blank"></a>
             </div>
-            {#
+
             <div class="socialFooterYoutube">
                 <a href="https://www.youtube.com/channel/UCFI3IYsyxIwLsVRWJzqUmTw" target="_blank"></a>
             </div>
-            #}
-        </div>
+
+        </div>#}
+        <div class="footerAlign mobilBlock">
+            <h5 class="footerTitle">Suivez nous</h5>
+            <div class="socialFooterParent">
+                <div class="mobileSocialFooterFb">
+                    <a href="https://www.facebook.com/dropshipresource/" target="_blank">
+                        <img src="{{ asset('asset/img/fb.svg') }}" alt="">
+                    </a>
+                </div>
+                <div class="mobileSocialFooterInsta">
+                    <a href="https://www.instagram.com/dropship_resource/" target="_blank">
+                        <p class="langueLogoInstaFooter">Fr</p>
+                        <img src="{{ asset('asset/img/insta.svg') }}" alt="">
+                    </a>
+                </div>
+                <div class="mobileSocialFooterLinkedin">
+                    <a href="https://www.linkedin.com/company/dropship-resource/" target="_blank">
+                        <img src="{{ asset('asset/img/linkedinfooter.svg') }}" alt="">
+                    </a>
+                </div>
+            </div>
         {#<div class="socialFooterParent">
             <div class="socialFooterInstaMultiLangue">
                 <a href="https://www.instagram.com/dropship_resource_en/?igshid=yjtmoe400ke2" target="_blank">
@@ -101,6 +123,10 @@
                 <p class="langueLogoInstaFooter">Es</p>
                 </a>
         </div>#}
-         </div>
+    </div>
+    <div class="mentionLegale">
+        <div><a class="textFooterSizeResponsive" href="{{ asset('asset/img/MentionsLegales.pdf') }}">Mentions légales</a></div>
+        <div><a class="textFooterSizeResponsive" href="{{ asset('asset/img/CGU site web.pdf') }}">CGU</a></div>
+        <div><a class="textFooterSizeResponsive" href="">RGPD</a></div>
     </div>
 </footer>

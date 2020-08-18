@@ -25,7 +25,7 @@
         /* padding: 0 10px; */
     }
     .agencePage h1 {
-        font-size: 5.6vw;
+        font-size: 7vw;
         text-align: center;
         padding: 0;
         margin: 0;
@@ -67,7 +67,7 @@
         width: 100%;
     }
     .pAgenceResponsive{
-        font-size: 2.7vw;
+        font-size: 4.2vw;
     }
     .titleAgenceStoryDr{
         font-size: 3.7vw;
@@ -78,16 +78,16 @@
     }
     .valeursAgenceOrganisationChild
     h2{
-        font-size: 3.5vw;
+        font-size: 5vw;
     }
     .pValeursAgence{
-        font-size: 2.7vw;
+        font-size: 4.2vw;
     }
     .paragrapheL{
-        font-size: 3vw;
+        font-size: 4.2vw;
     }
     .text{
-        font-size: 2.3vw;
+        font-size: 4.2vw;
     }
 
 
@@ -174,14 +174,18 @@
     .container{}
     .imgCarte{}
     .overlay{}
-    .text{}
+    .text{
+        font-size: 2.5vw;
+    }
     .element1{}
     .element2{}
     .element3{}
     .element4{}
     .element5{}
     .element6{}
-    .nomprenomgrade{}
+    .nomprenomgrade{
+        font-size: 4.2vw;
+    }
 
 
     /*

@@ -31,7 +31,7 @@
             <a class="buttonNavbar" href="{{ path ('recruitement') }}">
                 <h1 class="alignTitle">Candidature</h1>
             </a>
-            <a class="buttonNavbar" href="#Contact">
+            <a class="buttonNavbar" href="{{ path ('contactForm') }}">
                 <h1 class="alignTitle">Contact</h1>
             </a>
         </div>
@@ -76,7 +76,7 @@
                 <li><a class="aHeaderResponsive" href="{{ path ('app_login') }}"><h1 class="widthBurgerTitle">Espace client</h1></a></li>
             {% endif %}
             <li><a class="aHeaderResponsive" href="{{ path ('recruitement') }}"><h1 class="widthBurgerTitle">Candidature</h1></a></li>
-            <li><a class="aHeaderResponsive" href="#Contact"><h1 class="widthBurgerTitle">Contact</h1></a></li>
+            <li><a class="aHeaderResponsive" href="{{ path ('contactForm') }}"><h1 class="widthBurgerTitle">Contact</h1></a></li>
         </ul>
     </nav>
     <a class="contactHeader" href="{{ path ('contactForm') }}">

@@ -63,8 +63,8 @@
         justify-content: space-around;
     }
     #newsletter{
-        padding-top: 55px;
         text-align: center;
+        padding-top: 50px;
     }
     .footerTitle{
         font-size: 5vw;
@@ -73,8 +73,8 @@
         margin: 0 20%;
     }
     .submitFormFooter{
-        width: 20%;
-        font-size: 1.5vw;
+        width: 100%;
+        font-size: 4.2VW;
         margin: 0;
     }
     .logoSizeFooterResponsive{
@@ -82,6 +82,35 @@
     }
     .wrap-input2{
         margin-bottom: 6px;
+    }
+    .mentionLegale{
+        text-align: center;
+        padding-top: 50px;
+    }
+    .input2 {
+        border: transparent;
+        width: 100%;
+    }
+    .MobileSocialFooterLinkedin{
+        width: 40px;
+        height: 40px;
+        margin: 0 20px;
+    }
+    .MobileSocialFooterFb{
+        margin: 0 20px;
+        width: 40px;
+        height: 40px;
+    }
+    .MobileSocialFooterInsta{
+        margin: 0 20px;
+        width: 40px;
+        height: 40px;
+    }
+    .mobileSocialFooterFb, .mobileSocialFooterInsta, .mobileSocialFooterLinkedin img{
+        margin-left: 30px;
+    }
+    .footerAlign{
+        padding-top: 50px;
     }
 
     /*
@@ -267,7 +296,7 @@
     .pActivities{
         width: 100%;
         text-align: left;
-        font-size: 2.5vw;
+        font-size: 4.2vw;
     }
     .titleHomePage{
         font-size: 7vw;
@@ -370,10 +399,10 @@
     }
     .texteBlogHomePageMobile{
         text-align: left;
-        font-size: 3vw;
+        font-size: 4.2vw;
     }
     .blogArticleTitleHomePageResponsive{
-        font-size: 4vw;
+        font-size: 5vw;
     }
     /*----button----*/
     .colorAnimeSeven{
@@ -445,7 +474,9 @@
         width: 27%;
     }
     .submitForm{
-        font-size: 1.5vw;
+        font-size: 4.2vw;
+        width: 100%;
+        margin: 0;
     }
     /*
 ----------------------------------------------------------------------------------------------------------------------
@@ -472,8 +503,8 @@
         justify-content: center;
     }
     .blogTitle{
-        font-size: 6vw;
-        text-align: left;
+        font-size: 7vw;
+        text-align: center;
     }
     .blogForTitle{
         text-align: center;
@@ -499,7 +530,7 @@
         margin-top: 50px;
     }
     .textBlogResponsive{
-        font-size: 2.8vw;
+        font-size: 4.2vw;
     }
     .blogPageAdmin{
         margin: 0;
@@ -588,7 +619,7 @@
         width: 100%;
     }
     .titleActivitiesPage{
-        font-size: 3.7vw;
+        font-size: 7vw;
         width: 100%;
         margin-bottom: 15px;
     }
@@ -596,14 +627,14 @@
         margin-top: 20px;
     }
     .pActivitiesPage{
-        font-size: 2.3vw;
+        font-size: 4.2vw;
     }
     .imgActivitiesProspect{
         width: 100%;
         margin: 0 auto;
     }
     .pActivitiesProspect{
-        font-size: 2.3vw;
+        font-size: 4.2vw;
         width: 100%;
         text-align: center;
     }
@@ -615,14 +646,14 @@
         margin: 25px auto 0;
     }
     .pProspectExemple{
-        font-size: 2vw;
+        font-size: 4.2vw;
     }
     .activitiesContainerProspect{
         padding-bottom: 60px;
         margin-bottom: 0;
     }
     .pActivitiesPage{
-        font-size: 2.3vw;
+        font-size: 4.2vw;
         text-align: center;
     }
     .logoSocielProspect{
@@ -635,9 +666,16 @@
     .marginBottomResponsiveActivities{
         margin-bottom: 60px;
     }
-    .activitiesContainerPub
+    .activitiesContainerPub .titleActivitiesPage{
+        width: 100%;
+        text-align: center;
+    }
+    .activitiesProspectExemple{
+        display: none;
+    }
     .titleActivitiesPage{
         width: 100%;
+        text-align: center;
     }
     .imgActivitiesPub{
         width: 25%;
@@ -645,7 +683,7 @@
         text-align: center;
     }
     .pResponsivePubActivities{
-        font-size: 2.5vw;
+        font-size: 4.2vw;
         text-align: center;
     }
     .responsiveActivitiesPubCentrage{
@@ -707,10 +745,11 @@
         padding-top:30px;
         text-align: center;
         margin: 0;
+        font-size: 7vw;
     }
     .blogShowIdChapeau{
-        text-align: center;
-        font-size: 3vw;
+        width: 80%;
+        font-size: 4.5vw;
     }
     /* PARTIE IMAGE DE LA SECTION */
     .blogForTitle{
@@ -720,15 +759,15 @@
     /* PARTIE TEXT DE LA SECTION */
     .blogForArticle{
         width: 80%;
-        font-size: 3vw;
+        font-size: 4.2vw;
     }
     .forOtherBlog
     h3{
-        font-size: 2.5vw;
+        font-size: 5vw;
     }
     .forOtherBlog
     p{
-        font-size: 2.5vw;
+        font-size: 4.2vw;
     }
     .linkBlogId{
         background-color: #2046f5;
@@ -736,7 +775,7 @@
         margin-top: 26px;
     }
     .linkBlogIdTxtResponsive{
-        font-size: 2vw;
+        font-size: 4.2vw;
         color: whitesmoke;
         padding-top: 60%;
     }
@@ -752,7 +791,25 @@
     .linkBlogIdColorOne{}
     .linkBlogIdColorTwoBis{}
 
-
+    .BlogShowIdOrganisationArticle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .blogForArticle2 {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .blogForArticle2 .titleAgenceStoryDr {
+        font-size: 7vw;
+    }
+    .titleContactH1 {
+        font-size: 7vw;
+    }
+    .titleContactH2{
+        font-size: 4.2vw;
+    }
 }
 
 
@@ -787,3 +844,4 @@
         font-size: 5vw;
     }
 }
+
