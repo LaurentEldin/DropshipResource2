@@ -443,6 +443,19 @@ li{
     -o-transition-duration: 0.5s;
     transition-duration: 0.5s;
 }
+.alignTitleExclu{
+    background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 20px 0;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
 .logoConnect{
     height: 60%;
     padding: 10% 0;
@@ -2098,7 +2111,7 @@ td, th /* Mettre une bordure sur les td ET les th */
 ----------------------------------------------------------------------------------------------------------------------
  */
 .templatePage{
-    padding: 0 7%;
+    padding: 7% 7%;
 }
 .titleTemplate{
     font-size: 68px;
@@ -2115,7 +2128,7 @@ td, th /* Mettre une bordure sur les td ET les th */
     z-index: 99999;
 }
 #myBtn{
-    background-image: url(bouton.svg);
+    background-image: url("../img/bouton.svg");
     background-color: white;
     background-size: contain;
     border: none;

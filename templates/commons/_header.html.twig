@@ -34,6 +34,9 @@
             <a class="buttonNavbar" href="{{ path ('contactForm') }}">
                 <h1 class="alignTitle">Contact</h1>
             </a>
+            <a class="buttonNavbar" href="{{ path ('exclusivite') }}">
+                <h1 class="alignTitleExclu">Exclusivité</h1>
+            </a>
         </div>
         <div class="">
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
@@ -77,6 +80,7 @@
             {% endif %}
             <li><a class="aHeaderResponsive" href="{{ path ('recruitement') }}"><h1 class="widthBurgerTitle">Candidature</h1></a></li>
             <li><a class="aHeaderResponsive" href="{{ path ('contactForm') }}"><h1 class="widthBurgerTitle">Contact</h1></a></li>
+            <li><a class="aHeaderResponsive" href="{{ path ('exclusivite') }}"><h1 class="widthBurgerTitleExclu">Exclusivité</h1></a></li>
         </ul>
     </nav>
     <a class="contactHeader" href="{{ path ('contactForm') }}">

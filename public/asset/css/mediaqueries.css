@@ -36,6 +36,13 @@
         transform: translate(100% 0);
         right: 0;
     }
+    .widthBurgerTitleExclu{
+        background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+        background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+        background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
     /*
 ----------------------------------------------------------------------------------------------------------------------
 -------------------------------------------CSS footer-----------------------------------------------------------------
