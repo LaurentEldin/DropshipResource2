@@ -6,7 +6,6 @@ namespace App\Controller;
 
 use App\Entity\Blog;
 use App\Form\BlogType;
-use App\Repository\CategoriesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -19,9 +18,6 @@ class BlogController extends AbstractController
 {
     /**
      * @Route("/blog", name="blog")
-     * @param BlogRepository $blogRepository
-     * @param CategoriesRepository $categoriesRepository
-     * @return Response
      */
     public function blog(BlogRepository $blogRepository, CategoriesRepository $categoriesRepository)
     {

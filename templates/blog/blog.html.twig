@@ -23,6 +23,13 @@
                 {% for categories in categorie %}
                 <option value="{{ categories.libelle }}">{{ categories.libelle }}</option>
                 {% endfor %}
+                {#{% set newArray = [] %}
+                {% for categories in blog %}
+                    {% if categories not in newArray %}
+                        {{categories.categories}}
+                        {% set newArray = newArray|merge([]) %}
+                    {% endif %}
+                {% endfor %}#}
             </select>
             <input class="inputBlog" type="submit" value="rechercher">
         </form>

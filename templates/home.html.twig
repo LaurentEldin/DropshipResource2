@@ -12,14 +12,54 @@
             <div id="carousel">
                 <h1 class="titleHomePage ">Exclusivité</h1>
                 <figure id="spinner">
-                    <img class="" alt="illustration carousel template" src="{{ asset('asset/img/e-commerce.png') }}" title="illustration carousel template">
-                    <img class="" alt="illustration carousel template" src="{{ asset('asset/img/habitat.png') }}" title="illustration carousel template">
-                    <img class="" alt="illustration carousel template" src="{{ asset('asset/img/immobilier.png') }}" title="illustration carousel template">
-                    <img class="" alt="illustration carousel template" src="{{ asset('asset/img/portfolio.png') }}" title="illustration carousel template">
-                    <img class="" alt="illustration carousel template" src="{{ asset('asset/img/restaurant.png') }}" title="illustration carousel template">
-                    <img class="" alt="illustration carousel template" src="{{ asset('asset/img/VTC.png') }}" title="illustration carousel template">
-                    <img class="" alt="illustration carousel template" src="{{ asset('asset/img/e-commerce.png') }}" title="illustration carousel template">
-                    <img class="" alt="illustration carousel template" src="{{ asset('asset/img/e-commerce.png') }}" title="illustration carousel template">
+                    <a href="{{ path('exclusivite') }}" class="templateContainer">
+                        <img class="imgCarousel" alt="illustration carousel template" src="{{ asset('asset/img/template.jpg') }}" title="illustration carousel template">
+                        <span class="hoverImgTemplate">
+                        <p class="pImgTemplate">Nos thèmes</p>
+                        </span>
+                    </a>
+                    <a href="{{ path('contactForm') }}" class="templateContainer">
+                        <img class="imgCarousel" alt="illustration carousel template" src="{{ asset('asset/img/contacteznous.jpg') }}" title="illustration carousel template">
+                        <span class="hoverImgTemplate">
+                        <p class="pImgTemplate">Contact</p>
+                        </span>
+                    </a>
+                    <a href="{{ path('ecommerce') }}" class="templateContainer">
+                        <img class="imgCarousel" alt="illustration carousel template" src="{{ asset('asset/img/immobilier.png') }}" title="illustration carousel template">
+                        <span class="hoverImgTemplate">
+                        <p class="pImgTemplate">E-commerce</p>
+                        </span>
+                    </a>
+                    <a href="{{ path('portfolio') }}" class="templateContainer">
+                        <img class="imgCarousel" alt="illustration carousel template" src="{{ asset('asset/img/portfolio.png') }}" title="illustration carousel template">
+                        <span class="hoverImgTemplate">
+                        <p class="pImgTemplate">Portfoliot</p>
+                        </span>
+                    </a>
+                    <a href="{{ path('restaurant') }}" class="templateContainer">
+                        <img class="imgCarousel" alt="illustration carousel template" src="{{ asset('asset/img/restaurant.png') }}" title="illustration carousel template">
+                        <span class="hoverImgTemplate">
+                        <p class="pImgTemplate">Restaurant</p>
+                        </span>
+                    </a>
+                    <a href="{{ path('habitat') }}" class="templateContainer">
+                        <img class="imgCarousel" alt="illustration carousel template" src="{{ asset('asset/img/VTC.png') }}" title="illustration carousel template">
+                        <span class="hoverImgTemplate">
+                        <p class="pImgTemplate">Habitat</p>
+                        </span>
+                    </a>
+                    <a href="{{ path('immobilier') }}" class="templateContainer">
+                        <img class="imgCarousel" alt="illustration carousel template" src="{{ asset('asset/img/e-commerce.png') }}" title="illustration carousel template">
+                        <span class="hoverImgTemplate">
+                        <p class="pImgTemplate">Immoblier</p>
+                        </span>
+                    </a>
+                    <a href="{{ path('vtc') }}" class="templateContainer">
+                        <img class="imgCarousel" alt="illustration carousel template" src="{{ asset('asset/img/e-commerce.png') }}" title="illustration carousel template">
+                        <span class="hoverImgTemplate">
+                        <p class="pImgTemplate">Vtc</p>
+                        </span>
+                    </a>
                 </figure>
             </div>
             <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
