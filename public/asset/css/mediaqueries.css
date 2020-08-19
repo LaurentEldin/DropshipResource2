@@ -824,9 +824,15 @@
 */
     .templateContainer{
         position: relative;
-        width: 90%;
+        width: 100%;
         padding: 0;
         margin: 30px 0;
+    }
+    .templatePage{
+        padding: 14% 7%;
+    }
+    .titleTemplate{
+        font-size: 30px;
     }
 }
 
