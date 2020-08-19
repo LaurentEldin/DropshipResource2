@@ -12,17 +12,17 @@
                 <div class="modalContainer">
                     <div id="myModal" class="modal">
                         <div class="modal-content">
-                            <a class="modalCategorieA">E-commerce</a>
+                            <a href="{{ path('ecommerce') }}" class="modalCategorieA">E-commerce</a>
                             <br>
-                            <a class="modalCategorieA">Portfoliot</a>
+                            <a href="{{ path('portfolio') }}" class="modalCategorieA">Portfoliot</a>
                             <br>
-                            <a class="modalCategorieA">Restaurant</a>
+                            <a href="{{ path('restaurant') }}" class="modalCategorieA">Restaurant</a>
                             <br>
-                            <a class="modalCategorieA">Immo</a>
+                            <a href="{{ path('immobilier') }}" class="modalCategorieA">Immo</a>
                             <br>
-                            <a class="modalCategorieA">Habitat</a>
+                            <a href="{{ path('habitat') }}" class="modalCategorieA">Habitat</a>
                             <br>
-                            <a class="modalCategorieA">Vtc</a>
+                            <a href="{{ path('vtc') }}" class="modalCategorieA">Vtc</a>
                             <br>
                             <span class="close">&times;</span>
                         </div>
@@ -30,27 +30,27 @@
                 </div>
             </div>
             <div class="imgTemplateContainer">
-                <a class="templateContainer">
+                <a href="{{ path('ecommerce') }}" class="templateContainer">
                     <img class="imgTemplate" src="{{ asset('asset/img/e-commerce.png') }}" alt="illustration template" title="illustration template">
                     <span class="hoverImgTemplate">
                     <p class="pImgTemplate">E-commerce</p>
                     </span>
                 </a>
-                <a class="templateContainer">
+                <a href="{{ path('portfolio') }}" class="templateContainer">
                     <img class="imgTemplate" src="{{ asset('asset/img/portfolio.png') }}" alt="illustration template" title="illustration template">
                     <span class="hoverImgTemplate">
                     <p class="pImgTemplate">Portfolio</p>
                 </span>
                 </a>
             </div>
-            <div class="imgTemplateContainer">
+            <div href="{{ path('restaurant') }}" class="imgTemplateContainer">
                 <a class="templateContainer">
                     <img class="imgTemplate" src="{{ asset('asset/img/restaurant.png') }}" alt="illustration template" title="illustration template">
                     <span class="hoverImgTemplate">
                     <p class="pImgTemplate">Restaurant</p>
                 </span>
                 </a>
-                <a class="templateContainer">
+                <a href="{{ path('immobilier') }}" class="templateContainer">
                     <img class="imgTemplate" src="{{ asset('asset/img/immobilier.png') }}" alt="illustration template" title="illustration template">
                     <span class="hoverImgTemplate">
                     <p class="pImgTemplate">Immobilier</p>
@@ -58,13 +58,13 @@
                 </a>
             </div>
             <div class="imgTemplateContainer">
-                <a class="templateContainer">
+                <a href="{{ path('habitat') }}" class="templateContainer">
                     <img class="imgTemplate" src="{{ asset('asset/img/habitat.png') }}" alt="illustration template" title="illustration template">
                     <span class="hoverImgTemplate">
                     <p class="pImgTemplate">Habitat</p>
                 </span>
                 </a>
-                <a class="templateContainer">
+                <a href="{{ path('vtc') }}" class="templateContainer">
                     <img class="imgTemplate" src="{{ asset('asset/img/Vtc.png') }}" alt="illustration template" title="illustration template">
                     <span class="hoverImgTemplate">
                     <p class="pImgTemplate">Vtc</p>
