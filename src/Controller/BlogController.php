@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Entity\Blog;
 use App\Form\BlogType;
+use App\Repository\CategoriesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -18,12 +19,19 @@ class BlogController extends AbstractController
 {
     /**
      * @Route("/blog", name="blog")
+     * @param BlogRepository $blogRepository
+     * @param CategoriesRepository $categoriesRepository
+     * @return Response
      */
-    public function blog(BlogRepository $blogRepository)
+    public function blog(BlogRepository $blogRepository, CategoriesRepository $categoriesRepository)
     {
+        $categorie = $categoriesRepository->findAll();
         $blog = $blogRepository->findBy([],['id' => 'DESC']);
 
-        return $this->render('blog/blog.html.twig', ['blog'=>$blog]);
+        return $this->render('blog/blog.html.twig', [
+            'blog'=>$blog,
+            'categorie'=>$categorie
+        ]);
     }
 
     /**
@@ -74,7 +82,7 @@ class BlogController extends AbstractController
         $blog = $blogRepository->find($id);
         $entityManager->remove($blog);
         $entityManager->flush();
-        $this->addFlash('success', 'Suppression confirmé.');
+        $this->addFlash('success', 'Suppression confirmée.');
         return $this->redirectToRoute('blog');
     }
 
@@ -111,7 +119,7 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/blog/recherche_utilisateurs",name="recherche_categories")
+     * @Route("/blog/recherche_categories",name="recherche_categories")
      * @param BlogRepository $blogRepository
      * @param Request $request
      * @return Response
@@ -119,12 +127,13 @@ class BlogController extends AbstractController
 
     public function searchCategories(BlogRepository $blogRepository, Request $request)
     {
-        $blog = $request->query->get('categories');
+        $categorie = $request->query->get(('categorie'));
 
-        $blog = $blogRepository->getByField($blog);
+        $blog = $blogRepository->getByField($categorie);
 
         return $this->render('blog/blog.html.twig', [
             'blog' => $blog,
+            'categorie'=>$categorie
         ]);
     }
 

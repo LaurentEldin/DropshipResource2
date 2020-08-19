@@ -20,71 +20,90 @@
             <br>
             <select class="choiceTypeBlog" name="categories" id="pet-select">
                 <option  value="">Choisir une catégorie</option>
-                {% for categories in blog %}
-                <option value="{{ categories.categories }}">{{ categories.categories }}</option>
+                {% for categories in categorie %}
+                <option value="{{ categories.libelle }}">{{ categories.libelle }}</option>
                 {% endfor %}
             </select>
             <input class="inputBlog" type="submit" value="rechercher">
         </form>
-        {% for article in blog %}
-            {% if article.id is divisible by (2) %}
-            <div class="blogFor displayNone">
-                <div class="blogForArticleFor">
-                    <div>
-                        <h3 class="blogTitle">{{ article.title }}</h3>
+       {% if blog %}
+            {% for article in blog %}
+            {#{% if article.id is divisible by (2) %}#}
+                {% if loop.index is odd %}
+                <div class="blogFor displayNone">
+                    <div class="blogForArticleFor">
+                        <div>
+                            <h3 class="blogTitle">{{ article.categorie }} - {{ article.title }}</h3>
+                        </div>
+                        <div class="articleBlog">
+                            <span>{{ article.chapeau|u.truncate(255,'...')|raw }}</span>
+                        <div class="linkBlogId">
+                            <a class="linkBlogIdTxt" data-aos-delay="1250" data-aos="zoom-out" href="{{ path('details_article',{'id':article.id}) }}">VOIR PLUS</a>
+                            <img class="linkBlogIdColorOne" data-aos="fade-left" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element15.svg') }}">
+                            <img class="linkBlogIdColorTwo" data-aos="fade-right" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element5.svg') }}">
+                        </div>
+                        </div>
                     </div>
-                    <div class="articleBlog">
-                        <span>{{ article.chapeau|u.truncate(255,'...')|raw }}</span>
-                    <div class="linkBlogId">
-                        <a class="linkBlogIdTxt" data-aos-delay="1250" data-aos="zoom-out" href="{{ path('details_article',{'id':article.id}) }}">VOIR PLUS</a>
-                        <img class="linkBlogIdColorOne" data-aos="fade-left" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element15.svg') }}">
-                        <img class="linkBlogIdColorTwo" data-aos="fade-right" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element5.svg') }}">
-                    </div>
+                    <div class="blogForTitle">
+                        <img class="blogPicture" alt="article illustration" src="{{ asset('upload_directory/' ~ article.picture) }}">
                     </div>
                 </div>
-                <div class="blogForTitle">
-                    <img class="blogPicture" alt="article illustration" src="{{ asset('upload_directory/' ~ article.picture) }}">
-                </div>
-            </div>
-            {% else %}
-            <div class="blogFor displayNone">
-                <div class="blogForTitle" >
-                    <img class="blogPicture" alt="article illustration" src="{{ asset('upload_directory/' ~ article.picture) }}">
-                </div>
-                <div class="blogForArticleFor">
-                    <div>
-                        <h3 class="blogTitle">{{ article.title }}</h3>
+               {% else %}
+                <div class="blogFor displayNone">
+                    <div class="blogForTitle" >
+                        <img class="blogPicture" alt="article illustration" src="{{ asset('upload_directory/' ~ article.picture) }}">
                     </div>
-                    <div class="articleBlog">
-                        <span>{{ article.chapeau|u.truncate(255,'...')|raw }}</span>
+                    <div class="blogForArticleFor">
+                        <div>
+                            <h3 class="blogTitle">{{ article.categorie }} - {{ article.title }}</h3>
+                        </div>
+                        <div class="articleBlog">
+                            <span>{{ article.chapeau|u.truncate(255,'...')|raw }}</span>
+                        <div class="linkBlogId">
+                            <a class="linkBlogIdTxt" data-aos-delay="1250" data-aos="zoom-out" href="{{ path('details_article',{'id':article.id}) }}">VOIR PLUS</a>
+                            <img class="linkBlogIdColorOne" data-aos="fade-left" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element15.svg') }}">
+                            <img class="linkBlogIdColorTwoBis" data-aos="fade-right" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element5.svg') }}">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="mobilBlock">
+                    <h3 class="blogTitle">{{ article.title }}</h3>
+                    <div class="blogForTitle" >
+                        <img class="blogPicture" alt="article illustration" src="{{ asset('upload_directory/' ~ article.picture) }}">
+                    </div>
+                    <span class="textBlogResponsive">{{ article.chapeau|u.truncate(255,'...')|raw }}</span>
                     <div class="linkBlogId">
                         <a class="linkBlogIdTxt" data-aos-delay="1250" data-aos="zoom-out" href="{{ path('details_article',{'id':article.id}) }}">VOIR PLUS</a>
                         <img class="linkBlogIdColorOne" data-aos="fade-left" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element15.svg') }}">
                         <img class="linkBlogIdColorTwoBis" data-aos="fade-right" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element5.svg') }}">
                     </div>
-                    </div>
                 </div>
-            </div>
-            {% endif %}
-            <div class="mobilBlock">
-                <h3 class="blogTitle">{{ article.title }}</h3>
-                <div class="blogForTitle" >
-                    <img class="blogPicture" alt="article illustration" src="{{ asset('upload_directory/' ~ article.picture) }}">
+                <div class="adminButtonBlog">
+                    {% if is_granted("ROLE_ADMIN") %}
+                    <a class="aEffect" href="{{ path('blogDeleteId', {'id' : article.id}) }}">Supprimer</a>
+                    <a class="aEffect" href="{{ path('blogUpdateId', {'id' : article.id}) }}">Modifier</a>
+                    {% endif %}
                 </div>
-                <span class="textBlogResponsive">{{ article.chapeau|u.truncate(255,'...')|raw }}</span>
-                <div class="linkBlogId">
-                    <a class="linkBlogIdTxt" data-aos-delay="1250" data-aos="zoom-out" href="{{ path('details_article',{'id':article.id}) }}">VOIR PLUS</a>
-                    <img class="linkBlogIdColorOne" data-aos="fade-left" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element15.svg') }}">
-                    <img class="linkBlogIdColorTwoBis" data-aos="fade-right" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element5.svg') }}">
-                </div>
+            {% endfor %}
+        {% else %}
+            <h3 class="blogTitle">Désolé l'article n'existe pas !</h3>
+            <div class="linkBlogId displayNone">
+                <a class="linkBlogIdTxt" data-aos-delay="100" data-aos="zoom-out" href="{{ path('blog') }}">Retour</a>
+                <img class="linkBlogIdColorOne" data-aos="fade-up" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element15.svg') }}">
+                <img class="linkBlogIdColorTwoBis" data-aos="fade-down" data-aos-duration="1450" alt="color animation" src="{{ asset('asset/img/element5.svg') }}">
             </div>
-            <div class="adminButtonBlog">
-                {% if is_granted("ROLE_ADMIN") %}
-                <a class="aEffect" href="{{ path('blogDeleteId', {'id' : article.id}) }}">Supprimer</a>
-                <a class="aEffect" href="{{ path('blogUpdateId', {'id' : article.id}) }}">Modifier</a>
-                {% endif %}
+            <div class="linkBlogId mobilBlock">
+                <a class="linkBlogIdTxtResponsive" href="{{ path('blog') }}">Retour</a>
             </div>
-        {% endfor %}
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+       {% endif %}
     </main>
     {% include 'commons/_footer.html.twig' %}
 {% endblock %}

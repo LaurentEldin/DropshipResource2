@@ -10,6 +10,7 @@ use App\Repository\MetaRepository;
 use App\Repository\MetadescriptionRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,6 +20,10 @@ class MetaController extends AbstractController
 {
     /**
      * @Route("/admin/meta", name="metaAdmin")
+     * @param MetadescriptionRepository $metadescriptionRepository
+     * @param MetaRepository $metaRepository
+     * @param Request $request
+     * @return RedirectResponse|Response
      */
     public function meta(MetadescriptionRepository $metadescriptionRepository, MetaRepository $metaRepository, Request $request)
     {
@@ -50,6 +55,11 @@ class MetaController extends AbstractController
 
     /**
      * @Route("/admin/meta/description/{id}", name="descriptionUpdateId")
+     * @param MetadescriptionRepository $metadescriptionRepository
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @param $id
+     * @return RedirectResponse|Response
      */
     public function UpdateDescription(MetadescriptionRepository $metadescriptionRepository, Request $request, EntityManagerInterface $entityManager, $id)
     {
@@ -77,6 +87,10 @@ class MetaController extends AbstractController
 
     /**
      * @Route("/admin/meta/delete/{id}", name="metaDeleteId")
+     * @param MetaRepository $metaRepository
+     * @param EntityManagerInterface $entityManager
+     * @param $id
+     * @return RedirectResponse
      */
     public function deleteMeta(MetaRepository $metaRepository, EntityManagerInterface $entityManager, $id)
     {

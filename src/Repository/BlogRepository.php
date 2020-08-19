@@ -19,15 +19,13 @@ class BlogRepository extends ServiceEntityRepository
         parent::__construct($registry, Blog::class);
     }
 
-    public function getByField($categories)
+    public function getByField($categorie)
     {
         $qb = $this->createQueryBuilder('blog');
 
-        $query = $qb->select('blog')
-
-            ->where('blog.categories LIKE :categories')
-
-            ->setParameter('categories', '%' . $categories . '%');
+        $qb->select('blog')
+            ->where('blog.categorie = :libelle')
+            ->setParameter('libelle', '%' . $categorie . '%');
 
         $query = $qb->getQuery();
         $resultats = $query->getArrayResult();

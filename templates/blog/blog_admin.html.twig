@@ -16,14 +16,14 @@
                     {{ form_errors(blogForm.chapeau) }}
                     {{ form_errors(blogForm.article) }}
                     {{ form_errors(blogForm.picture) }}
-                    {{ form_errors(blogForm.categories) }}
+                    {{ form_errors(blogForm.categorie) }}
                 </div>
                 <div class="wrap-input2">
-                    {{ form_label(blogForm.categories) }}
+                    {{ form_label(blogForm.categorie) }}
                     <br>
-                    {{ form_widget(blogForm.categories, { 'attr': {'class': 'input2'} }) }}
+                    {{ form_widget(blogForm.categorie, { 'attr': {'class': 'input2'} }) }}
                     <span class="focus-input2" data-placeholder="title"></span>
-                    {{ form_errors(blogForm.categories) }}
+                    {{ form_errors(blogForm.categorie) }}
                 </div>
                 <div class="wrap-input2">
                     {{ form_label(blogForm.title) }}

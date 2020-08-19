@@ -51,16 +51,6 @@ class Blog
      */
     private $picture;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(
-     *      min = 2,
-     *      max = 100,
-     *      minMessage = "Votre catégorie peut contenir {{ limit }} de caractère au minimum ",
-     *      maxMessage = "Votre catégorie peut contenir {{ limit }} de caractère au maximum ",
-     *     )
-     */
-    private $categories;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -70,6 +60,11 @@ class Blog
      * )
      */
     private $chapeau;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Categories::class, inversedBy="articles")
+     */
+    private $categorie;
 
 
     public function getId(): ?int
@@ -151,6 +146,22 @@ class Blog
         $this->chapeau = $chapeau;
 
         return $this;
+    }
+
+    public function getCategorie(): ?Categories
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?Categories $categorie): self
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+    public function __toString()
+    {
+        return $this->categorie;
     }
 
 }

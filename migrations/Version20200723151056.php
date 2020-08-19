@@ -20,18 +20,12 @@ final class Version20200723151056 extends AbstractMigration
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE activities DROP date');
-        $this->addSql('ALTER TABLE blog ADD categories VARCHAR(255) DEFAULT NULL');
-        $this->addSql('ALTER TABLE contact CHANGE phone phone VARCHAR(255) DEFAULT NULL');
-        $this->addSql('ALTER TABLE user CHANGE phone phone VARCHAR(255) NOT NULL');
+
     }
 
     public function down(Schema $schema) : void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE activities ADD date DATE DEFAULT NULL');
-        $this->addSql('ALTER TABLE blog DROP categories');
-        $this->addSql('ALTER TABLE contact CHANGE phone phone INT DEFAULT NULL');
-        $this->addSql('ALTER TABLE user CHANGE phone phone INT NOT NULL');
+
     }
 }
