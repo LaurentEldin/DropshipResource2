@@ -2247,6 +2247,22 @@ td, th /* Mettre une bordure sur les td ET les th */
     height: 320px;
     z-index: 60;
 }
+.optionsPaiement{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: transparent;
+}
+#myBtnPaiement{
+    background-image: url("../img/bouton.svg");
+    background-color: white;
+    background-size: contain;
+    border: none;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    padding: 7px 16px;
+}
 /*
 ----------------------------------------------------------------------------------------------------------------------
 -------------------------------------------CSS Home PAGE carousel-------------------------------------------------------------------
