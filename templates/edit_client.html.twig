@@ -10,16 +10,7 @@
             <div class="registerpage">
                 {{ form_start(userFormView) }}
                 <h1 class="titleHomePage">Modifiez vos informations</h1>
-                <div class="errorFormMessage">
-                    {{ form_errors(userFormView.name) }}
-                    {{ form_errors(userFormView.lastname) }}
-                    {{ form_errors(userFormView.adresse) }}
-                    {{ form_errors(userFormView.phone) }}
-                    {{ form_errors(userFormView.plainPassword) }}
-                    {{ form_errors(userFormView.city) }}
-                    {{ form_errors(userFormView.email) }}
-                    {{ form_errors(userFormView.agreeTerms) }}
-                </div>
+                <div class="errorFormMessage"></div>
                 <div class="formContactParent">
                     <div class="formContactChild1">
                         <div class="wrap-input2">
@@ -27,24 +18,28 @@
                             <br>
                             {{ form_widget(userFormView.name, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="NAME"></span>
+                            {{ form_errors(userFormView.name) }}
                         </div>
                         <div class="wrap-input2">
                             {{ form_label(userFormView.adresse) }}
                             <br>
                             {{ form_widget(userFormView.adresse, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="ADRESSE"></span>
+                            {{ form_errors(userFormView.adresse) }}
                         </div>
                         <div class="wrap-input2">
                             {{ form_label(userFormView.phone) }}
                             <br>
                             {{ form_widget(userFormView.phone, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="PHONE"></span>
+                            {{ form_errors(userFormView.phone) }}
                         </div>
                         <div class="wrap-input2">
                             {{ form_label(userFormView.plainPassword, 'Votre mot de passe') }}
                             <br>
                             {{ form_widget(userFormView.plainPassword, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="PASSWORD"></span>
+                            {{ form_errors(userFormView.plainPassword) }}
                         </div>
                     </div>
                     <div class="formContactChild2">
@@ -53,6 +48,7 @@
                             <br>
                             {{ form_widget(userFormView.lastname, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="LASTNAME"></span>
+                            {{ form_errors(userFormView.lastname) }}
                         </div>
                         <div class="wrap-input2">
                             {{ form_label(userFormView.city, 'ville') }}
@@ -66,12 +62,14 @@
                             <br>
                             {{ form_widget(userFormView.email, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="EMAIL"></span>
+                            {{ form_errors(userFormView.email) }}
                         </div>
                         <br>
                         <div class="checkbox">
                             {{ form_widget(userFormView.agreeTerms) }}
                             {{ form_label(userFormView.agreeTerms, 'Confirmer les modifications ?') }}
                             <small class="mobileSmall">Cliquer sur le texte pour confirmer</small>
+                            {{ form_errors(userFormView.agreeTerms) }}
                         </div>
                         <br>
                         <br>

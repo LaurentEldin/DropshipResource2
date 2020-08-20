@@ -18,6 +18,8 @@ class BlogController extends AbstractController
 {
     /**
      * @Route("/blog", name="blog")
+     * @param BlogRepository $blogRepository
+     * @return Response
      */
     public function blog(BlogRepository $blogRepository)
     {
@@ -111,7 +113,7 @@ class BlogController extends AbstractController
             'formView' => $formView
         ]);
     }
-
+/*
     /**
      * @Route("/blog/recherche_categories",name="recherche_categories")
      * @param BlogRepository $blogRepository
@@ -119,7 +121,7 @@ class BlogController extends AbstractController
      * @return Response
      */
 
-    public function searchCategories(BlogRepository $blogRepository, Request $request)
+    /*public function searchCategories(BlogRepository $blogRepository, Request $request)
     {
         $categorie = $request->query->get(('categorie'));
 
@@ -129,7 +131,7 @@ class BlogController extends AbstractController
             'blog' => $blog,
             'categorie'=>$categorie
         ]);
-    }
+    }*/
 
     /**
      * @Route("/blog/article/{id}",name="details_article")

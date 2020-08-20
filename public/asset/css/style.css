@@ -1717,7 +1717,7 @@ p{
     position: absolute;
     top: 10vh;
     padding-left: 100px;
-    z-index: 1000;
+    z-index: 9999999999;
     padding-right: 100px;
 }
 
@@ -2149,7 +2149,7 @@ td, th /* Mettre une bordure sur les td ET les th */
 }
 .categorieBox{
     position: relative;
-    z-index: 9999;
+    z-index: auto;
 }
 #myBtn{
     background-image: url("../img/testBouton.svg");

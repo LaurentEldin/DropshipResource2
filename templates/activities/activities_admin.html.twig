@@ -8,27 +8,27 @@
         {{ form_start(activitiesForm) }}
         <div class="formContactParent">
             <div class="formContactChild1">
-                <div class="errorFormMessage">
-                    {{ form_errors(activitiesForm.title) }}
-                    {{ form_errors(activitiesForm.article) }}
-                </div>
+                <div class="errorFormMessage"></div>
                 <div class="wrap-input2">
                     {{ form_label(activitiesForm.title) }}
                     <br>
                     {{ form_widget(activitiesForm.title, { 'attr': {'class': 'input2'} }) }}
                     <span class="focus-input2" data-placeholder="TITRE"></span>
+                    {{ form_errors(activitiesForm.title) }}
                 </div>
                 <div class="wrap-input2">
                     {{ form_label(activitiesForm.article) }}
                     <br>
                     {{ form_widget(activitiesForm.article) }}
                     <span class="focus-input2" data-placeholder="ARTICLE"></span>
+                    {{ form_errors(activitiesForm.article) }}
                 </div>
                 <div class="wrap-input2">
                     {{ form_label(activitiesForm.picture) }}
                     <br>
                     {{ form_widget(activitiesForm.picture) }}
                     <span class="focus-input2" data-placeholder="ARTICLE"></span>
+                    {{ form_errors(activitiesForm.picture) }}
                 </div>
                 <div>
                     {{ form_label(activitiesForm.envoyer) }}

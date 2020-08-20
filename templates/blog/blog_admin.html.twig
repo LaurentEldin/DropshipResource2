@@ -11,13 +11,7 @@
         <div class="sizeResponsiveForemCreateBlog">
             <div class="formContactChild1">
                 {{ form_start(blogForm) }}
-                <div class="errorFormMessage">
-                    {{ form_errors(blogForm.title) }}
-                    {{ form_errors(blogForm.chapeau) }}
-                    {{ form_errors(blogForm.article) }}
-                    {{ form_errors(blogForm.picture) }}
-                    {{ form_errors(blogForm.categorie) }}
-                </div>
+                <div class="errorFormMessage"></div>
                 <div class="wrap-input2">
                     {{ form_label(blogForm.categorie) }}
                     <br>

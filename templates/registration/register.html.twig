@@ -11,16 +11,7 @@
         <div class="registerpage">
             {{ form_start(registrationForm) }}
             <h1 class="titleHomePage margin0auto">Enregistrez vous</h1>
-            <div class="errorFormMessage">
-                {{ form_errors(registrationForm.name) }}
-                {{ form_errors(registrationForm.lastname) }}
-                {{ form_errors(registrationForm.adresse) }}
-                {{ form_errors(registrationForm.city) }}
-                {{ form_errors(registrationForm.phone) }}
-                {{ form_errors(registrationForm.email) }}
-                {{ form_errors(registrationForm.plainPassword) }}
-                {{ form_errors(registrationForm.agreeTerms) }}
-            </div>
+            <div class="errorFormMessage"></div>
             <div class="formContactParent">
                 <div class="formContactChild1">
                     <div class="wrap-input2">
@@ -28,24 +19,28 @@
                         <br>
                         {{ form_widget(registrationForm.name, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="NAME"></span>
+                        {{ form_errors(registrationForm.name) }}
                     </div>
                     <div class="wrap-input2">
                         {{ form_label(registrationForm.adresse) }}
                         <br>
                         {{ form_widget(registrationForm.adresse, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="ADRESSE"></span>
+                        {{ form_errors(registrationForm.adresse) }}
                     </div>
                     <div class="wrap-input2">
                         {{ form_label(registrationForm.phone) }}
                         <br>
                         {{ form_widget(registrationForm.phone, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="PHONE"></span>
+                        {{ form_errors(registrationForm.phone) }}
                     </div>
                     <div class="wrap-input2">
                         {{ form_label(registrationForm.plainPassword, 'Votre mot de passe') }}
                         <br>
                         {{ form_widget(registrationForm.plainPassword, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="NAME"></span>
+                        {{ form_errors(registrationForm.plainPassword) }}
                     </div>
                 </div>
                 <div class="formContactChild2">
@@ -54,24 +49,28 @@
                         <br>
                         {{ form_widget(registrationForm.lastname, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="LASTNAME"></span>
+                        {{ form_errors(registrationForm.lastname) }}
                     </div>
                     <div class="wrap-input2">
                         {{ form_label(registrationForm.city, 'ville') }}
                         <br>
                         {{ form_widget(registrationForm.city, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="CITY"></span>
+                        {{ form_errors(registrationForm.city) }}
                     </div>
                     <div class="wrap-input2">
                         {{ form_label(registrationForm.email) }}
                         <br>
                         {{ form_widget(registrationForm.email, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="EMAIL"></span>
+                        {{ form_errors(registrationForm.email) }}
                     </div>
                     <br>
                     <div>
                         {{ form_widget(registrationForm.agreeTerms) }}
                         {{ form_label(registrationForm.agreeTerms, 'Accepter et continuer') }}
                         <small class="mobileSmall">Cliquer sur le texte pour confirmer</small>
+                        {{ form_errors(registrationForm.agreeTerms) }}
                     </div>
                     <br>
                     <br>

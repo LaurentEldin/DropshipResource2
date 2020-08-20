@@ -8,23 +8,20 @@
         </div>
         <div>
             {{ form_start(formView) }}
-            <div class="errorFormMessage">
-                {{ form_errors(formView.title) }}
-                {{ form_errors(formView.article) }}
-                {{ form_errors(formView.picture) }}
-                {{ form_errors(formView.categories) }}
-            </div>
+            <div class="errorFormMessage"></div>
             <div class="wrap-input2">
                 {{ form_label(formView.categories) }}
                 <br>
                 {{ form_widget(formView.categories, { 'attr': {'class': 'input2'} }) }}
                 <span class="focus-input2" data-placeholder="title"></span>
+                {{ form_errors(formView.categories) }}
             </div>
             <div class="wrap-input2">
                 {{ form_label(formView.title) }}
                 <br>
                 {{ form_widget(formView.title, { 'attr': {'class': 'input2'} }) }}
                 <span class="focus-input2" data-placeholder="title"></span>
+                {{ form_errors(formView.title) }}
             </div>
             <div class="wrap-input2">
                 {{ form_label(formView.chapeau) }}
@@ -38,12 +35,14 @@
                 <br>
                 {{ form_widget(formView.article) }}
                 <span class="focus-input2" data-placeholder="article"></span>
+                {{ form_errors(formView.article) }}
             </div>
             <div class="wrap-input2">
                 {{ form_label(formView.picture) }}
                 <br>
                 {{ form_widget(formView.picture, { 'attr': {'class': 'input2'} }) }}
                 <span class="focus-input2" data-placeholder="illustration"></span>
+                {{ form_errors(formView.picture) }}
             </div>
             <div>
                 {{ form_label(formView.envoyer) }}
