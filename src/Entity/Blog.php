@@ -61,11 +61,6 @@ class Blog
      */
     private $chapeau;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Categories::class, inversedBy="articles")
-     */
-    private $categorie;
-
 
     public function getId(): ?int
     {
@@ -146,22 +141,6 @@ class Blog
         $this->chapeau = $chapeau;
 
         return $this;
-    }
-
-    public function getCategorie(): ?Categories
-    {
-        return $this->categorie;
-    }
-
-    public function setCategorie(?Categories $categorie): self
-    {
-        $this->categorie = $categorie;
-
-        return $this;
-    }
-    public function __toString()
-    {
-        return $this->categorie;
     }
 
 }
