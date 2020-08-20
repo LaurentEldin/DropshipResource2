@@ -393,7 +393,7 @@ li{
     margin-bottom: 10vh;
 }
 .nav{
-    z-index: 999;
+    z-index: 9999999;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2247,6 +2247,7 @@ td, th /* Mettre une bordure sur les td ET les th */
     height: 320px;
     z-index: 60;
 }
+
 .optionsPaiement{
     position: absolute;
     right: 0;
