@@ -162,6 +162,7 @@
     #menu{
         width: 100vh;
         height: auto;
+        z-index: 99999999;
     }
     .menuBurgerParent{
         width: 100vh;
