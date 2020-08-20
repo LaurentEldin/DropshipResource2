@@ -2269,8 +2269,14 @@ td, th /* Mettre une bordure sur les td ET les th */
 -------------------------------------------CSS Home PAGE carousel-------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
  */
+.marginLeftTitle{
+    margin-left: 8%;
+}
+.marginTitleHomePageExclu{
+    padding: 0 8%;
+}
 #sectionCarousel{
-    padding: 0 8% 0 8%;
+    padding: 0  0 ;
     position: relative;
 }
 div#carousel {
@@ -2287,7 +2293,7 @@ figure#spinner {
     transition: 1s;
 }
 figure#spinner a {
-    width: 40%; max-width: 320px;
+    width: 50%; max-width: 400px;
     position: absolute; left: 35%;
     transform-origin: 50% 50% -500px;
     outline:1px solid transparent;
