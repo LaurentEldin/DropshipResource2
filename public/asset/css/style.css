@@ -2149,7 +2149,7 @@ td, th /* Mettre une bordure sur les td ET les th */
 }
 .categorieBox{
     position: relative;
-    z-index: -1;
+    z-index: 9999;
 }
 #myBtn{
     background-image: url("../img/testBouton.svg");
