@@ -850,6 +850,7 @@
     .soustitleTemplate{
         font-size: 18px;
         padding-bottom: 20px;
+        margin-top: 0px;
     }
 }
 @media screen and (min-width:1px) and (max-width:500px) {
