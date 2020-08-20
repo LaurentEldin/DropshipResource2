@@ -15,10 +15,10 @@
             <br>
             <br>
         {% endif %}
-        <form action="{{ path('recherche_categories') }}" class="formBlogCategorie">
+        {#<form action="{{ path('recherche_categories') }}" class="formBlogCategorie">
             <label for="categories">Catégories</label>
             <br>
-            {#<select class="choiceTypeBlog" name="categories" id="pet-select">
+            <select class="choiceTypeBlog" name="categories" id="pet-select">
                 <option  value="">Choisir une catégorie</option>
                 {% for categories in categorie %}
                 <option value="{{ categories.libelle }}">{{ categories.libelle }}</option>
@@ -30,9 +30,9 @@
                         {% set newArray = newArray|merge([]) %}
                     {% endif %}
                 {% endfor %}
-            </select>#}
+            </select>
             <input class="inputBlog" type="submit" value="rechercher">
-        </form>
+        </form>#}
        {% if blog %}
             {% for article in blog %}
             {#{% if article.id is divisible by (2) %}#}
@@ -40,7 +40,7 @@
                 <div class="blogFor displayNone">
                     <div class="blogForArticleFor">
                         <div>
-                            <h3 class="blogTitle">{{ article.categorie }} - {{ article.title }}</h3>
+                            <h3 class="blogTitle">{{ article.title }}</h3>
                         </div>
                         <div class="articleBlog">
                             <span>{{ article.chapeau|u.truncate(255,'...')|raw }}</span>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="blogForArticleFor">
                         <div>
-                            <h3 class="blogTitle">{{ article.categorie }} - {{ article.title }}</h3>
+                            <h3 class="blogTitle">{{ article.title }}</h3>
                         </div>
                         <div class="articleBlog">
                             <span>{{ article.chapeau|u.truncate(255,'...')|raw }}</span>

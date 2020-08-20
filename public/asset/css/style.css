@@ -2387,5 +2387,9 @@ div#carousel ~ span {
 .imgCarouselResponsiveCarousel{
     width: 100%;
 }
+.soustitleTemplate{
+    margin-top: -50px;
+    padding-bottom: 20px;
+}
 
 
