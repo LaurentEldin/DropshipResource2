@@ -2388,8 +2388,9 @@ div#carousel ~ span {
     width: 100%;
 }
 .soustitleTemplate{
-    margin-top: -50px;
+    font-size: 18px;
     padding-bottom: 20px;
+    margin-top: -50px;
 }
 
 
