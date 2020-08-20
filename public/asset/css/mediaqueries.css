@@ -843,7 +843,6 @@
         padding: 0 8%;
     }
 }
-
 @media screen and (min-width:1px) and (max-width:500px) {
     .imgTemplate{
         width: 100%;
@@ -851,8 +850,6 @@
         z-index: 60;
     }
 }
-
-
 @media screen and (min-width:1px) and (max-width:280px) {
     .titleHomePageBlog{
         font-size: 7vw;
