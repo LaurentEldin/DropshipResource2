@@ -2296,6 +2296,9 @@ td, th /* Mettre une bordure sur les td ET les th */
 .hoverImgTemplate:hover .hoverTemplateP{
     color: white;
 }
+.categorieBoxContainer{
+
+}
 /*
 ----------------------------------------------------------------------------------------------------------------------
 -------------------------------------------CSS Home PAGE carousel-------------------------------------------------------------------

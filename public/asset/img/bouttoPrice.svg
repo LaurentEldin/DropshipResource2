@@ -1,0 +1,11 @@
+<svg id="Composant_60_1" data-name="Composant 60 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="366" height="73" viewBox="0 0 366 73">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.517" x2="1" y2="0.515" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00e2fe"/>
+      <stop offset="0.515" stop-color="blue"/>
+      <stop offset="1" stop-color="#f0f"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_1511" data-name="Rectangle 1511" width="366" height="73" rx="36.5" fill="url(#linear-gradient)"/>
+  <text id="Options_de_paiement_" data-name="Options de paiement " transform="translate(51 47)" fill="#fff" font-size="30" font-family="D-DIN-Bold, D-DIN DIN" font-weight="700"><tspan x="0" y="0">Options de paiement </tspan></text>
+</svg>

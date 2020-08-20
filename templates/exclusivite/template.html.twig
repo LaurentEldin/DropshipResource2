@@ -6,25 +6,27 @@
     {% include 'commons/_headerLittle.html.twig' %}
         <main class="templatePage">
             <h1 class="titleTemplate">Choisissez le template le mieux adapté à votre activité</h1>
-            <div class="categorieBox">
-                <p><strong>Catégorie</strong></p>
-                <div id="myBtn"></div>
-                <div class="modalContainer">
-                    <div id="myModal" class="modal">
-                        <div class="modal-content">
-                            <a href="{{ path('ecommerce') }}" class="modalCategorieA">E-commerce</a>
-                            <br>
-                            <a href="{{ path('portfolio') }}" class="modalCategorieA">Portfoliot</a>
-                            <br>
-                            <a href="{{ path('restaurant') }}" class="modalCategorieA">Restaurant</a>
-                            <br>
-                            <a href="{{ path('immobilier') }}" class="modalCategorieA">Immo</a>
-                            <br>
-                            <a href="{{ path('habitat') }}" class="modalCategorieA">Habitat</a>
-                            <br>
-                            <a href="{{ path('vtc') }}" class="modalCategorieA">Taxi/Vtc</a>
-                            <br>
-                            <span class="close">&times;</span>
+            <div class="categorieBoxContainer">
+                <div class="categorieBox">
+                    <p><strong>Catégorie</strong></p>
+                    <div id="myBtn"></div>
+                    <div class="modalContainer">
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <a href="{{ path('ecommerce') }}" class="modalCategorieA">E-commerce</a>
+                                <br>
+                                <a href="{{ path('portfolio') }}" class="modalCategorieA">Portfoliot</a>
+                                <br>
+                                <a href="{{ path('restaurant') }}" class="modalCategorieA">Restaurant</a>
+                                <br>
+                                <a href="{{ path('immobilier') }}" class="modalCategorieA">Immo</a>
+                                <br>
+                                <a href="{{ path('habitat') }}" class="modalCategorieA">Habitat</a>
+                                <br>
+                                <a href="{{ path('vtc') }}" class="modalCategorieA">Taxi/Vtc</a>
+                                <br>
+                                <span class="close">&times;</span>
+                            </div>
                         </div>
                     </div>
                 </div>

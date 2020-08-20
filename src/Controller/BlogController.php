@@ -19,14 +19,12 @@ class BlogController extends AbstractController
     /**
      * @Route("/blog", name="blog")
      */
-    public function blog(BlogRepository $blogRepository, CategoriesRepository $categoriesRepository)
+    public function blog(BlogRepository $blogRepository)
     {
-        $categorie = $categoriesRepository->findAll();
         $blog = $blogRepository->findBy([],['id' => 'DESC']);
 
         return $this->render('blog/blog.html.twig', [
-            'blog'=>$blog,
-            'categorie'=>$categorie
+            'blog'=>$blog
         ]);
     }
 

@@ -18,19 +18,19 @@
         <form action="{{ path('recherche_categories') }}" class="formBlogCategorie">
             <label for="categories">Catégories</label>
             <br>
-            <select class="choiceTypeBlog" name="categories" id="pet-select">
+            {#<select class="choiceTypeBlog" name="categories" id="pet-select">
                 <option  value="">Choisir une catégorie</option>
                 {% for categories in categorie %}
                 <option value="{{ categories.libelle }}">{{ categories.libelle }}</option>
                 {% endfor %}
-                {#{% set newArray = [] %}
+                {% set newArray = [] %}
                 {% for categories in blog %}
                     {% if categories not in newArray %}
                         {{categories.categories}}
                         {% set newArray = newArray|merge([]) %}
                     {% endif %}
-                {% endfor %}#}
-            </select>
+                {% endfor %}
+            </select>#}
             <input class="inputBlog" type="submit" value="rechercher">
         </form>
        {% if blog %}
