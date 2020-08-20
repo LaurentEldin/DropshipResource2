@@ -8,7 +8,7 @@
     {% endfor %}
     {% include 'commons/_header.html.twig' %}
     <main>
-        <section id="sectionCarousel">
+        <section id="sectionCarousel" class="displayNone">
             <div id="carousel">
                 <h1 class="titleHomePage ">Exclusivité</h1>
                 <figure id="spinner">
@@ -64,6 +64,12 @@
             </div>
             <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
             <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
+        </section>
+        <section id="sectionCarousel" class="mobilBlock">
+            <h1 class="titleHomePageTemplateResponsive ">Exclusivité</h1>
+                <a href="{{ path('exclusivite') }}" class="templateContainer">
+                    <img class="imgCarouselResponsiveCarousel" alt="illustration carousel template" src="{{ asset('asset/img/template.jpg') }}" title="illustration carousel template">
+                </a>
         </section>
         <section id="Activities">
             <img class="geoAnime colorAnimeOne mobilBlock" data-aos="fade-left" data-aos-duration="1050" alt="color animation" src="{{ asset('asset/img/element6.svg') }}" title="image_button">

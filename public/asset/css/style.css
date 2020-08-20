@@ -2319,3 +2319,23 @@ div#carousel ~ span {
     line-height: 0; }
     div#carousel ~ span:hover { color: #FF00FF; cursor: pointer;
 }
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS Home PAGE carousel responsive-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.titleHomePageTemplateResponsive{
+    font-size: 6vw;
+    margin: 2% 0;
+    background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+}
+.imgCarouselResponsiveCarousel{
+    width: 100%;
+}
