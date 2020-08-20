@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Exclusivité{% endblock %}
+{% block title %}Exclusivité - Habitat{% endblock %}
 {% block body %}
 
     {% include 'commons/_headerLittle.html.twig' %}
@@ -8,7 +8,7 @@
         <h1 class="titleTemplate">Choisissez le template le mieux adapté à votre activité</h1>
         <div class="categorieBox">
             <p><strong>Catégorie</strong></p>
-            <div id="myBtn">Selectionnez</div>
+            <div id="myBtn"></div>
             <div class="modalContainer">
                 <div id="myModal" class="modal">
                     <div class="modal-content">
@@ -30,46 +30,70 @@
             </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="https://ld-wp73.template-help.com/wordpress/prod_523/v1/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/BUILDERRY.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">BUILDERRY</p>
-                    </span>
-            </a>
-            <a href="http://anpsthemes.com/constructo-new-demos/4/" target="_blank" class="templateContainer">
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="https://ld-wp73.template-help.com/wordpress/prod_523/v1/"></a>
+                    </div>
+                </span>
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/CONSTRUCTO4.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">CONSTRUCTO 4</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="http://anpsthemes.com/constructo-new-demos/4/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="http://anpsthemes.com/constructo-new-demos/8/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/CONSTRUCTO8.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">CONSTRUCTO 8</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="http://anpsthemes.com/constructo-new-demos/8/"></a>
+                    </div>
                 </span>
-            </a>
-            <a href="http://anpsthemes.com/constructo-new-demos/11/" target="_blank" class="templateContainer">
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/CONSTRUCTO11.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">CONSTRUCTO 11</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="http://anpsthemes.com/constructo-new-demos/11/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="http://anpsthemes.com/constructo-new-demos/10/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/CONSTRUCTO10.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">CONSTRUCTO 10</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="http://anpsthemes.com/constructo-new-demos/10/"></a>
+                    </div>
                 </span>
-            </a>
-            <a href="https://saral-demo.theironnetwork.org/" target="_blank" class="templateContainer">
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/SARAL.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">SARAL</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="https://saral-demo.theironnetwork.org/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="mobilBlock">
             <a href="https://ld-wp73.template-help.com/wordpress/prod_523/v1/" target="_blank" class="templateContainer">

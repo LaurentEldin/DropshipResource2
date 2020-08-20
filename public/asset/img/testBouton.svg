@@ -1,0 +1,20 @@
+<svg id="Composant_65_1" data-name="Composant 65 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="366" height="50" viewBox="0 0 366 50">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.517" x2="1" y2="0.515" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00e2fe"/>
+      <stop offset="0.515" stop-color="blue"/>
+      <stop offset="1" stop-color="#f0f"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect width="9.664" height="6.1" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2233" data-name="Groupe 2233" transform="translate(-576 -1130)">
+    <rect id="Rectangle_1527" data-name="Rectangle 1527" width="366" height="50" rx="25" transform="translate(576 1130)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_1528" data-name="Rectangle 1528" width="362" height="46" rx="23" transform="translate(578 1132)" fill="#fff"/>
+    <text id="Sélectionner" transform="translate(606 1162)" font-size="20" font-family="D-DIN"><tspan x="0" y="0">Sélectionner</tspan></text>
+  </g>
+  <g id="Composant_156_1" data-name="Composant 156 – 1" transform="translate(336 22)" clip-path="url(#clip-path)">
+    <path id="Tracé_36" data-name="Tracé 36" d="M6.832,8.1,2,3.4,3.439,2,6.832,5.3,10.225,2l1.439,1.4Z" transform="translate(-2 -2)"/>
+  </g>
+</svg>

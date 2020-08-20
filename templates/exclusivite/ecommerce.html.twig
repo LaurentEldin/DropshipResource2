@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Exclusivité{% endblock %}
+{% block title %}Exclusivité E-commerce{% endblock %}
 {% block body %}
 
     {% include 'commons/_headerLittle.html.twig' %}
@@ -8,7 +8,7 @@
         <h1 class="titleTemplate">Choisissez le template le mieux adapté à votre activité</h1>
         <div class="categorieBox">
             <p><strong>Catégorie</strong></p>
-            <div id="myBtn">Selectionnez</div>
+            <div id="myBtn"></div>
             <div class="modalContainer">
                 <div id="myModal" class="modal">
                     <div class="modal-content">
@@ -30,46 +30,70 @@
             </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="https://konsept.qodeinteractive.com/interior-decor/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/KONSEPTDECOR.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">KONNSEPT DECOR</p>
-                    </span>
-            </a>
-            <a href="https://konsept.qodeinteractive.com/shop-metro/" target="_blank" class="templateContainer">
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank"  href="https://konsept.qodeinteractive.com/interior-decor/"></a>
+                    </div>
+                </span>
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/KONSEPTMETRO.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">KONSEPT METRO</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank"  href="https://konsept.qodeinteractive.com/shop-metro/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="https://konsept.qodeinteractive.com/shop-minimal/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/KONSEPTMINIMAL.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">KONSEPT MINIMAL</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank"  href="https://konsept.qodeinteractive.com/shop-minimal/"></a>
+                    </div>
                 </span>
-            </a>
-            <a href="https://makao.qodeinteractive.com/interactive-showcase/" target="_blank" class="templateContainer">
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/MAKAOINTERACTIVE.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">MAKAO INTERACTIVE</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank"  href="https://makao.qodeinteractive.com/interactive-showcase/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="https://makao.qodeinteractive.com/parallax-shop/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/MAKAOPARALLAX.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">MAKAO PARALLAX</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank"  href="https://makao.qodeinteractive.com/parallax-shop/"></a>
+                    </div>
                 </span>
-            </a>
-            <a href="{{ path('vtc') }}" target="_blank" class="templateContainer">
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/MAKAOSLIDE.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">MAKAO SLIDE</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="https://makao.qodeinteractive.com/divided-slider-showcase/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="mobilBlock">
             <a href="https://konsept.qodeinteractive.com/interior-decor/" target="_blank" class="templateContainer">

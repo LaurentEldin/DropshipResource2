@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Exclusivité{% endblock %}
+{% block title %}Exclusivité - Vtc{% endblock %}
 {% block body %}
 
     {% include 'commons/_headerLittle.html.twig' %}
@@ -8,7 +8,7 @@
         <h1 class="titleTemplate">Choisissez le template le mieux adapté à votre activité</h1>
         <div class="categorieBox">
             <p><strong>Catégorie</strong></p>
-            <div id="myBtn">Selectionnez</div>
+            <div id="myBtn">{#Selectionnez#}</div>
             <div class="modalContainer">
                 <div id="myModal" class="modal">
                     <div class="modal-content">
@@ -30,46 +30,70 @@
             </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="http://demo.spyropress.com/themeforest/citycabs/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/CITYCAB.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">CITYCAB</p>
-                    </span>
-            </a>
-            <a href="http://getcab.ancorathemes.com/" target="_blank" class="templateContainer">
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil"  target="_blank" href="http://demo.spyropress.com/themeforest/citycabs/"></a>
+                    </div>
+                </span>
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/GETCAB.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">GETCAB</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank"  href="http://getcab.ancorathemes.com/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="http://themes.quitenicestuff2.com/chauffeurwp/demo3/home-iii/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/HOME.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">HOME</p>
+                     <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank"  href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank"  href="http://themes.quitenicestuff2.com/chauffeurwp/demo3/home-iii/"></a>
+                    </div>
                 </span>
-            </a>
-            <a href="http://wpdemo.kimarotec.net/vtc-theme/" target="_blank" class="templateContainer">
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/KIMAROTEC.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">KIMAROTEC</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe"  target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="http://wpdemo.kimarotec.net/vtc-theme/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="http://demo.earththeme.com/limoguys/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/LIMOGUYS.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">LIMOGUYS</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe"  target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil"  target="_blank"  href="http://demo.earththeme.com/limoguys/"></a>
+                    </div>
                 </span>
-            </a>
-            <a href="https://demo.goodlayers.com/limoking/" target="_blank" class="templateContainer">
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/LIMOKING.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">LIMOKING</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="https://demo.goodlayers.com/limoking/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="mobilBlock">
             <a href="http://demo.spyropress.com/themeforest/citycabs/" target="_blank" class="templateContainer">

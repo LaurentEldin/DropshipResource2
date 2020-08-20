@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Exclusivité{% endblock %}
+{% block title %}Exclusivité - Immobilier{% endblock %}
 {% block body %}
 
     {% include 'commons/_headerLittle.html.twig' %}
@@ -8,7 +8,7 @@
         <h1 class="titleTemplate">Choisissez le template le mieux adapté à votre activité</h1>
         <div class="categorieBox">
             <p><strong>Catégorie</strong></p>
-            <div id="myBtn">Selectionnez</div>
+            <div id="myBtn"></div>
             <div class="modalContainer">
                 <div id="myModal" class="modal">
                     <div class="modal-content">
@@ -30,46 +30,68 @@
             </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="http://demo1.wpopal.com/na/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/NAHOME1.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">NA HOME 1 </p>
-                    </span>
-            </a>
-            <a href="http://demo1.wpopal.com/na/home-8/" target="_blank" class="templateContainer">
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="http://demo1.wpopal.com/na/"></a>
+                    </div>
+                </span>
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/NAHOME8.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">NA HOME 8 </p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="http://demo1.wpopal.com/na/home-8/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="http://demo1.wpopal.com/na/home-9/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/NAHOME9.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">NA HOME 9</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="http://demo1.wpopal.com/na/home-9/"></a>
+                    </div>
                 </span>
-            </a>
-            <a href="http://demo1.wpopal.com/na/home-10/" target="_blank" class="templateContainer">
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/NAHOME10.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
                     <p class="pImgTemplate">NA HOME 10</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="http://demo1.wpopal.com/na/home-10/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="imgTemplateContainer displayNone">
-            <a href="https://rp.inspirydemos.com/" target="_blank" class="templateContainer">
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/REALPLACEONE.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
-                    <p class="pImgTemplate">REAL PLACE ONE</p>
+                    <p class="pImgTemplate">REAL PLACE ONE</p><div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="https://rp.inspirydemos.com/"></a>
+                    </div>
                 </span>
-            </a>
-            <a href="http://rttheme15.templatemints.com/" target="_blank" class="templateContainer">
+            </div>
+            <div class="templateContainer">
                 <img class="imgTemplate" src="{{ asset('asset/img/RTTHEME15.jpg') }}" alt="illustration template" title="illustration template">
                 <span class="hoverImgTemplate">
-                    <p class="pImgTemplate">RT THEME 15</p>
+                    <p class="pImgTemplate">RT THEME 15</p><div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contactForm') }}"></a>
+                        <a class="oeil" target="_blank" href="http://rttheme15.templatemints.com/"></a>
+                    </div>
                 </span>
-            </a>
+            </div>
         </div>
         <div class="mobilBlock">
             <a href="http://demo1.wpopal.com/na/" target="_blank" class="templateContainer">

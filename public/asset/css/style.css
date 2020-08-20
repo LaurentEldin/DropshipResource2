@@ -2149,13 +2149,13 @@ td, th /* Mettre une bordure sur les td ET les th */
     z-index: 99999;
 }
 #myBtn{
-    background-image: url("../img/bouton.svg");
+    background-image: url("../img/testBouton.svg");
     background-color: white;
     background-size: contain;
     border: none;
     background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
+    height: 19px;
+    width: 40%;
     padding: 7px 16px;
 }
 .modalContainer{
@@ -2239,7 +2239,7 @@ td, th /* Mettre une bordure sur les td ET les th */
 }
 .pImgTemplate{
     text-align: center;
-    margin-top: 25%;
+    margin-top: 10%;
     font-size: 30px;
 }
 .imgTemplate{
@@ -2263,6 +2263,25 @@ td, th /* Mettre une bordure sur les td ET les th */
     height: 100%;
     width: 100%;
     padding: 7px 16px;
+}
+
+.TemplateImgButtonHoverContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.hoverImgTemplate:hover .oeil{
+    background-image: url("../img/oeilTemplate.svg");
+    width: 120px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.hoverImgTemplate:hover .enveloppe{
+    background-image: url("../img/enveloppeTemplate.svg");
+    width: 120px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 /*
 ----------------------------------------------------------------------------------------------------------------------
@@ -2345,3 +2364,5 @@ div#carousel ~ span {
 .imgCarouselResponsiveCarousel{
     width: 100%;
 }
+
+
