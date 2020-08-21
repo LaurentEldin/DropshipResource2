@@ -127,7 +127,6 @@ class homeController extends AbstractController
                     ->setBody('Nom: ' . $contact->getName() . '<br>' . 'Tel: ' . $contact->getPhone() . '<br>' . 'Email: ' . $contact->getMail() . '<br>' . 'Sujet: ' . $contact->getMessage(), 'text/html');
                 $mailer->send($message);
 
-                $this->addFlash('success', 'Votre message a bien été envoyé.');
                 return $this->redirectToRoute('validationContact');
             }
         }
