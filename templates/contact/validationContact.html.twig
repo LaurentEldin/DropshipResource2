@@ -7,8 +7,16 @@
         </div>
     {% endfor %}
     {% include 'commons/_headerLittle.html.twig' %}
-    <main class="">
-        hello world
+    <main class="validationContactPage">
+        <h1 class="titleContactValidation">Validation</h1>
+        <div class="validationContactContainer">
+            <p class="validationContactP">
+                Nous vous remercions pour l'intérêt que vous portez à notre société. Nous vous recontacterons dans les plus brefs délais.
+            </p>
+        </div>
+        <div data-aos="flip-up" data-aos-duration="1050" class="validationContactBouton">
+            <a data-aos-delay="850" data-aos="zoom-out" class="validationContactA" href="{{ path ('home') }}">Retour accueil</a>
+        </div>
     </main>
     {% include 'commons/_footer.html.twig' %}
 {% endblock %}

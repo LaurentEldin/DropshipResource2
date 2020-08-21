@@ -878,7 +878,12 @@
         padding-bottom: 20px;
         margin-top: 0px;
     }
+
+    .titleContactValidation{
+        padding-top: 40px;
+    }
 }
+
 @media screen and (min-width:1px) and (max-width:500px) {
     .imgTemplate{
         width: 100%;

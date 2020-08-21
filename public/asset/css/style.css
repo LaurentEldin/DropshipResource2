@@ -2477,8 +2477,44 @@ div#carousel ~ span:hover { color: #FF00FF; cursor: pointer;
     background-position: 100% 0;
 }
 
+/*
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------CSS validation contact-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ */
+.validationContactPage{
+    padding: 7%;
+    text-align: center;
+}
+.validationContactContainer{
 
-
+}
+.validationContactP{
+    font-size: 22px;
+}
+.validationContactBouton{
+    background-color: rgb(0,0,255);
+    text-align: center;
+    width: 200px;
+    color: whitesmoke;
+    padding: 10px;
+    margin: 65px auto 30px;
+}
+.validationContactA{
+    color: whitesmoke;
+}
+.titleContactValidation{
+    font-size: 70px;
+    margin: 5% auto;
+    background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00E0FF), to(#FF00FF));
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+}
 
 
 
