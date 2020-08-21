@@ -2207,6 +2207,7 @@ td, th /* Mettre une bordure sur les td ET les th */
     width: -moz-max-content;
     width: max-content;
     border-radius: 18px;
+    z-index: 6666;
 }
 .close {
     color: white;
@@ -2230,6 +2231,7 @@ td, th /* Mettre une bordure sur les td ET les th */
     width: 225px;
     padding: 5px 0 5px 10px;
     border-radius: 20px;
+    z-index: 6666;
 }
 .imgTemplateContainer{
     display: -webkit-box;
@@ -2283,7 +2285,7 @@ td, th /* Mettre une bordure sur les td ET les th */
 .imgTemplate{
     width: 100%;
     height: 320px;
-    z-index: 60;
+    z-index: -2;
 }
 
 .optionsPaiement{
@@ -2309,8 +2311,10 @@ td, th /* Mettre une bordure sur les td ET les th */
     display: flex;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+    z-index: -1;
 }
 .hoverImgTemplate{
+    z-index: auto;
 }
 .hoverImgTemplate:hover .oeil{
     background-image: url("../img/oeilTemplate.svg");
@@ -2325,6 +2329,7 @@ td, th /* Mettre une bordure sur les td ET les th */
     height: 75px;
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: 0;
 }
 .hoverTemplateP{
     position: absolute;
