@@ -114,6 +114,23 @@
             $owl.trigger('to.owl.carousel', [$(this).data( 'position' ), $speed] );
         });
     </script>
+    <script>
+        var modalHeader = document.getElementById("myModalHeader");
+        var btnHeader = document.getElementById("myBtnHeader");
+        var spanHeader = document.getElementsByClassName("closeHeader")[0];
+
+        btnHeader.onclick = function() {
+            modalHeader.style.display = "block";
+        }
+        spanHeader.onclick = function() {
+            modalHeader.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target === modalHeader) {
+                modalHeader.style.display = "none";
+            }
+        }
+    </script>
 {% endblock %}
 </body>
 </html>

@@ -65,5 +65,4 @@ class TemplateController extends AbstractController
         return $this->render('exclusivite/portfolio.html.twig');
     }
 
-
 }

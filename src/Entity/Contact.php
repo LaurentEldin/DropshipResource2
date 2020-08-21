@@ -35,7 +35,7 @@ class Contact
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\Email(
      *     message = "Votre email n'est pas au bon format"
      * )
@@ -43,20 +43,22 @@ class Contact
     private $mail;
 
     /**
-     * @ORM\Column(type="string", nullable=true)
+     * @ORM\Column(type="string")
      * @Assert\Length(
      *     min = 8,
      *     max = 20,
      *     minMessage = "Numéro trop court",
      *     maxMessage = "Numéro trop long"
      *     )
+     * @Assert\Regex(pattern="^(?:(?:\+|00)33[\s.-]{0,3}(?:00[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$^",
+     *      message="Format incorrect")
      */
     private $phone;
 
-    /**
-     * @ORM\Column(type="string", length=255)
+/**
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\Length(
-     *     min = 2,
+     *     min = 0,
      *     max = 50,
      *     minMessage = "Texte trop court",
      *     maxMessage = "Texte trop long"
@@ -65,16 +67,16 @@ class Contact
     private $subject;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      * @Assert\Length(
-     *      min = 10,
+     *      min = 0,
      *      minMessage = " Votre texte doit contenir au minium {{ limit }} caractères",
      *      )
      */
     private $message;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $date;
 
@@ -107,12 +109,12 @@ class Contact
         return $this;
     }
 
-    public function getPhone(): ?int
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
 
-    public function setPhone(?int $phone): self
+    public function setPhone(string $phone): self
     {
         $this->phone = $phone;
 

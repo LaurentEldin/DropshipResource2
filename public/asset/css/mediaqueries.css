@@ -46,6 +46,7 @@
         -ms-transform: translate(100% 0);
         transform: translate(100% 0);
         right: 0;
+        border: none;
     }
     .widthBurgerTitleExclu{
         background: -o-linear-gradient(left, #00E0FF 0%, #FF00FF 100%);

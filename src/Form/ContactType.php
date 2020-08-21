@@ -22,16 +22,19 @@ class ContactType extends AbstractType
                 'label'=>'Nom'
             ])
             ->add('mail', EmailType::class, [
-                'label'=>'Mail'
+                'label'=>'Mail',
+                'required'=>false
             ])
             ->add('phone', TextType::class, [
                 'label'=>'Téléphone'
             ])
             ->add('subject', TextType::class, [
-                'label'=>'Sujet'
+                'label'=>'Sujet',
+                'required'=>false
             ])
             ->add('message', TextareaType::class, [
-                'label'=>'Précisez votre demande'
+                'label'=>'Précisez votre demande',
+                'required'=>false
             ])
             ->add('envoyer', SubmitType::class, [
                 'label'=>'Envoyer'
