@@ -135,4 +135,13 @@ class homeController extends AbstractController
             'users' => $users,
         ]);
     }
+
+    /**
+     * @Route("/contact/validation", name="validationContact")
+     */
+    public function validationcontact()
+    {
+        return $this->render('contact/validationContact.html.twig');
+    }
+
 }
