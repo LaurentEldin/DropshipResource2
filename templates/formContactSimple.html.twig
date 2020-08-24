@@ -1,0 +1,25 @@
+{{ form_start(contactForm) }}
+<div class="errorFormMessage"></div>
+<div class="formContactParent">
+    <div class="formContactChild1">
+        <div class="wrap-input2">
+            {{ form_label(contactForm.name) }}
+            <br>
+            {{ form_widget(contactForm.name, { 'attr': {'class': 'input2'} }) }}
+            <span class="focus-input2" data-placeholder="NAME"></span>
+            {{ form_errors(contactForm.name) }}
+        </div>
+        <div class="wrap-input2">
+            {{ form_label(contactForm.phone) }}
+            <br>
+            {{ form_widget(contactForm.phone, { 'attr': {'class': 'input2'} }) }}
+            <span class="focus-input2" data-placeholder="PHONE"></span>
+            {{ form_errors(contactForm.phone) }}
+        </div>
+        <div class="positionSubmitFormContactResponsive">
+            {{ form_label(contactForm.envoyer) }}
+            {{ form_widget(contactForm.envoyer, { 'attr': {'class': 'submitForm'} }) }}
+        </div>
+    </div>
+</div>
+{{ form_end(contactForm) }}

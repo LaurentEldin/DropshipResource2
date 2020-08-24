@@ -68,7 +68,7 @@ class homeController extends AbstractController
     }
 
     /**
-     * @Route("/contact", name="contact")
+     * @Route("/admin/contact", name="contact")
      * @param ContactRepository $contactRepository
      * @return Response
      */
