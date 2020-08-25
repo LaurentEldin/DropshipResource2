@@ -2472,7 +2472,6 @@ div#carousel ~ span:hover { color: #FF00FF; cursor: pointer;
 .backgroundAnimation {
     height: 600px;
     background-size: 200%;
-    /*background-image: linear-gradient(to bottom left, rgb(255,255,255) 0%, rgb(255,255,255) 60%, rgba(255,0,255,0.3) 80%, rgba(0,224,255,0.3) 95%);*/
     background-image: linear-gradient(to bottom left, rgba(0,224,255,0.3) 5%, rgba(255,0,255,0.3) 18%, rgb(255,255,255) 30%, rgb(255,255,255) 95%);
     transition: 600ms ease;
 }

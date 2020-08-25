@@ -16,10 +16,10 @@ class TestController extends AbstractController
     {
         dump('coucou');
         $email = (new Email())
-            ->from('samahz@hotmail.fr')
+            ->from('microsoft@gmail.com')
             ->to('atif.developpeur@gmail.com')
-            ->subject('je te donne tout mon argent')
-            ->text('et ce message a une valeur juridique');
+            ->subject('on vous embauche')
+            ->text('6000 / mois ');
 
         $mailer->send($email);
     }
