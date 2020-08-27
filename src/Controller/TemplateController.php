@@ -64,5 +64,11 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/portfolio.html.twig');
     }
-
+    /**
+     * @Route("/concours", name="concours")
+     */
+    public function concours()
+    {
+        return $this->render('concours.html.twig');
+    }
 }
