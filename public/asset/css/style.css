@@ -536,6 +536,7 @@ footer{
     display: flex;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+    position: relative;
 }
 .logoFooterMarginB{
     margin-bottom: 30px;
@@ -684,6 +685,12 @@ footer{
 }
 .textFooterSizeResponsive{
     font-size: 3.5vw;
+}
+.copyright{
+    color: black;
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
 }
 /*
 ----------------------------------------------------------------------------------------------------------------------
