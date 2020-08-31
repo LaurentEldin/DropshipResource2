@@ -27,7 +27,7 @@
                 </div>
                 <div class="">
                     {{ form_start(form) }}
-                    {{ form_errors(form.keywords, { 'attr': {'class': 'errorFormMessage'} }) }}
+                    <div class="errorFormMessage">{{ form_errors(form.keywords, { 'attr': {'class': 'errorFormMessage'} }) }}</div>
                     <div class="wrap-input2 formKeywordsChild1">
                         {{ form_label(form.keywords) }}
                         <br>

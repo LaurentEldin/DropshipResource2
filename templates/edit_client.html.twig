@@ -18,28 +18,28 @@
                             <br>
                             {{ form_widget(userFormView.name, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="NAME"></span>
-                            {{ form_errors(userFormView.name) }}
+                            <div class="errorFormMessage">{{ form_errors(userFormView.name) }}</div>
                         </div>
                         <div class="wrap-input2">
                             {{ form_label(userFormView.adresse) }}
                             <br>
                             {{ form_widget(userFormView.adresse, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="ADRESSE"></span>
-                            {{ form_errors(userFormView.adresse) }}
+                            <div class="errorFormMessage">{{ form_errors(userFormView.adresse) }}</div>
                         </div>
                         <div class="wrap-input2">
                             {{ form_label(userFormView.phone) }}
                             <br>
                             {{ form_widget(userFormView.phone, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="PHONE"></span>
-                            {{ form_errors(userFormView.phone) }}
+                            <div class="errorFormMessage">{{ form_errors(userFormView.phone) }}</div>
                         </div>
                         <div class="wrap-input2">
                             {{ form_label(userFormView.plainPassword, 'Votre mot de passe') }}
                             <br>
                             {{ form_widget(userFormView.plainPassword, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="PASSWORD"></span>
-                            {{ form_errors(userFormView.plainPassword) }}
+                            <div class="errorFormMessage">{{ form_errors(userFormView.plainPassword) }}</div>
                         </div>
                     </div>
                     <div class="formContactChild2">
@@ -48,28 +48,28 @@
                             <br>
                             {{ form_widget(userFormView.lastname, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="LASTNAME"></span>
-                            {{ form_errors(userFormView.lastname) }}
+                            <div class="errorFormMessage">{{ form_errors(userFormView.lastname) }}</div>
                         </div>
                         <div class="wrap-input2">
                             {{ form_label(userFormView.city, 'ville') }}
                             <br>
                             {{ form_widget(userFormView.city, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="CITY"></span>
-                            {{ form_errors(userFormView.city) }}
+                            <div class="errorFormMessage">{{ form_errors(userFormView.city) }}</div>
                         </div>
                         <div class="wrap-input2">
                             {{ form_label(userFormView.email) }}
                             <br>
                             {{ form_widget(userFormView.email, { 'attr': {'class': 'input2'} }) }}
                             <span class="focus-input2" data-placeholder="EMAIL"></span>
-                            {{ form_errors(userFormView.email) }}
+                            <div class="errorFormMessage">{{ form_errors(userFormView.email) }}</div>
                         </div>
                         <br>
                         <div class="checkbox">
                             {{ form_widget(userFormView.agreeTerms) }}
                             {{ form_label(userFormView.agreeTerms, 'Confirmer les modifications ?') }}
                             <small class="mobileSmall">Cliquer sur le texte pour confirmer</small>
-                            {{ form_errors(userFormView.agreeTerms) }}
+                            <div class="errorFormMessage">{{ form_errors(userFormView.agreeTerms) }}</div>
                         </div>
                         <br>
                         <br>

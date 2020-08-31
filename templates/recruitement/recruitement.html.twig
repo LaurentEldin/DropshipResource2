@@ -20,21 +20,21 @@
                          <br>
                          {{ form_widget(recruitementForm.name, { 'attr': {'class': 'input2'} }) }}
                          <span class="focus-input2" data-placeholder="NAME"></span>
-                         {{ form_errors(recruitementForm.name) }}
+                         <div class="errorFormMessage">{{ form_errors(recruitementForm.name) }}</div>
                      </div>
                      <div class="wrap-input2">
                          {{ form_label(recruitementForm.surname) }}
                          <br>
                          {{ form_widget(recruitementForm.surname, { 'attr': {'class': 'input2'} }) }}
                          <span class="focus-input2" data-placeholder="SURNAME"></span>
-                         {{ form_errors(recruitementForm.surname) }}
+                         <div class="errorFormMessage">{{ form_errors(recruitementForm.surname) }}</div>
                      </div>
                      <div class="wrap-input2">
                          {{ form_label(recruitementForm.mail) }}
                          <br>
                          {{ form_widget(recruitementForm.mail, { 'attr': {'class': 'input2'} }) }}
                          <span class="focus-input2" data-placeholder="EMAIL"></span>
-                         {{ form_errors(recruitementForm.mail) }}
+                         <div class="errorFormMessage">{{ form_errors(recruitementForm.mail) }}</div>
                      </div>
                  </div>
                  <div class="formContactChild2">
@@ -43,21 +43,21 @@
                          <br>
                          {{ form_widget(recruitementForm.phone, { 'attr': {'class': 'input2'} }) }}
                          <span class="focus-input2" data-placeholder="PHONE"></span>
-                         {{ form_errors(recruitementForm.phone) }}
+                         <div class="errorFormMessage">{{ form_errors(recruitementForm.phone) }}</div>
                      </div>
                      <div class="wrap-input2">
                          {{ form_label(recruitementForm.message) }}
                          <br>
                          {{ form_widget(recruitementForm.message, { 'attr': {'class': 'input2'} }) }}
                          <span class="focus-input2" data-placeholder="MESSAGE"></span>
-                         {{ form_errors(recruitementForm.message) }}
+                         <div class="errorFormMessage">{{ form_errors(recruitementForm.message) }}</div>
                      </div>
                      <div class="wrap-input2">
                          {{ form_label(recruitementForm.document) }}
                          <br>
                          {{ form_widget(recruitementForm.document, { 'attr': {'class': 'input2'} }) }}
                          <span class="focus-input2" data-placeholder="DOCUMENT"></span>
-                         {{ form_errors(recruitementForm.document) }}
+                         <div class="errorFormMessage">{{ form_errors(recruitementForm.document) }}</div>
                      </div>
                      <div>
                          {{ form_label(recruitementForm.envoyer) }}

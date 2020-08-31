@@ -14,21 +14,21 @@
                     <br>
                     {{ form_widget(activitiesForm.title, { 'attr': {'class': 'input2'} }) }}
                     <span class="focus-input2" data-placeholder="TITRE"></span>
-                    {{ form_errors(activitiesForm.title) }}
+                    <div class="errorFormMessage">{{ form_errors(activitiesForm.title) }}</div>
                 </div>
                 <div class="wrap-input2">
                     {{ form_label(activitiesForm.article) }}
                     <br>
                     {{ form_widget(activitiesForm.article) }}
                     <span class="focus-input2" data-placeholder="ARTICLE"></span>
-                    {{ form_errors(activitiesForm.article) }}
+                    <div class="errorFormMessage">{{ form_errors(activitiesForm.article) }}</div>
                 </div>
                 <div class="wrap-input2">
                     {{ form_label(activitiesForm.picture) }}
                     <br>
                     {{ form_widget(activitiesForm.picture) }}
                     <span class="focus-input2" data-placeholder="ARTICLE"></span>
-                    {{ form_errors(activitiesForm.picture) }}
+                    <div class="errorFormMessage">{{ form_errors(activitiesForm.picture) }}</div>
                 </div>
                 <div>
                     {{ form_label(activitiesForm.envoyer) }}

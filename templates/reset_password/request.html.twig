@@ -24,7 +24,7 @@
                                 {{ form_widget(requestForm.email, { 'attr': {'class': 'input2'} }) }}
                                 <span class="focus-input2" data-placeholder="NAME"></span>
                             </div>
-                            {{ form_errors(requestForm.email) }}
+                            <div class="errorFormMessage">{{ form_errors(requestForm.email) }}</div>
                             <small>
                                 Vous allez recevoir un lien pour mettre à jour votre mot de passe.
                             </small>

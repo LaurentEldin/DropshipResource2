@@ -50,7 +50,7 @@ class homeController extends AbstractController
                 $entityManager->persist($contact);
                 $entityManager->flush();
                 $message = (new \Swift_Message('Demande de contact'))
-                    ->setFrom('victor.rondon.castano@gmail.com', 'DropShipResource')
+                    ->setFrom('administrateur@dropshipresource.com', 'DropShipResource')
                     ->setTo('contact@dropshipresource.com')
                     ->setCc(['victor.rondon@dropshipresource.com','laurent.eldin@dropshipresource.com','s.chhim@dropshipresource.com'])
                     ->setBody('Nom: ' . $contact->getName() . '<br>' . 'Tel: ' . $contact->getPhone() . '<br>' . 'Email: ' . $contact->getMail() . '<br>' . 'Sujet: ' . $contact->getMessage(), 'text/html');
@@ -98,7 +98,7 @@ class homeController extends AbstractController
     }
 
     /**
-     * @Route("/contactform", name="contactForm")
+     * @Route("/contact", name="contact")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
      * @param Swift_Mailer $mailer

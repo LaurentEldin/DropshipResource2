@@ -115,22 +115,6 @@ class Blog
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCategories()
-    {
-        return $this->categories;
-    }
-
-    /**
-     * @param mixed $categories
-     */
-    public function setCategories($categories): void
-    {
-        $this->categories = $categories;
-    }
-
     public function getChapeau(): ?string
     {
         return $this->chapeau;

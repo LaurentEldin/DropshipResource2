@@ -12,40 +12,40 @@
             <div class="formContactChild1">
                 {{ form_start(blogForm) }}
                 <div class="errorFormMessage"></div>
-                <div class="wrap-input2">
+               {# <div class="wrap-input2">
                     {{ form_label(blogForm.categorie) }}
                     <br>
                     {{ form_widget(blogForm.categorie, { 'attr': {'class': 'input2'} }) }}
                     <span class="focus-input2" data-placeholder="title"></span>
-                    {{ form_errors(blogForm.categorie) }}
-                </div>
+                    <div class="errorFormMessage">{{ form_errors(blogForm.categorie) }}</div>
+                </div> #}
                 <div class="wrap-input2">
                     {{ form_label(blogForm.title) }}
                     <br>
                     {{ form_widget(blogForm.title, { 'attr': {'class': 'input2'} }) }}
                     <span class="focus-input2" data-placeholder="title"></span>
-                    {{ form_errors(blogForm.title) }}
+                    <div class="errorFormMessage">{{ form_errors(blogForm.title) }}</div>
                 </div>
                 <div class="wrap-input2">
                     {{ form_label(blogForm.chapeau) }}
                     <br>
                     {{ form_widget(blogForm.chapeau, { 'attr': {'class': 'input2'} }) }}
                     <span class="focus-input2" data-placeholder="article"></span>
-                    {{ form_errors(blogForm.chapeau) }}
+                    <div class="errorFormMessage">{{ form_errors(blogForm.chapeau) }}</div>
                 </div>
                 <div class="wrap-input2">
                     {{ form_label(blogForm.article) }}
                     <br>
                     {{ form_widget(blogForm.article) }}
                     <span class="focus-input2" data-placeholder="article"></span>
-                    {{ form_errors(blogForm.article) }}
+                    <div class="errorFormMessage">{{ form_errors(blogForm.article) }}</div>
                 </div>
                 <div class="wrap-input2">
                     {{ form_label(blogForm.picture) }}
                     <br>
                     {{ form_widget(blogForm.picture, { 'attr': {'class': 'input2'} }) }}
                     <span class="focus-input2" data-placeholder="illustration"></span>
-                    {{ form_errors(blogForm.picture) }}
+                    <div class="errorFormMessage">{{ form_errors(blogForm.picture) }}</div>
                 </div>
                 <div>
                     {{ form_label(blogForm.envoyer) }}

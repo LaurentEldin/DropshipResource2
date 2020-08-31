@@ -5,9 +5,7 @@
 {% block body %}
     <div class="formlogin">
         <h1>Modifier vos informations</h1>
-
         {{ form_start(form) }}
-
             {{ form_label(form.email,'Votre Email') }}
             <br>
             {{ form_widget(form.email) }}
@@ -48,11 +46,7 @@
                 {{ form_label(form.agreeTerms, 'Accepter et continuer') }}
             </div>
             <button type="submit" class="btn">Envoyer</button>
-
         {{ form_end(form) }}
-
         <img class="logo" src="{{ asset('asset/img/logo.png') }}">
-
     </div>
-
 {% endblock %}

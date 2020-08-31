@@ -19,28 +19,28 @@
                         <br>
                         {{ form_widget(registrationForm.name, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="NAME"></span>
-                        {{ form_errors(registrationForm.name) }}
+                        <div class="errorFormMessage">{{ form_errors(registrationForm.name) }}</div>
                     </div>
                     <div class="wrap-input2">
                         {{ form_label(registrationForm.adresse) }}
                         <br>
                         {{ form_widget(registrationForm.adresse, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="ADRESSE"></span>
-                        {{ form_errors(registrationForm.adresse) }}
+                        <div class="errorFormMessage">{{ form_errors(registrationForm.adresse) }}</div>
                     </div>
                     <div class="wrap-input2">
                         {{ form_label(registrationForm.phone) }}
                         <br>
                         {{ form_widget(registrationForm.phone, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="PHONE"></span>
-                        {{ form_errors(registrationForm.phone) }}
+                        <div class="errorFormMessage">{{ form_errors(registrationForm.phone) }}</div>
                     </div>
                     <div class="wrap-input2">
                         {{ form_label(registrationForm.plainPassword, 'Votre mot de passe') }}
                         <br>
                         {{ form_widget(registrationForm.plainPassword, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="NAME"></span>
-                        {{ form_errors(registrationForm.plainPassword) }}
+                        <div class="errorFormMessage">{{ form_errors(registrationForm.plainPassword) }}</div>
                     </div>
                 </div>
                 <div class="formContactChild2">

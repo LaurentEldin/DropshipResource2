@@ -18,21 +18,21 @@
                         <br>
                         {{ form_widget(contactForm.name, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="NAME"></span>
-                        {{ form_errors(contactForm.name) }}
+                        <div class="errorFormMessage">{{ form_errors(contactForm.name) }}</div>
                     </div>
                     <div class="wrap-input2">
                         {{ form_label(contactForm.phone) }}
                         <br>
                         {{ form_widget(contactForm.phone, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="PHONE"></span>
-                        {{ form_errors(contactForm.phone) }}
+                        <div class="errorFormMessage">{{ form_errors(contactForm.phone) }}</div>
                     </div>
                     <div class="wrap-input2">
                         {{ form_label(contactForm.mail) }}
                         <br>
                         {{ form_widget(contactForm.mail, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="EMAIL"></span>
-                        {{ form_errors(contactForm.mail) }}
+                        <div class="errorFormMessage">{{ form_errors(contactForm.mail) }}</div>
                     </div>
                 </div>
                 <div class="formContactChild2">
@@ -41,14 +41,14 @@
                         <br>
                         {{ form_widget(contactForm.subject, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="SUBJECT"></span>
-                        {{ form_errors(contactForm.subject) }}
+                        <div class="errorFormMessage">{{ form_errors(contactForm.subject) }}</div>
                     </div>
                     <div class="wrap-input2">
                         {{ form_label(contactForm.message) }}
                         <br>
                         {{ form_widget(contactForm.message, { 'attr': {'class': 'input2'} }) }}
                         <span class="focus-input2" data-placeholder="MESSAGE"></span>
-                        {{ form_errors(contactForm.message) }}
+                        <div class="errorFormMessage">{{ form_errors(contactForm.message) }}</div>
                     </div>
                     <div class="positionSubmitFormContactResponsive">
                         {{ form_label(contactForm.envoyer) }}

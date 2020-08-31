@@ -20,11 +20,11 @@ class BlogType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('categorie', EntityType::class, [
+            /*->add('categorie', EntityType::class, [
                 'class' => Categories::class,
                 'choice_label' => 'libelle',
                 'label' => "Catégorie de l'article"
-            ])
+            ])*/
             ->add('title', TextType::class, [
                 'label'=>'Titre'
             ])
