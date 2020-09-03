@@ -64,6 +64,15 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/portfolio.html.twig');
     }
+
+    /**
+     * @Route("/exclusivite/liberal", name="liberal")
+     */
+    public function liberal()
+    {
+        return $this->render('exclusivite/liberal.html.twig');
+    }
+
     /**
      * @Route("/concours", name="concours")
      */
