@@ -716,6 +716,21 @@
         margin-bottom: 0;
         padding-bottom: 60px;
     }
+    .border-buttonmobile{
+        width: 100%;
+        position: relative;
+        background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+        padding: 0.2rem;
+        border-radius: 50px;
+        margin-top: 20px;
+    }
+    .ESPbuttonmobile{
+        background-color: white;
+        color: black;
+        padding: 0.5rem;
+        border-radius: 50px;
+        text-align: center;
+    }
     /*
 ----------------------------------------------------------------------------------------------------------------------
 -------------------------------------------CSS page newsletteradmin-----------------------------------------------------------------
