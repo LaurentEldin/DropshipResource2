@@ -122,5 +122,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="8859ee993f06ea22e00933eadc11583902e24a8e" level="application" />
   </component>
 </module>

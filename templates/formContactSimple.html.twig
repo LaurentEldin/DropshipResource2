@@ -16,6 +16,11 @@
             <span class="focus-input2" data-placeholder="PHONE"></span>
             {{ form_errors(contactForm.phone) }}
         </div>
+        <div class="champscache">
+            {{ form_row(contactForm.mail) }}
+            {{ form_row(contactForm.subject) }}
+            {{ form_row(contactForm.message) }}
+        </div>
         <div class="positionSubmitFormContactResponsive">
             {{ form_label(contactForm.envoyer) }}
             {{ form_widget(contactForm.envoyer, { 'attr': {'class': 'submitForm'} }) }}

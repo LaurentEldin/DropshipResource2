@@ -8,45 +8,18 @@
     {% endfor %}
     {% include 'commons/_header.html.twig' %}
     <main>
-        {#<div id="myBtnHeader" class="contactHeader">
+        <div id="myBtnHeader" class="contactHeader">
             <p><strong><span style="color:white"> Contactez un</span> spécialiste</strong></p>
             <div id="myModalHeader" class="modalHeader">
                 <div class="modal-contentHeader">
-                    <span class="closeHeader">&times;</span>
+                    <span class="closeHeader"></span>
                     <p class="pModalHeader">Contactez un spécialiste</p>
                     <div>
                         {% include 'formContactSimple.html.twig' %}
-                        <div>
-                            {{ form_start(contactForm) }}
-                            <div class="errorFormMessage"></div>
-                            <div class="formContactParent">
-                                <div class="formContactChild1">
-                                    <div class="wrap-input2">
-                                        {{ form_label(contactForm.name) }}
-                                        <br>
-                                        {{ form_widget(contactForm.name, { 'attr': {'class': 'input2'} }) }}
-                                        <span class="focus-input2" data-placeholder="NAME"></span>
-                                        {{ form_errors(contactForm.name) }}
-                                    </div>
-                                    <div class="wrap-input2">
-                                        {{ form_label(contactForm.phone) }}
-                                        <br>
-                                        {{ form_widget(contactForm.phone, { 'attr': {'class': 'input2'} }) }}
-                                        <span class="focus-input2" data-placeholder="PHONE"></span>
-                                        {{ form_errors(contactForm.phone) }}
-                                    </div>
-                                    <div class="positionSubmitFormContactResponsive">
-                                        {{ form_label(contactForm.envoyer) }}
-                                        {{ form_widget(contactForm.envoyer, { 'attr': {'class': 'submitForm'} }) }}
-                                    </div>
-                                </div>
-                            </div>
-                            {{ form_end(contactForm) }}
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>#}
+        </div>
         <section id="sectionCarousel" class="displayNone">
             <div id="carousel">
                 <h1 class="titleHomePage marginLeftTitle">Exclusivité</h1>
@@ -185,7 +158,7 @@
         <section id="Contact">
             <h1 class="displayNone titleHomePage">Contact</h1>
             <h1 class="mobilBlock titleHomePageContactResponsive">Contact</h1>
-            <div>
+            {#<div>
                 {{ form_start(contactForm) }}
                 <div class="errorFormMessage"></div>
                 <div class="formContactParent">
@@ -241,6 +214,9 @@
                     {{ message }}
                 </div>
             {% endfor %}
+            #}
+            <p>Prenez un instant pour nous présenter votre projet ou vos idées !</p>
+            <a href="{{ path('contact') }}" class="submitHtml">Venez c'est par ici</a>
         </section>
     </main>
     {% include 'commons/_footer.html.twig' %}

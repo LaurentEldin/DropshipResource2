@@ -232,6 +232,9 @@ li{
     -o-transition-delay: 0s;
     transition-delay: 0s;
 }
+#Contact .submitHtml{
+    margin: 0;
+}
 /*
 ----------------------------------------------------------------------------------------------------------------------
 -------------------------------------------design back-----------------------------------------------------------------
@@ -2535,7 +2538,7 @@ div#carousel ~ span:hover { color: #FF00FF; cursor: pointer;
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 300px;
+    padding-top: 150px;
     left: 0;
     top: 0;
     width: 100%;
@@ -2547,7 +2550,7 @@ div#carousel ~ span:hover { color: #FF00FF; cursor: pointer;
 .modal-contentHeader {
     background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
     border-radius: 50px 0 0 50px;
-    margin: auto;
+    margin-inline-start: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
@@ -2572,7 +2575,24 @@ div#carousel ~ span:hover { color: #FF00FF; cursor: pointer;
 .pModalHeader{
     font-size: 40px;
     margin-top: 100px;
+    text-align: center;
 }
+.champscache{
+    display: none;
+}
+.modal-contentHeader .formContactChild1{
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    color: black;
+}
+.modal-contentHeader .formContactChild1 .wrap-input2{
+    color: black;
+}
+.modal-contentHeader .formContactChild1 .submitForm{
+    width: 30%;
+}
+
 /*
 ----------------------------------------------------------------------------------------------------------------------
 -------------------------------------------CSS jeux concours-------------------------------------------------------------------
