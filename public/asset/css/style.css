@@ -2244,7 +2244,7 @@ td, th /* Mettre une bordure sur les td ET les th */
 
 }
 .myBtn{
-    background-image: url("../img/testBouton.svg");
+    background-image: url("../img/selectTemplate.png");
     background-color: white;
     background-size: contain;
     border: none;
