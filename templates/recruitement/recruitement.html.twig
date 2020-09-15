@@ -1,4 +1,8 @@
 {% extends 'base.html.twig' %}
+{% block meta %}
+    <meta name="description" content="Vous aimez le digital, passionné et à l’écoute ? Vous avez toujours rêvé de travailler en équipe dans le domaine du numérique ? Vous pensez avoir les compétences nécessaires pour aider à développer notre enseigne ? N’attendez plus, et postulez maintenant !">
+    <meta name="keywords" content="Offre d’emploi, postuler, candidature, numérique, agence, développeur, graphiste, community manager, apporteur d’affaires, commercial, chercher un travail digital, travailler dans le numérique.">
+{% endblock %}
 {% block title %}Candidature{% endblock %}
 {% block body %}
     {% for message in app.flashes('success') %}

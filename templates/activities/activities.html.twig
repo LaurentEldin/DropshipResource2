@@ -1,4 +1,8 @@
 {% extends 'base.html.twig' %}
+{% block meta %}
+    <meta name="description" content="Faites votre transformation numérique en compagnie de dropship resource. Démarrez avec un écosystème complet et réussi ! Du site internet, à la création de votre image d’entreprise et même à l’apport de vos premiers clients ! Faites vous coacher tout au long de votre transformation numérique et laissez nous vous armer pour conquérir le marché.">
+    <meta name="keywords" content="services, paris, france, conseils, disponibilité, recherche spéciale, gestion, transformation numérique, écosystème, augmentation du chiffre d’affaire, accompagnement, coaching, numérique, création de sites internet, community management, génération de prospects qualifiés, webdesign, graphisme, création de campagnes publicitaires, développement, applications mobiles, jeux mobiles, interactions mobiles, réussite.">
+{% endblock %}
 {% block title %}Services{% endblock %}
 {% block body %}
     {% for message in app.flashes('success') %}
