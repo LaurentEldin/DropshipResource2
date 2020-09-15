@@ -123,5 +123,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="8859ee993f06ea22e00933eadc11583902e24a8e" level="application" />
+    <orderEntry type="library" name="daf50cccd8fa486105fc5e8b89784decf3633a90" level="application" />
   </component>
 </module>
