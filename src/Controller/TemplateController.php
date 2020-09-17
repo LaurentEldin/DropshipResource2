@@ -24,6 +24,20 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/ecommerce.html.twig');
     }
+    /**
+     * @Route("/exclusivite/e-commerce/page2", name="ecommerce2")
+     */
+    public function ecommerce2()
+    {
+        return $this->render('exclusivite/ecommerce2.html.twig');
+    }
+    /**
+     * @Route("/exclusivite/e-commerce/page3", name="ecommerce3")
+     */
+    public function ecommerce3()
+    {
+        return $this->render('exclusivite/ecommerce3.html.twig');
+    }
 
     /**
      * @Route("/exclusivite/immobilier", name="immobilier")
@@ -48,6 +62,20 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/habitat.html.twig');
     }
+    /**
+     * @Route("/exclusivite/habitat/page2", name="habitat2")
+     */
+    public function habitat2()
+    {
+        return $this->render('exclusivite/habitat2.html.twig');
+    }
+    /**
+     * @Route("/exclusivite/habitat/page3", name="habitat3")
+     */
+    public function habitat3()
+    {
+        return $this->render('exclusivite/habitat3.html.twig');
+    }
 
     /**
      * @Route("/exclusivite/restaurant", name="restaurant")
@@ -63,6 +91,13 @@ class TemplateController extends AbstractController
     public function portfolio()
     {
         return $this->render('exclusivite/portfolio.html.twig');
+    }
+    /**
+     * @Route("/exclusivite/portfolio/page2", name="portfolio2")
+     */
+    public function portfolio2()
+    {
+        return $this->render('exclusivite/portfolio2.html.twig');
     }
 
     /**

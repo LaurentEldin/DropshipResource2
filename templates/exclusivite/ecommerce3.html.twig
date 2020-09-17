@@ -1,0 +1,141 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Exclusivité E-commerce Page 3{% endblock %}
+{% block body %}
+
+    {% include 'commons/_headerLittle.html.twig' %}
+    <main class="templatePage">
+        <h1 class="titleTemplate">Choisissez le design le mieux adapté à votre activité</h1>
+        <p>Vous ne trouvez pas chaussure à votre pied , Faites le nous savoir !</p>
+        <div class="categorieBoxContainer">
+            <div class="categorieBox">
+                <p><strong>E-commerce<br></strong></p>
+                <div id="myBtn" class="myBtn">Choisir une catégorie</div>
+                <div class="modalContainer">
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <a href="{{ path('ecommerce') }}" class="modalCategorieA">E-commerce</a>
+                            <br>
+                            <a href="{{ path('portfolio') }}" class="modalCategorieA">Portfolio</a>
+                            <br>
+                            <a href="{{ path('restaurant') }}" class="modalCategorieA">Restaurant</a>
+                            <br>
+                            <a href="{{ path('immobilier') }}" class="modalCategorieA">Immo</a>
+                            <br>
+                            <a href="{{ path('habitat') }}" class="modalCategorieA">Habitat</a>
+                            <br>
+                            <a href="{{ path('vtc') }}" class="modalCategorieA">Taxi/Vtc</a>
+                            <br>
+                            <a href="{{ path('liberal') }}" class="modalCategorieA">Profession libérale</a>
+                            <br>
+                            <span class="close">&times;</span>
+                        </div>
+                    </div>
+                </div>
+                <a class="categorieBoxPrice" href="{{ path('contact') }}"><img src="{{ asset('asset/img/boutonPriceNew.svg') }}" class="imgprice" alt="prix" name="prix"></a>
+            </div>
+        </div>
+        <div class="imgTemplateContainer displayNone">
+            <div class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome.png') }}" alt="illustration template" title="illustration template">
+                <span class="hoverImgTemplate">
+                    <p class="pImgTemplate">FlatSome1</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contact') }}"><p class="hoverTemplateP">Choisir</p></a>
+                        <a class="oeil" target="_blank"  href="https://flatsome3.uxthemes.com/demos/shop-demos/grid-style-1/"><p class="hoverTemplateP">Visualier</p></a>
+                    </div>
+                </span>
+            </div>
+            <div class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome2.png') }}" alt="illustration template" title="illustration template">
+                <span class="hoverImgTemplate">
+                    <p class="pImgTemplate">FlatSome2</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contact') }}"><p class="hoverTemplateP">Choisir</p></a>
+                        <a class="oeil" target="_blank"  href="https://flatsome3.uxthemes.com/demos/shop-demos/fullscreen-fashion/"><p class="hoverTemplateP">Visualier</p></a>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="imgTemplateContainer displayNone">
+            <div class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome3.png') }}" alt="illustration template" title="illustration template">
+                <span class="hoverImgTemplate">
+                    <p class="pImgTemplate">FlatSome3</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contact') }}"><p class="hoverTemplateP">Choisir</p></a>
+                        <a class="oeil" target="_blank"  href="https://flatsome3.uxthemes.com/demos/shop-demos/big-sale/"><p class="hoverTemplateP">Visualier</p></a>
+                    </div>
+                </span>
+            </div>
+            <div class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome4.png') }}" alt="illustration template" title="illustration template">
+                <span class="hoverImgTemplate">
+                    <p class="pImgTemplate">FlatSome4</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contact') }}"><p class="hoverTemplateP">Choisir</p></a>
+                        <a class="oeil" target="_blank"  href="https://flatsome3.uxthemes.com/demos/shop-demos/parallax-shop/"><p class="hoverTemplateP">Visualier</p></a>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="imgTemplateContainer displayNone">
+            <div class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome5.png') }}" alt="illustration template" title="illustration template">
+                <span class="hoverImgTemplate">
+                    <p class="pImgTemplate">FlatSome5</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contact') }}"><p class="hoverTemplateP">Choisir</p></a>
+                        <a class="oeil" target="_blank"  href="https://flatsome3.uxthemes.com/demos/shop-demos/cute-shop/"><p class="hoverTemplateP">Visualier</p></a>
+                    </div>
+                </span>
+            </div>
+            <div class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome6.png') }}" alt="illustration template" title="illustration template">
+                <span class="hoverImgTemplate">
+                    <p class="pImgTemplate">FlatSome6</p>
+                    <div class="TemplateImgButtonHoverContainer">
+                        <a class="enveloppe" target="_blank" href="{{ path('contact') }}"><p class="hoverTemplateP">Choisir</p></a>
+                        <a class="oeil" target="_blank" href="https://flatsome3.uxthemes.com/demos/shop-demos/classic-shop/"><p class="hoverTemplateP">Visualier</p></a>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+        {#------------------- MOBILE VERSION ------------------#}
+        <div class="mobilBlock">
+            <a href="https://flatsome3.uxthemes.com/demos/shop-demos/grid-style-1/" target="_blank" class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome.png') }}" alt="illustration template" title="illustration template">
+                <p class="pImgTemplateResponsive">FlatSome1</p>
+            </a>
+            <a href="https://flatsome3.uxthemes.com/demos/shop-demos/fullscreen-fashion/" target="_blank" class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome2.png') }}" alt="illustration template" title="illustration template">
+                <p class="pImgTemplateResponsive">FlatSome2</p>
+            </a>
+            <a href="https://flatsome3.uxthemes.com/demos/shop-demos/big-sale/" target="_blank" class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome3.png') }}" alt="illustration template" title="illustration template">
+                <p class="pImgTemplateResponsive">FlatSome3</p>
+            </a>
+            <a href="https://flatsome3.uxthemes.com/demos/shop-demos/parallax-shop/" target="_blank" class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome4.png') }}" alt="illustration template" title="illustration template">
+                <p class="pImgTemplateResponsive">FlatSome4</p>
+            </a>
+            <a href="https://flatsome3.uxthemes.com/demos/shop-demos/cute-shop/" target="_blank" class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome5.png') }}" alt="illustration template" title="illustration template">
+                <p class="pImgTemplateResponsive">FlatSome5</p>
+            </a>
+            <a href="https://flatsome3.uxthemes.com/demos/shop-demos/classic-shop/" target="_blank" class="templateContainer">
+                <img class="imgTemplate" src="{{ asset('asset/img/ecommerce3/flatsome6.png') }}" alt="illustration template" title="illustration template">
+                <p class="pImgTemplateResponsive">FlatSome6</p>
+            </a>
+        </div>
+        {#------------------- FIN MOBILE VERSION ------------------#}
+        <div class="nextpage">
+            <a href="{{ path('ecommerce') }}" class="submitHtml">Page 1</a>
+            <a href="{{ path('ecommerce2') }}" class="submitHtml">Page2</a>
+            <a href="{{ path('ecommerce3') }}" class="submitHtml">[...]</a>
+        </div>
+    </main>
+    {% include 'commons/_footer.html.twig' %}
+
+{% endblock %}

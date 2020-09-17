@@ -9,7 +9,7 @@
             </div>
         {% endfor %}
         {% include 'commons/_headerLittle.html.twig' %}
-        <h1 class="titleHomePageClient">Hello {{ app.user.name }}!</h1>
+        <h1 class="titleHomePageClient">Bienvenue <strong style="color: #00e0ff">{{ app.user.lastname }}</strong> dans votre espace client!</h1>
         <div class="espaceClient">
             <div class="formContactParent">
                 <div class="formContactChild1EspaceClient">
@@ -51,6 +51,9 @@
                     </div>
                 </div>
                 <div class="formContactChild2EspaceClient">
+                    {#≈<div>
+                        <a class="submitHtml" href="{{ path ('content', {'id':app.user.id}) }}">Mes documents</a>
+                    </div>#}
                     <div>
                         <a class="submitHtml" href="{{ path ('edit_client', {'id':app.user.id}) }}">Modifier vos informations</a>
                     </div>

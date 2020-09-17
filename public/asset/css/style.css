@@ -1025,15 +1025,6 @@ footer{
 .titleActivitiesPage{
     width: 100%;
 }
-.border-buttonleft{
-    width: 150px;
-    position: relative;
-    left: 0%;
-    top: 30%;
-    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
-    padding: 0.2rem;
-    border-radius: 50px;
-}
 .border-buttoncm{
     width: 150px;
     position: relative;
@@ -1062,6 +1053,15 @@ footer{
     border-radius: 50px;
 }
 .border-buttondesign{
+    width: 150px;
+    position: relative;
+    left: 0%;
+    top: 25%;
+    background: linear-gradient(to right, #00E0FF 0%, #FF00FF 100%);
+    padding: 0.2rem;
+    border-radius: 50px;
+}
+.border-buttonleft{
     width: 150px;
     position: relative;
     left: 0%;
@@ -2668,5 +2668,21 @@ div#carousel ~ span:hover { color: #FF00FF; cursor: pointer;
     font-size: 26px;
     text-align: center;
 }
-
+.nextpage{
+    display: flex;
+    justify-content: center;
+}
+.nextpage .submitHtml{
+    border-radius: 50px;
+    width: 5%;
+    background-color: rgb(30,30,30);
+    color: rgb(255,255,255);
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    border: none;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
 

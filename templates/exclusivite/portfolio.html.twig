@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Exclusivité - Portfoliot{% endblock %}
+{% block title %}Exclusivité - Portfolio{% endblock %}
 {% block body %}
 
     {% include 'commons/_headerLittle.html.twig' %}
@@ -9,7 +9,7 @@
         <p>Vous ne trouvez pas chaussure à votre pied , Faites le nous savoir !</p>
         <div class="categorieBoxContainer">
             <div class="categorieBox">
-                <p><strong>Catégorie</strong></p>
+                <p><strong>Portfolio</strong></p>
                 <div id="myBtn" class="myBtn">Choisir une catégorie</div>
                 <div class="modalContainer">
                     <div id="myModal" class="modal">
@@ -26,8 +26,8 @@
                             <br>
                             <a href="{{ path('vtc') }}" class="modalCategorieA">Taxi/Vtc</a>
                             <br>
-                            {#<a href="{{ path('liberal') }}" class="modalCategorieA">Profession libérale</a>
-                            <br>#}
+                            <a href="{{ path('liberal') }}" class="modalCategorieA">Profession libérale</a>
+                            <br>
                             <span class="close">&times;</span>
                         </div>
                     </div>
@@ -126,6 +126,10 @@
                 <img class="imgTemplate" src="{{ asset('asset/img/PINTEREST.jpg') }}" alt="illustration template" title="illustration template">
                 <p class="pImgTemplateResponsive">PINTEREST</p>
             </a>
+        </div>
+        <div class="nextpage">
+            <a href="{{ path('portfolio2') }}" class="submitHtml">Page2</a>
+            {#<a href="{{ path('') }}" class="submitHtml">Page3</a>#}
         </div>
     </main>
     {% include 'commons/_footer.html.twig' %}
