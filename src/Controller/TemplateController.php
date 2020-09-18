@@ -16,7 +16,12 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/template.html.twig');
     }
-
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*----------------              E-COMMERCE      -------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
     /**
      * @Route("/exclusivite/e-commerce", name="ecommerce")
      */
@@ -24,6 +29,7 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/ecommerce.html.twig');
     }
+
     /**
      * @Route("/exclusivite/e-commerce/page2", name="ecommerce2")
      */
@@ -31,6 +37,7 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/ecommerce2.html.twig');
     }
+
     /**
      * @Route("/exclusivite/e-commerce/page3", name="ecommerce3")
      */
@@ -38,7 +45,12 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/ecommerce3.html.twig');
     }
-
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*----------------              IMMOBILIER      -------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
     /**
      * @Route("/exclusivite/immobilier", name="immobilier")
      */
@@ -48,13 +60,40 @@ class TemplateController extends AbstractController
     }
 
     /**
+     * @Route("/exclusivite/immobilier/page2", name="immobilier2")
+     */
+    public function immobilier2()
+    {
+        return $this->render('exclusivite/immobilier2.html.twig');
+    }
+
+    /**
+     * @Route("/exclusivite/immobilier/page3", name="immobilier3")
+     */
+    public function immobilier3()
+    {
+        return $this->render('exclusivite/immobilier3.html.twig');
+    }
+
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*----------------              VTC             -------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+    /**
      * @Route("/exclusivite/vtc", name="vtc")
      */
     public function vtc()
     {
         return $this->render('exclusivite/vtc.html.twig');
     }
-
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*----------------              HABITAT         -------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
     /**
      * @Route("/exclusivite/habitat", name="habitat")
      */
@@ -62,6 +101,7 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/habitat.html.twig');
     }
+
     /**
      * @Route("/exclusivite/habitat/page2", name="habitat2")
      */
@@ -69,6 +109,7 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/habitat2.html.twig');
     }
+
     /**
      * @Route("/exclusivite/habitat/page3", name="habitat3")
      */
@@ -76,7 +117,12 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/habitat3.html.twig');
     }
-
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*----------------              RESTAURANT      -------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
     /**
      * @Route("/exclusivite/restaurant", name="restaurant")
      */
@@ -86,12 +132,34 @@ class TemplateController extends AbstractController
     }
 
     /**
+     * @Route("/exclusivite/restaurant/page2", name="restaurant2")
+     */
+    public function restaurant2()
+    {
+        return $this->render('exclusivite/restaurant2.html.twig');
+    }
+
+    /**
+     * @Route("/exclusivite/restaurant/page3", name="restaurant3")
+     */
+    public function restaurant3()
+    {
+        return $this->render('exclusivite/restaurant3.html.twig');
+    }
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*----------------              PORTFOLIO       -------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+    /**
      * @Route("/exclusivite/portfolio", name="portfolio")
      */
     public function portfolio()
     {
         return $this->render('exclusivite/portfolio.html.twig');
     }
+
     /**
      * @Route("/exclusivite/portfolio/page2", name="portfolio2")
      */
@@ -99,7 +167,12 @@ class TemplateController extends AbstractController
     {
         return $this->render('exclusivite/portfolio2.html.twig');
     }
-
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*----------------              LIBERAL         -------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
     /**
      * @Route("/exclusivite/liberal", name="liberal")
      */
@@ -108,6 +181,12 @@ class TemplateController extends AbstractController
         return $this->render('exclusivite/liberal.html.twig');
     }
 
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*----------------              CONCOURS        -------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
     /**
      * @Route("/concours", name="concours")
      */
