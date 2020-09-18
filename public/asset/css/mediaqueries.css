@@ -908,6 +908,15 @@
         text-align: left;
         color: whitesmoke;
     }
+    .copyright{
+        color: black;
+        position: absolute;
+        bottom: 20px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
     .nextpage{
         width: 100%;
         justify-content: center;
@@ -923,6 +932,11 @@
         border: none;
         margin: 20px;
         padding: 10px;
+        text-align: center;
+    }
+    #Contact .submitHtml {
+        margin: 0;
+        width: 50%;
         text-align: center;
     }
 }
