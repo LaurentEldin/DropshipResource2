@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block title %}Mes Documents{% endblock %}
+{% block body %}
+    <section class="fullPage">
+        <div class="boucheTrouL"></div>
+        {% include 'commons/_headerLittle.html.twig' %}
+        <h1 class="titleHomePageClient">Retrouvez vos documents ici !</h1>
+        <div class="espaceClient">
+            <div class="formContactParent">
+                <div class="formContactChild1EspaceClient">
+                    {% for document in documents %}
+                    <ul>
+                        <li>{{ document.title }}</li>
+                        <li>{{ document.user }}</li>
+                    </ul>
+                    {% endfor %}
+                </div>
+                <div class="formContactChild2EspaceClient">
+                    <div>
+                        <a class="submitHtml" href="{{ path ('espace_client', {'id':app.user.id}) }}">Retour Espace client</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'commons/_footer.html.twig' %}
+{% endblock %}
