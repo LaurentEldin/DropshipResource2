@@ -19,6 +19,8 @@ class RecruitementController extends AbstractController
 {
     /**
      * @Route("/recruitement", name="recruitement")
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
      * @return Response
      * @throws Exception
      */
