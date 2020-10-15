@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block meta %}
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+{% endblock %}
+{% block title %}Community Management{% endblock %}
+{% block body %}
+    {% include 'commons/_headerLittle.html.twig' %}
+    <main class="activitiesPage displayNone">
+        <section class="activitiesContainerCreateWeb">
+            <div class="activitiesBloc">
+                <h1 class="titleActivitiesPage"></h1>
+                <p class="pActivitiesPage"></p>
+                {#<div class="border-buttonleft">
+                    <div class="ESPbutton"><a href="">En savoir plus</a></div>
+                </div>#}
+            </div>
+            <div class="activitiesBloc">
+                <img class="cardImgActivities" src="{{ asset('asset/img/') }}" alt="" title="">
+            </div>
+        </section>    </main>
+    <main class="activitiesPage mobilBlock">
+        <section class="mobileActivitiesCreateWeb">
+            <div class="activitiesBloc">
+                <h1 class="titleActivitiesPage"></h1>
+                <p class="pActivitiesPage"></p>
+            </div>
+            <div class="activitiesBloc">
+                <img class="cardImgActivities" src="{{ asset('asset/img/') }}" alt="" title="">
+            </div>
+            {#<div class="border-buttonmobile">
+                <div class="ESPbuttonmobile"><a href="">En savoir plus</a></div>
+            </div>#}
+        </section>
+    </main>
+{% endblock %}

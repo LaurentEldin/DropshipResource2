@@ -107,4 +107,26 @@ class ActivitiesController extends AbstractController
         $this->addFlash('success', 'Suppression confirmé.');
         return $this->redirectToRoute('activities');
     }
+
+    /**
+     * @Route("/activities/leeds",name="leeds")
+     */
+    public function leeds()
+    {
+        return $this->render('activities/leeds.html.twig');
+    }
+    /**
+     * @Route("/activities/website",name="website")
+     */
+    public function website()
+    {
+        return $this->render('activities/website.html.twig');
+    }
+    /**
+     * @Route("/activities/community",name="community")
+     */
+    public function community()
+    {
+        return $this->render('activities/community.html.twig');
+    }
 }

@@ -727,9 +727,10 @@
     .ESPbuttonmobile{
         background-color: white;
         color: black;
-        padding: 0.5rem;
+        padding: 1.5rem 1rem 0.5rem 1rem;
         border-radius: 50px;
         text-align: center;
+        font-size: 1.5rem;
     }
     /*
 ----------------------------------------------------------------------------------------------------------------------
